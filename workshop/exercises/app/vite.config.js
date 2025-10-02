@@ -14,7 +14,7 @@ export default {
     server: {
         host: true, // allow connections from other Docker containers
         allowedHosts: ['node', 'geographika.github.io'], // allow access using http://node:7001 from the mapserver container
-        port: 5001,
+        port: 7001,
         watch: {
             // fix for Windows on WSL - https://github.com/vitejs/vite/issues/1153
             usePolling: true

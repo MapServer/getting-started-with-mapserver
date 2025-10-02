@@ -29,10 +29,10 @@
 
 services:
   mapserver:
-    image: camptocamp/mapserver:8.4-gdal3.10
+    image: geographika/mapserver-workshop:latest
     container_name: mapserver
     ports:
-      - 7000:80
+      - 7000:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
