@@ -17,7 +17,7 @@ MAP
   LAYER
     NAME "roads"
     TYPE LINE
-    STATUS OFF    
+    STATUS OFF
     CONNECTIONTYPE FLATGEOBUF
     DATA "data/osm/roads.fgb"
     CLASS
