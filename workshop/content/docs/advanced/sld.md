@@ -17,7 +17,7 @@ SLD can be used by MapServer in several different ways:
 This exercise will focus on the first use case.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/sld.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/sld.html"></iframe>
 </div>
 
 ## Code

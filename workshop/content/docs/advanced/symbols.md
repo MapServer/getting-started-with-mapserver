@@ -5,7 +5,7 @@
 In this exercise we'll look at how [SYMBOL](https://mapserver.org/mapfile/symbol.html)s can be used to apply complex cartographic effects to vector data. The Mapfile displays OpenStreetMap railways in Tartu, Estonia.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/railways.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/railways.html"></iframe>
 </div>
 
 ## Vector Symbols

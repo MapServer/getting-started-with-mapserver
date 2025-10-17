@@ -2,13 +2,13 @@
 
 In this workshop we use the following materials:
 
-1. **Documentation** - (like this page): the latest versions are available online [here](https://geographika.github.io/getting-started-with-mapserver/)
-2. **Exercises** - download the [latest zip file](https://github.com/geographika/getting-started-with-mapserver/archive/refs/heads/main.zip), unzip, 
+1. **Documentation** - (like this page): the latest versions are available online [here](https://mapserver.github.io/getting-started-with-mapserver/)
+2. **Exercises** - download the [latest zip file](https://github.com/mapserver/getting-started-with-mapserver/archive/refs/heads/main.zip), unzip, 
    and find exercises in `workshop/exercises`.
 
 The first step is to download and unzip the `main.zip` file to a local folder on your system. 
 Alternatively, if you are familiar with `git` and have it installed you can fork/clone the GitHub repository of this 
-workshop directly from <https://github.com/geographika/getting-started-with-mapserver/>.
+workshop directly from <https://github.com/mapserver/getting-started-with-mapserver/>.
 
 ## Text editor
 
@@ -101,7 +101,7 @@ sudo docker run hello-world
 
 # Setup the workshop
 cd /home
-sudo git clone https://github.com/geographika/getting-started-with-mapserver/
+sudo git clone https://github.com/mapserver/getting-started-with-mapserver/
 cd /home/getting-started-with-mapserver/workshop/exercises/
 sudo docker compose up
 

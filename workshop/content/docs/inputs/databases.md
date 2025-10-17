@@ -72,7 +72,7 @@ ogrinfo PG:"host=db user=docker password=docker dbname=gis port=5432" water_a -s
 Online example not available as no PostGIS installation on the server
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/postgis.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/postgis.html"></iframe>
 </div>
 -->
 

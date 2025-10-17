@@ -5,7 +5,7 @@
 This exercise displays buildings from OpenStreetMap. 
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
 </div>
 
 ## Polygons

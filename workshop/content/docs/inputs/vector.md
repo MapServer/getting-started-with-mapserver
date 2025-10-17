@@ -13,7 +13,7 @@ More information can be found on the [Vector Data Management & Optimization](htt
 MapServer documentation.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/stars.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/stars.html"></iframe>
 </div>
 
 ## Remote Datasets using  Virtual File Systems

@@ -6,7 +6,7 @@ In this exercise we'll be configuring MapServer to serve out data using
 MapServer's [OGC API - Features](https://mapserver.org/ogc/ogc_api.html). See the [OGC API - Features Overview](https://ogcapi.ogc.org/features/overview.html) page for more details.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/ogcapi-features.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/ogcapi-features.html"></iframe>
 </div>
 
 

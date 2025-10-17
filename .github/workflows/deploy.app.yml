@@ -28,5 +28,5 @@ jobs:
           deploy_key: ${{ secrets.PRIVATE_KEY }}
           publish_dir: ./workshop/exercises/app/dist
           publish_branch: gh-pages
-          # deploy to https://geographika.github.io/getting-started-with-mapserver-demo/
-          external_repository: geographika/getting-started-with-mapserver-demo
+          # deploy to https://mapserver.github.io/getting-started-with-mapserver-demo/
+          external_repository: mapserver/getting-started-with-mapserver-demo

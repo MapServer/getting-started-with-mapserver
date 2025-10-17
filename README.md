@@ -9,11 +9,11 @@ major platforms (Windows, Linux, Mac OS X).
 ## For users
 
 Are you a workshop participant or want to dive-in individually?  Go to 
-[https://geographika.github.io/getting-started-with-mapserver](https://geographika.github.io/getting-started-with-mapserver) 
+[https://mapserver.github.io/getting-started-with-mapserver](https://mapserver.github.io/getting-started-with-mapserver) 
 to follow the lessons and exercises.
 
 The demo exercises are also available online at
-[https://geographika.github.io/getting-started-with-mapserver-demo/](https://geographika.github.io/getting-started-with-mapserver-demo/).
+[https://mapserver.github.io/getting-started-with-mapserver-demo/](https://mapserver.github.io/getting-started-with-mapserver-demo/).
 
 ## For authors
 
@@ -23,7 +23,7 @@ Below are guidelines for authoring and/or improving the workshop's content.
 
 This workshop uses Docker (Docker, Docker Compose) to ensure a consistent environment
 to deploy MapServer and work through the various exercises. As with participants, follow
-the [Workshop environment setup](https://geographika.github.io/getting-started-with-mapserver/setup).
+the [Workshop environment setup](https://mapserver.github.io/getting-started-with-mapserver/setup).
 
 ### Building the workshop content locally
 
@@ -38,7 +38,7 @@ of content and publishing. Workshop content is written in Markdown.
 python3 -m venv .
 . bin/activate
 # fork or clone from GitHub
-git clone https://github.com/geographika/getting-started-with-mapserver.git
+git clone https://github.com/mapserver/getting-started-with-mapserver.git
 cd getting-started-with-mapserver/workshop/content
 # install required dependencies
 pip install -r requirements.txt
@@ -52,7 +52,7 @@ mkdocs serve  # website is made available on http://localhost:8000
 
 To make contributions back to the workshop, fork the repository from GitHub.  Contributions and Pull Requests are always welcome!
 
-Changes to the GitHub repository result in an automated build and deploy of the content to [https://geographika.github.io/getting-started-with-mapserver](https://geographika.github.io/getting-started-with-mapserver).
+Changes to the GitHub repository result in an automated build and deploy of the content to [https://mapserver.github.io/getting-started-with-mapserver](https://mapserver.github.io/getting-started-with-mapserver).
 
 ## Deploying to live site
 

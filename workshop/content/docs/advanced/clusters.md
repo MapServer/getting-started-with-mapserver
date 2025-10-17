@@ -6,7 +6,7 @@ directive.
 In our example points representing trees are clustered together, with the number of points in each cluster used as the label.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/clusters.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/clusters.html"></iframe>
 </div>
 
 ## Mapfile Notes

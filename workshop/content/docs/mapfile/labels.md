@@ -5,7 +5,7 @@
 In this exercises we'll look at labelling features in a map. We'll be using a lakes dataset from the original Itasca County, Minnesota MapServer demo.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lakes.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/lakes.html"></iframe>
 </div>
 
 ## Labels

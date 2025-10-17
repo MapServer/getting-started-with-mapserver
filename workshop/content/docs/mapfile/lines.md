@@ -6,7 +6,7 @@ In this exercise we're going to display the road network from OpenStreetMap for 
 city for [FOSS4G Europe 2024](https://2024.europe.foss4g.org/) where this workshop was first given. 
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
 </div>
 
 The diagram below shows the Mapfile directives used for the map:

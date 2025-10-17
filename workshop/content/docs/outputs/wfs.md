@@ -6,7 +6,7 @@ In this exercise we'll create a Mapfile that can be used to serve data
 as a WFS. We'll be using the "Populated Places" from [Natural Earth](https://www.naturalearthdata.com/) as the data source.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/wfs.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/wfs.html"></iframe>
 </div>
 
 ## Configuring a MAP for WFS

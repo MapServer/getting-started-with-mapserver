@@ -8,7 +8,7 @@ Tiles will always be in the
 Web Mercator (`EPSG:3857`) projection, and can easily be added to client JavaScript applications such as OpenLayers and Leaflet. Tiles are also easy to cache using software such as [MapCache](https://mapserver.org/mapcache/).
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/tiles.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/tiles.html"></iframe>
 </div>
 
 ## Mapfile Notes

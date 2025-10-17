@@ -46,15 +46,15 @@ MAP
 
 # Workshop location and materials
 
-This workshop is provided live at [https://geographika.github.io/getting-started-with-mapserver](https://geographika.github.io/getting-started-with-mapserver).
+This workshop is provided live at [https://mapserver.github.io/getting-started-with-mapserver](https://mapserver.github.io/getting-started-with-mapserver).
 
-The workshop contents, wiki and issue tracker are managed on GitHub at [https://github.com/geographika/getting-started-with-mapserver](https://github.com/geographika/getting-started-with-mapserver).
+The workshop contents, wiki and issue tracker are managed on GitHub at [https://github.com/mapserver/getting-started-with-mapserver](https://github.com/mapserver/getting-started-with-mapserver).
 
 # Support
 
-For issues/bugs/suggestions or improvements/contributions, use the [GitHub issue tracker](https://github.com/geographika/getting-started-with-mapserver/issues).
+For issues/bugs/suggestions or improvements/contributions, use the [GitHub issue tracker](https://github.com/mapserver/getting-started-with-mapserver/issues).
 
-Bugs, enhancements and issues can be reported on [GitHub](https://github.com/geographika/getting-started-with-mapserver/issues).
+Bugs, enhancements and issues can be reported on [GitHub](https://github.com/mapserver/getting-started-with-mapserver/issues).
 
 As always, core MapServer support and community information can be found on the MapServer [website](https://mapserver.org/community/index.html).
 

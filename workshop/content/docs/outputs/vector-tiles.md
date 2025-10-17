@@ -5,7 +5,7 @@
 This example displays [Mapbox Vector Tiles](https://mapserver.org/development/rfc/ms-rfc-119.html) for a simplified countries dataset from [Natural Earth](https://www.naturalearthdata.com/). 
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/vector-tiles.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/vector-tiles.html"></iframe>
 </div>
 
 ## Mapfile Configuration

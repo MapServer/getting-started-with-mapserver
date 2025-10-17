@@ -8,7 +8,7 @@ The dataset used in this example is elevation data from the [Estonian Geoportal]
 and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
 </div>
 
 ## Viewing Dataset Details

@@ -6,7 +6,7 @@ In this exercise we'll create a map of POIs (Points of Interest) from OpenStreet
 city for [FOSS4G Europe 2025](https://2025.europe.foss4g.org/).
 
 <div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
+  <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
 </div>
 
 The diagram below shows the Mapfile directives used for the point map:

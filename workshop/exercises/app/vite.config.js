@@ -13,7 +13,7 @@ export default {
     base: '', // otherwise assets are located at /assets
     server: {
         host: true, // allow connections from other Docker containers
-        allowedHosts: ['node', 'geographika.github.io'], // allow access using http://node:7001 from the mapserver container
+        allowedHosts: ['node', 'mapserver.github.io'], // allow access using http://node:7001 from the mapserver container
         port: 7001,
         watch: {
             // fix for Windows on WSL - https://github.com/vitejs/vite/issues/1153
