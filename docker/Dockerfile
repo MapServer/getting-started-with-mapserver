@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-full-3.11.0 AS gdal
+FROM ghcr.io/osgeo/gdal:ubuntu-full-3.11.4 AS gdal
 # see https://github.com/OSGeo/gdal/tree/master/docker#ubuntu-based
 
 FROM gdal AS builder
@@ -104,7 +104,10 @@ EXPOSE 8080
 COPY --from=builder /usr/local/bin /usr/local/bin/
 COPY --from=builder /usr/local/lib /usr/local/lib/
 COPY --from=builder /usr/local/share/mapserver /usr/local/share/mapserver/
-COPY --from=builder /src/share/ogcapi/templates/html-bootstrap4 /usr/local/share/mapserver/ogcapi/templates/html-bootstrap4/
+COPY --from=builder /src/share/ogcapi/templates/html-bootstrap /usr/local/share/mapserver/ogcapi/templates/html-bootstrap/
+COPY --from=builder /src/share/ogcapi/templates/html-plain /usr/local/share/mapserver/ogcapi/templates/html-plain/
+COPY --from=builder /src/share/ogcapi/templates/html-index-bootstrap /usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/
+COPY --from=builder /src/share/ogcapi/templates/html-index-plain /usr/local/share/mapserver/ogcapi/templates/html-index-plain/
 
 COPY runtime /
 
@@ -112,7 +115,7 @@ RUN ldconfig
 
 ENV MS_DEBUGLEVEL=0 \
     MS_ERRORFILE=stderr \
-    MAPSERVER_CONFIG_FILE=/usr/local/share/mapserver/config/index.conf \
+    MAPSERVER_CONFIG_FILE=/etc/mapserver/mapserver.conf \
     MAPSERVER_BASE_PATH= \
     MAX_REQUESTS_PER_PROCESS=1000 \
     MIN_PROCESSES=1 \
