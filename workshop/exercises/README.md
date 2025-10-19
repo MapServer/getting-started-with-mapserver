@@ -25,3 +25,9 @@ To connect to the containers to use bash commands you can use the following comm
 docker exec -it mapserver bash
 docker exec -it node bash
 ```
+
+To view live logs:
+
+```bash
+docker logs --follow mapserver
+```
