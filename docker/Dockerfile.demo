@@ -1,0 +1,4 @@
+FROM mapserver-workshop
+
+# Copy workshop files into the image
+COPY workshop/exercises/mapfiles /etc/mapserver/
