@@ -1,0 +1,51 @@
+MAP
+  NAME "STAC"
+  EXTENT -180 -90 180 90
+  UNITS DD
+  SIZE 600 600
+  PROJECTION
+    "init=epsg:4326"
+  END
+  WEB
+    METADATA
+      "ows_enable_request" "*"
+      "ows_srs" "EPSG:4326 EPSG:3857 EPSG:5070"
+    END
+    VALIDATION
+      # check the parameter is in the form -74.134,41.871,-73.694,42.089
+      BBOX '^-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?$'
+    END
+  END
+
+  LAYER
+    NAME "lcpri"
+    TYPE RASTER
+    DATA 'STACIT:\"https://planetarycomputer.microsoft.com/api/stac/v1/search?&collections=usgs-lcmap-conus-v13&datetime=2021-01-01/2021-12-31&bbox=%BBOX%\":asset=lcpri'
+    PROJECTION
+        "init=epsg:5070"
+    END
+    PROCESSING "BANDS=1"
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      STYLE
+         COLOR 28 107 160
+       END
+    END
+
+    CLASS
+      EXPRESSION ([pixel] != 5)
+      STYLE
+         COLORRANGE  255 255 230   0 100 0   # light green to dark green
+         DATARANGE   1 8
+       END
+    END
+
+    # to switch to black and white uncomment below
+
+    # PROCESSING "SCALE=1,8"
+    # PROCESSING "SCALE_BUCKETS=256"
+    # PROCESSING "CLASSIFY_SCALED=TRUE"
+
+  END
+
+END
