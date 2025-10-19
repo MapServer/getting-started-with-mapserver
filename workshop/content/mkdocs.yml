@@ -32,6 +32,7 @@ nav:
         - Vector Symbols: advanced/symbols.md
         - Clusters: advanced/clusters.md
         - SLD: advanced/sld.md
+        - STAC: advanced/stac.md
         # - Apache: advanced/apache.md
         # - MapScript: advanced/mapscript.md
     - Summary: summary.md
