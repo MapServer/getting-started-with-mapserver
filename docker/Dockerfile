@@ -49,10 +49,8 @@ RUN cmake .. \
     -DWITH_PYTHON=1 \
     -DWITH_MSSQL2008=0
 
+RUN cmake --build . --target pythonmapscript-wheel
 RUN ninja install
-
-# Run the make command for pythonmapscript-wheel
-# RUN cmake --build . --target pythonmapscript-wheel
 
 FROM gdal AS runner
 LABEL maintainer="sethg@geographika.co.uk"
@@ -104,12 +102,17 @@ EXPOSE 8080
 COPY --from=builder /usr/local/bin /usr/local/bin/
 COPY --from=builder /usr/local/lib /usr/local/lib/
 COPY --from=builder /usr/local/share/mapserver /usr/local/share/mapserver/
+# copy the mapscript wheel
+COPY --from=builder /src/build/src/mapscript/python/dist /usr/local/share/mapserver/python/
 COPY --from=builder /src/share/ogcapi/templates/html-bootstrap /usr/local/share/mapserver/ogcapi/templates/html-bootstrap/
 COPY --from=builder /src/share/ogcapi/templates/html-plain /usr/local/share/mapserver/ogcapi/templates/html-plain/
 COPY --from=builder /src/share/ogcapi/templates/html-index-bootstrap /usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/
 COPY --from=builder /src/share/ogcapi/templates/html-index-plain /usr/local/share/mapserver/ogcapi/templates/html-index-plain/
 
 COPY runtime /
+
+RUN apt-get install --no-install-recommends python3-pip --assume-yes
+RUN pip install --break-system-packages --no-index --find-links=/usr/local/share/mapserver/python mapscript
 
 RUN ldconfig
 
