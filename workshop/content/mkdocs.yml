@@ -29,6 +29,7 @@ nav:
         - Vector Tiles: outputs/vector-tiles.md
         - OGC API - Features: outputs/ogcapi-features.md
     - Advanced:
+        - ArcGIS Feature Server: advanced/arcgis.md
         - Vector Symbols: advanced/symbols.md
         - Clusters: advanced/clusters.md
         - SLD: advanced/sld.md
