@@ -169,4 +169,4 @@ new ImageLayer({
 
 ## Further Links
 
-- https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/
+- <https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/>
