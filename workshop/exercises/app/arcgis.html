@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArcGIS Feature Server</title>
+    <style>
+        /* panel styling */
+        #control-panel {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 12px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+            #control-panel input[type="checkbox"] {
+                margin-right: 6px;
+            }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="control-panel">
+        <label>
+            <input type="checkbox" id="labelsCheckbox" />
+            Labels
+        </label>
+    </div>
+    <script type="module" src="./js/arcgis.js"></script>
+</body>
+</html>

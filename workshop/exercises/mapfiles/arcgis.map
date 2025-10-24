@@ -1,0 +1,61 @@
+MAP
+    NAME "arcgis"
+    EXTENT -117.462057 33.895445 -117.436808 33.911090
+    SIZE 400 400
+    PROJECTION
+        "init=epsg:4326"
+    END
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
+    END
+    LAYER
+        NAME "PoolPermits"
+        TYPE POLYGON
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE OGR
+        CONNECTION "https://sampleserver6.arcgisonline.com/arcgis/rest/services/PoolPermits/FeatureServer/0/query?f=pjson"
+        PROCESSING "RENDERMODE=ALL_MATCHING_CLASSES"
+        CLASS
+            STYLE
+                COLOR 0 173 181
+                OUTLINECOLOR 230 230 230
+                OUTLINEWIDTH 0.1
+            END
+        END
+        CLASS
+            VALIDATION
+              labels '.'
+              default_labels 'hidden'
+            END
+            EXPRESSION ('%labels%' = 'visible')
+            LABEL
+                TEXT "[apn]"
+                COLOR 220 240 255
+                SIZE 8
+            END
+        END
+    END
+
+    # this layer is used for the excercise only - not in the arcgis.html page
+    LAYER
+        NAME "PoolPermitLabels"
+        TYPE POLYGON
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE OGR
+        CONNECTION "https://sampleserver6.arcgisonline.com/arcgis/rest/services/PoolPermits/FeatureServer/0/query?f=pjson"
+        CLASS
+            LABEL
+                TEXT "[apn]"
+                COLOR 220 240 255
+                SIZE 8
+            END
+        END
+    END
+END
