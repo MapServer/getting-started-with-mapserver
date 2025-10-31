@@ -1,0 +1,47 @@
+MAP
+  NAME "Roads"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  SIZE 800 600
+  # CONFIG MS_ERRORFILE "/tmp/error.log"
+  CONFIG MS_ERRORFILE "C:/temp/error.log"
+  CONFIG CPL_DEBUG "ON"
+  PROJECTION
+    "init=epsg:4326"
+  END
+  DEBUG 5
+  WEB
+    METADATA
+      "ows_enable_request" "*"
+      "ows_srs" "EPSG:4326 EPSG:3857"
+    END
+  END
+
+  LAYER
+    NAME "roads"
+    TYPE POLYGON
+    STATUS ON
+    DEBUG 5
+
+    # PATH=C:\GitHub\MapServer\sdk\release-1930-x64\bin;%PATH%
+    # $env:Path = "C:\GitHub\MapServer\build\RelWithDebInfo;C:\GitHub\MapServer\sdk\release-1930-x64\bin;C:\GitHub\MapServer\sdk\release-1930-x64\bin\gdal\apps;" + $env:Path
+    CONNECTIONTYPE OGR
+    CONNECTION "{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.000001\"}"
+    # DATA "0"
+
+    # CONNECTION "{\"type\": \"gdal_streamed_alg\",\"command_line\":\"gdal vector pipeline read data/osm/roads.fgb\"}"
+    #CONNECTION "{\"type\":\"gdal_streamed_alg\",\"command_line\":\"gdal vector pipeline read --input data/province.shp\"}"
+    # DATA province
+    # TYPE POINT
+
+    #CONNECTION "roads.gdalg.json"
+    DATA "0"
+    CLASS
+      STYLE
+        COLOR 50 50 50
+      END
+    END
+  END
+END
+
+# map2img -m gdalg.map -o D:\Temp\mymap.png
+# gdal vector info '{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.000001\"}'o
