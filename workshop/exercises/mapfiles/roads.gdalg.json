@@ -1,0 +1,4 @@
+{
+    "type": "gdal_streamed_alg",
+    "command_line": "gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.0001"
+}
