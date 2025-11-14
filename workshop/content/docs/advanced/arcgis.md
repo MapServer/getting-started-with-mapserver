@@ -183,7 +183,7 @@ labelsCheckbox.addEventListener('change', (event) => {
     --8<-- "arcgis.js"
     ```
 
-??? Mapfile "stac.map"
+??? Mapfile "arcgis.map"
 
     ``` scala
     --8<-- "arcgis.map"

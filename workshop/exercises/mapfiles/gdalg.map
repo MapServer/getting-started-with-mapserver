@@ -1,14 +1,11 @@
 MAP
-  NAME "Roads"
+  NAME "GDALG"
   EXTENT 26.668678 58.339241 26.796582 58.409410
   SIZE 800 600
-  # CONFIG MS_ERRORFILE "/tmp/error.log"
-  CONFIG MS_ERRORFILE "C:/temp/error.log"
-  CONFIG CPL_DEBUG "ON"
+  IMAGECOLOR "#0A1E50"
   PROJECTION
     "init=epsg:4326"
   END
-  DEBUG 5
   WEB
     METADATA
       "ows_enable_request" "*"
@@ -16,32 +13,49 @@ MAP
     END
   END
 
+  SYMBOL
+    NAME "hatchsymbol"
+    TYPE hatch
+  END
+
   LAYER
-    NAME "roads"
+    NAME "buffered_roads"
     TYPE POLYGON
-    STATUS ON
-    DEBUG 5
-
-    # PATH=C:\GitHub\MapServer\sdk\release-1930-x64\bin;%PATH%
-    # $env:Path = "C:\GitHub\MapServer\build\RelWithDebInfo;C:\GitHub\MapServer\sdk\release-1930-x64\bin;C:\GitHub\MapServer\sdk\release-1930-x64\bin\gdal\apps;" + $env:Path
+    STATUS OFF
     CONNECTIONTYPE OGR
-    CONNECTION "{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.000001\"}"
-    # DATA "0"
-
-    # CONNECTION "{\"type\": \"gdal_streamed_alg\",\"command_line\":\"gdal vector pipeline read data/osm/roads.fgb\"}"
-    #CONNECTION "{\"type\":\"gdal_streamed_alg\",\"command_line\":\"gdal vector pipeline read --input data/province.shp\"}"
-    # DATA province
-    # TYPE POINT
-
-    #CONNECTION "roads.gdalg.json"
+    # note we need to use the full path to the dataset using the inline pipeline
+    CONNECTION '{"type": "gdal_streamed_alg","command_line": "gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001"}'
     DATA "0"
+    # CONNECTION "roads.gdalg.json"
+    # DATA "0"
     CLASS
       STYLE
-        COLOR 50 50 50
+        COLOR 50 100 180
+      END
+      STYLE
+        SYMBOL "hatchsymbol"
+        COLOR "#78C8FF"
+        WIDTH 0.1
+        ANGLE 45
+        SIZE 8
       END
     END
   END
+
+  # original unbuffered roads dataset
+  LAYER
+    NAME "roads"
+    TYPE LINE
+    STATUS OFF
+    CONNECTIONTYPE FLATGEOBUF
+    DATA "data/osm/roads.fgb"
+    CLASS
+      STYLE
+        WIDTH 0.8
+        COLOR "#DCF0FF"
+      END
+    END
+  END
+
 END
 
-# map2img -m gdalg.map -o D:\Temp\mymap.png
-# gdal vector info '{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.000001\"}'o

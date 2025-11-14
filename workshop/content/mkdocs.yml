@@ -30,6 +30,7 @@ nav:
         - OGC API - Features: outputs/ogcapi-features.md
     - Advanced:
         - ArcGIS Feature Server: advanced/arcgis.md
+        - GDAL Pipeline: advanced/gdalg.md
         - Vector Symbols: advanced/symbols.md
         - Clusters: advanced/clusters.md
         - SLD: advanced/sld.md
