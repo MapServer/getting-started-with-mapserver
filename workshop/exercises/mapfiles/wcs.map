@@ -1,52 +1,36 @@
 MAP
-  NAME "WCS"
-  EXTENT 26.668678 58.339241 26.796582 58.409410
-  UNITS DD
-  SIZE 800 600
-  MAXSIZE 5000
-  PROJECTION
-    "init=epsg:4326"
-  END
-
-OUTPUTFORMAT
-    NAME GEOTIFF_BYTE
-    DRIVER "GDAL/GTiff"
-    MIMETYPE "image/tiff"
-    IMAGEMODE BYTE
-    EXTENSION "tif"
-END
-
-  WEB
-    METADATA
-      ows_enable_request "*"
-      ows_srs "EPSG:4326 EPSG:3857"
-
-   "wcs_label"    "Test Label"
-   "wcs_description" "Test description"
-   "wcs_onlineresource"    "http://devgeo.cciw.ca/cgi-bin/mapserv/ecows"
-   "wcs_metadatalink_href" "http://devgeo.cciw.ca/index.html"
-
-    END
-  END
-
-  LAYER
-    NAME "dtm"
-    EXTENT 655000 6470000 660000 6475000
-    STATUS OFF
-    TYPE RASTER
-    # Map data: Estonian Land Board 2024
-    DATA "data/raster/54752_dtm_1m.tif"
+    NAME "WCS"
+    EXTENT 26.668678 58.339241 26.796582 58.40941
+    UNITS DD
+    SIZE 800 600
+    MAXSIZE 5000
     PROJECTION
-        "epsg:3301"
+        "epsg:4326"
     END
-    METADATA
-       "wcs_rangeset_axes" "bands"
-       "wcs_rangeset_name" "Landsat 5 TM Bands"
-       "wcs_rangeset_label" "Bands"
-       "wcs_rangeset_description" "Bands for Landsat 5 TM"
-       "wcs_rangeset_nullvalue" "-99"
-       "wcs_imagemode" "BYTE"
+    OUTPUTFORMAT
+        NAME "GEOTIFF"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/tiff"
+        IMAGEMODE FLOAT32
+        EXTENSION "tif"
     END
-  END
-
+    WEB
+        METADATA
+            "wcs_enable_request" "*"
+            "wcs_srs" "EPSG:4326 EPSG:3857"
+            "wcs_title" "Example WCS Mapfile"
+            "wcs_description" "Test description"
+            "wcs_onlineresource" "http://localhost:7000/"
+        END
+    END
+    LAYER
+        NAME "dtm"
+        EXTENT 655000 6470000 660000 6475000
+        STATUS OFF
+        TYPE RASTER
+        DATA "data/raster/54752_dtm_1m.tif" # Map data: Estonian Land Board 2024
+        PROJECTION
+            "epsg:3301"
+        END
+    END
 END
