@@ -1,0 +1,5 @@
+[data-md-color-scheme="mapserver"] {
+    --md-primary-fg-color: #3333A4; /* #3333A4 purple*/
+    --md-primary-fg-color--light: #6c98c6;
+    --md-primary-fg-color--dark: #33A433; /* #33A433 green*/
+}
