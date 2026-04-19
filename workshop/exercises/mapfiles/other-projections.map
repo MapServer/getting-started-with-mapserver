@@ -1,0 +1,84 @@
+MAP
+    NAME "OTHER_PROJECTIONS"
+    SIZE 1200 1200
+    EXTENT -18019909.21 -9009954.61 18019909.21 9009954.61
+
+    PROJECTION
+        "ESRI:53009"
+    END
+
+    IMAGETYPE "png"
+
+    MAXSIZE 8096
+
+    SYMBOL
+        NAME "circlef"
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            10 10
+        END
+    END
+
+    WEB
+        METADATA
+            "ows_enable_request" "*"
+            "ows_onlineresource" "http://localhost/path/to/other-projections?"
+            "ows_srs" "ESRI:53009 EPSG:4326"
+            "wfs_getfeature_formatlist" "geojson"
+        END
+    END
+
+    OUTPUTFORMAT
+        NAME "geojson"
+        DRIVER "OGR/GEOJSON"
+        MIMETYPE "application/geo+json"
+        FORMATOPTION "FORM=SIMPLE"
+    END
+
+    LAYER
+        NAME "raster"
+        TYPE RASTER
+        EXTENT -180 -90 180 90
+        DATA "data/naturalearth/NE2_50M_SR_SMALL.tif"
+        PROJECTION
+            "EPSG:4326"
+        END
+    END
+
+    LAYER
+        NAME "countries"
+        TYPE POLYGON
+        CONNECTIONTYPE OGR
+        CONNECTION "data/naturalearth/ne_110m_admin_0_countries.fgb"
+        PROJECTION
+            "EPSG:4326"
+        END
+        CLASS
+            STYLE
+                OUTLINECOLOR 50 50 50
+                OUTLINEWIDTH 0.4 # the width of the polygon outline
+            END
+        END
+    END
+
+    LAYER
+        NAME "cities"
+        TYPE POINT
+        PROJECTION
+            "ESRI:53009"
+        END
+        METADATA
+            "gml_include_items" "all" 
+        END
+        CONNECTIONTYPE OGR
+        CONNECTION "data/naturalearth/worldcity_53009.geojson"
+        CLASS
+            STYLE
+                SYMBOL "circlef"
+                COLOR "#ff6600"
+                SIZE 6
+            END
+        END
+    END
+END
