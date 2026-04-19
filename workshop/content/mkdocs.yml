@@ -36,7 +36,7 @@ nav:
         - Clusters: advanced/clusters.md
         - SLD: advanced/sld.md
         - STAC: advanced/stac.md
-        # - WCS and non-EPSG Projections: advanced/wcs-projections.md
+        - Non-EPSG CRSs: advanced/other-projections.md
         # - Apache: advanced/apache.md
         # - MapScript: advanced/mapscript.md
     - Summary: summary.md

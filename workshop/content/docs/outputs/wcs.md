@@ -122,6 +122,26 @@ rather than to display it as a map image. However, for the purposes of this tuto
 WCS is not natively supported in OpenLayers, but we can use the [ImageWMS](https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS.html) source as a workaround
 by overriding the request parameters to call WCS, and display the results as an image layer on the map.
 
+Typically WCS is used to return raw raster formats such as GeoTIFFs, but viewing these in a browser requires rendering the raw
+pixel values using additional JavaScript libraries such as [geotiff.js](https://geotiffjs.github.io/).
+
+In this tutorial we instead request a rendered image (`FORMAT: 'image/png'`) and use [CSS filters](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter)
+to visually confirm that data is being returned correctly.
+
+```js
+const wcsSource = new ImageWMS({
+    url,
+    params: {
+        SERVICE: 'WCS',
+        VERSION: '2.0.1',
+        REQUEST: 'GetCoverage',
+        FORMAT: 'image/png',
+        COVERAGEID: 'dtm',
+        SUBSETTINGCRS: 'http://www.opengis.net/def/crs/EPSG/0/3857',
+        OUTPUTCRS: 'http://www.opengis.net/def/crs/EPSG/0/3857',
+    }
+```
+
 !!! tip
 
     The `COVERAGEID` corresponds to the MapServer `LAYER` `NAME`
@@ -145,11 +165,11 @@ by overriding the request parameters to call WCS, and display the results as an 
 1. From the command line, test the WCS 2.0.1 protocol by making a `GetCoverage` request and saving the output as a GeoTIFF using the configured `OUTPUTFORMAT` (MapServer format name, not a MIME type).
    Then use `gdal raster info` to check the output file.
 
-```
-mapserv -nh "QUERY_STRING=map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=GEOTIFF&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=x(26.6507,26.7362)&SUBSET=y(58.3414,58.3879)&SCALESIZE=x(400),y(400)" \
-> output.tif
-gdal raster info output.tif
-```
+    ```bash
+    mapserv -nh "QUERY_STRING=map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=GEOTIFF&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=x(26.6507,26.7362)&SUBSET=y(58.3414,58.3879)&SCALESIZE=x(400),y(400)" \
+    > output.tif
+    gdal raster info output.tif
+    ```
 
 2. Add the COG output format to the Mapfile and make a `GetCoverage` request to download a COG-formatted output. Check the output file with `gdal raster info` to see the difference in metadata.
 
@@ -157,17 +177,17 @@ gdal raster info output.tif
    for example `COVERAGEID` becomes `COVERAGE`, and the CRS parameters are different. You can also remove the entire `imageLoadFunction` as WCS 1.0.0
    more closely matches the WMS protocol, using `BBOX`,`WIDTH`, and `HEIGHT` parameters to specify the area and size of the output image.
 
-```js
-params: {
-    SERVICE: 'WCS',
-    VERSION: '1.0.0',
-    REQUEST: 'GetCoverage',
-    FORMAT: 'image/png',
-    COVERAGE: 'dtm',
-    CRS: 'EPSG:3857',
-    RESPONSE_CRS: 'EPSG:3857',
-},
-```
+    ```js
+    params: {
+        SERVICE: 'WCS',
+        VERSION: '1.0.0',
+        REQUEST: 'GetCoverage',
+        FORMAT: 'image/png',
+        COVERAGE: 'dtm',
+        CRS: 'EPSG:3857',
+        RESPONSE_CRS: 'EPSG:3857',
+    },
+    ```
 
 ## Possible Errors
 
