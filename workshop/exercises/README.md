@@ -31,3 +31,9 @@ To view live logs:
 ```bash
 docker logs --follow mapserver
 ```
+
+To force getting the latest Docker images:
+
+```bash
+docker compose up -d --pull always
+```
