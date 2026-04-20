@@ -9,7 +9,6 @@ Workshop attendees don't need to build these images themselves, they can simply 
 ```
 start "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 
-# add --no-cache to the command below to force getting the latest code
 # can also test other repos / branches
 
 cd D:\GitHub\getting-started-with-mapserver\docker
@@ -21,6 +20,15 @@ docker build `
     --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
     .
 
+# add --no-cache to the command below to force getting the latest code
+docker build `
+    --tag "mapserver-workshop" `
+    --target=runner `
+    --build-arg=MAPSERVER_BRANCH=main `
+    --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
+    --no-cache `
+    .
+
 # docker run -it --name mapserver-workshop -p 8080:8080 mapserver-workshop
 
 docker tag mapserver-workshop geographika/mapserver-workshop
@@ -29,6 +37,14 @@ docker tag mapserver-workshop geographika/mapserver-workshop
 # docker images
 docker push geographika/mapserver-workshop
 ```
+
+If there are connection issues, try running the following test from the host, and check proxy/DNS settings:
+
+```
+ping archive.ubuntu.com
+```
+
+Also check https://status.canonical.com/
 
 ## Testing
 
@@ -61,9 +77,12 @@ docker tag mapserver-workshop-demo geographika/mapserver-workshop-demo
 # docker push geographika/mapserver-workshop-demo
 
 # DigitalOcean
-doctl auth init
+# https://mapserver-workshop-k8hvw.ondigitalocean.app/
+# used for https://mapserver.github.io/getting-started-with-mapserver-demo/
+# Login and get a new API token with permissions for "registry"
+
+doctl auth init -t dop_v1_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 doctl registry login
 docker tag mapserver-workshop-demo registry.digitalocean.com/geographika/mapserver-workshop-demo:latest
 docker push registry.digitalocean.com/geographika/mapserver-workshop-demo:latest
-
 ```

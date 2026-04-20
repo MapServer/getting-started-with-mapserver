@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-full-3.11.4 AS gdal
+FROM ghcr.io/osgeo/gdal:ubuntu-full-3.12.2 AS gdal
 # see https://github.com/OSGeo/gdal/tree/master/docker#ubuntu-based
 
 FROM gdal AS builder
@@ -9,13 +9,43 @@ RUN --mount=type=cache,target=/var/cache,sharing=locked \
     --mount=type=cache,target=/root/.cache \
     apt-get update \
     && apt-get upgrade --assume-yes \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends bison \
-        flex python3-lxml libfribidi-dev swig \
-        cmake librsvg2-dev colordiff libpq-dev libpng-dev libjpeg-dev libgif-dev libgeos-dev libgd-dev \
-        libfreetype6-dev libfcgi-dev libcurl4-gnutls-dev libcairo2-dev libxml2-dev \
-        libxslt1-dev python3-dev python3-pip python3-setuptools python3-venv php-dev libexempi-dev lcov lftp ninja-build git curl \
-        clang libprotobuf-c-dev protobuf-c-compiler libharfbuzz-dev libcairo2-dev librsvg2-dev \
-        unixodbc-dev \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    bison \
+    flex \
+    python3-lxml \
+    libfribidi-dev \
+    swig \
+    cmake \
+    librsvg2-dev \
+    colordiff \
+    libpq-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libgif-dev \
+    libgeos-dev \
+    libgd-dev \
+    libfreetype6-dev \
+    libfcgi-dev \
+    libcurl4-gnutls-dev \
+    libcairo2-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    python3-dev \
+    php-dev \
+    libexempi-dev \
+    lcov \
+    lftp \
+    ninja-build \
+    git \
+    curl \
+    clang \
+    libprotobuf-c-dev \
+    protobuf-c-compiler \
+    libharfbuzz-dev \
+    python3-pip \
+    python3-setuptools \
+    python3-venv \
+    unixodbc-dev \
     && ln -s /usr/lib/*-linux-gnu/libproj.so.*[0] $(echo /usr/lib/*-linux-gnu)/libproj.so
 
 ARG MAPSERVER_BRANCH
@@ -37,7 +67,7 @@ RUN cmake .. \
     -DWITH_CLIENT_WMS=1 \
     -DWITH_CLIENT_WFS=1 \
     -DWITH_OGCAPI=1 \
-    -DWITH_KML=0 \
+    -DWITH_KML=1 \
     -DWITH_SOS=0 \
     -DWITH_XMLMAPFILE=0 \
     -DWITH_CAIRO=1 \
@@ -87,7 +117,7 @@ RUN a2enmod fcgid headers status \
     s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
     ' '{}' ';' \
     && sed -ri 's!LogFormat "(.*)" combined!LogFormat "%{us}T %{X-Request-Id}i \1" combined!g' /etc/apache2/apache2.conf \
-    && echo 'ErrorLogFormat "%{X-Request-Id}i [%l] [pid %P] %M"' >> /etc/apache2/apache2.conf \
+    && echo 'ErrorLogFormat "%{X-Request-Id}i [%l] [pid %P] %M"' > /etc/apache2/conf-enabled/000-error-log-format.conf \
     && sed -i -e 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-available/000-default.conf \
     && sed -i -e 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf \
     && rm -rf /etc/apache2/conf-enabled/other-vhosts-access-log.conf
