@@ -1,0 +1,98 @@
+[project]
+site_name = "Getting Started with MapServer"
+site_description = "MapServer is an Open Source platform for publishing spatial data and interactive mapping applications to the web. This workshop will cover publishing geospatial data to the Web using MapServer in support of the suite of OGC API standards."
+site_author = "The MapServer community"
+copyright = "© 2025 Seth Girvin and the MapServer community"
+site_url = "https://mapserver.github.io/getting-started-with-mapserver"
+repo_url = "https://github.com/mapserver/getting-started-with-mapserver"
+docs_dir = "docs"
+directory_urls = true
+extra_css = [
+    "assets/stylesheets/mapserver.css",
+    "assets/stylesheets/custom.css"
+]
+extra_javascript = [
+    "assets/javascripts/custom.js"
+]
+
+nav = [
+    { "Home" = "index.md" },
+    { "Workshop Environment Setup" = "setup.md" },
+    { "Introduction" = [
+        { "Workshop Overview" = "introduction/introduction.md" },
+        { "Docker" = "introduction/docker.md" },
+        { "MapServer" = "introduction/mapserver.md" },
+        { "Command Line" = "introduction/commandline.md" },
+        { "OpenLayers" = "introduction/openlayers.md" }
+    ]},
+    { "Mapfile" = [
+        { "Lines" = "mapfile/lines.md" },
+        { "Points" = "mapfile/points.md" },
+        { "Labels" = "mapfile/labels.md" },
+        { "Polygons" = "mapfile/polygons.md" }
+    ]},
+    { "Inputs" = [
+        { "Raster Data" = "inputs/raster.md" },
+        { "Vector Data" = "inputs/vector.md" },
+        { "Databases" = "inputs/databases.md" }
+    ]},
+    { "Outputs" = [
+        { "WMS" = "outputs/wms.md" },
+        { "WFS" = "outputs/wfs.md" },
+        { "WCS" = "outputs/wcs.md" },
+        { "Tiles" = "outputs/tiles.md" },
+        { "Vector Tiles" = "outputs/vector-tiles.md" },
+        { "OGC API - Features" = "outputs/ogcapi-features.md" }
+    ]},
+    { "Advanced" = [
+        { "ArcGIS Feature Server" = "advanced/arcgis.md" },
+        { "GDAL Pipeline" = "advanced/gdalg.md" },
+        { "Vector Symbols" = "advanced/symbols.md" },
+        { "Clusters" = "advanced/clusters.md" },
+        { "SLD" = "advanced/sld.md" },
+        { "STAC" = "advanced/stac.md" },
+        { "Non-EPSG CRSs" = "advanced/other-projections.md" }
+    ]},
+    { "Summary" = "summary.md" },
+    { "Credits and Thanks" = "credits.md" }
+]
+
+[project.theme]
+language = "en"
+variant = "material"
+scheme = "mapserver"
+favicon = "assets/favicon.ico"
+logo = "assets/images/mapserver-logo.png"
+features = [
+    "navigation.indexes",
+    "content.code.copy",
+    "content.code.select"
+]
+
+# see https://github.com/zensical/zensical/blob/master/python/zensical/bootstrap/zensical.toml
+# for examples
+
+[project.markdown_extensions.meta]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.snippets]
+check_paths = true
+base_path = ["../../workshop/exercises/mapfiles", "../../workshop/exercises/app/js", "../../workshop/exercises/app", "./docs"]
+
+[project.extra]
+homepage = "https://mapserver.github.io/getting-started-with-mapserver"
