@@ -13,6 +13,9 @@ start "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 
 cd D:\GitHub\getting-started-with-mapserver\docker
 
+# MAPSERVER_BRANCH=main
+# MAPSERVER_BRANCH=branch-8-6
+
 docker build `
     --tag "mapserver-workshop" `
     --target=runner `
@@ -49,8 +52,13 @@ Also check https://status.canonical.com/
 ## Testing
 
 ```
+docker pull geographika/mapserver-workshop:latest
+# docker stop mapserver-workshop
+# docker rm mapserver-workshop
+docker run -it --name mapserver-workshop geographika/mapserver-workshop:latest bash
 docker start mapserver-workshop
 docker exec -it mapserver-workshop bash
+# mapserv -v
 ```
 
 ## Build the Demo Image
