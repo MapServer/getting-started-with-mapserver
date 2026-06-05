@@ -29,10 +29,10 @@
 
 services:
   mapserver:
-    image: camptocamp/mapserver:8.4-gdal3.10
+    image: geographika/mapserver-workshop:latest
     container_name: mapserver2
     ports:
-      - 7000:80
+      - 7000:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -56,7 +56,7 @@ services:
 
   # from https://github.com/kartoza/docker-postgis/blob/develop/docker-compose.yml
   db:
-    image: kartoza/postgis:17-3.5
+    image: kartoza/postgis:18-3.6
     container_name: db
     volumes:
       - ./postgis-data:/var/lib/postgresql
