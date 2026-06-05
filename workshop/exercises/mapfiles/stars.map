@@ -2,7 +2,7 @@ MAP
     NAME "Stars!"
     EXTENT -42.33528830884047 -47.25854720678822 43.404846801027695 24.75957883214916
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
     SIZE 400 400
     FONTSET "data/fonts/fontset.txt"

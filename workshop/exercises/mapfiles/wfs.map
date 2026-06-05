@@ -3,7 +3,7 @@ MAP
     EXTENT -180 -90 180 90
     SIZE 400 400 #
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
 
     OUTPUTFORMAT
@@ -28,7 +28,7 @@ MAP
         NAME "places"
         TYPE POINT
         PROJECTION
-            "init=epsg:4326"
+            "epsg:4326"
         END
         EXTENT -180.0 -90.0 180.0 90
         STATUS OFF

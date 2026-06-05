@@ -3,7 +3,7 @@ MAP
     EXTENT 17.77 43.31 17.83 43.36
     SIZE 800 600
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
     FONTSET "data/fonts/fontset.txt"
     WEB

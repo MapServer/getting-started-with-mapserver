@@ -4,24 +4,24 @@ MAP
     UNITS DD
     SIZE 800 600
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
-    SYMBOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-  NAME 'octahedron'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-  TYPE VECTOR                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  POINTS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-    20 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    22 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    24 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    24 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    22 24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    20 24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    18 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    18 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    20 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-  FILLED FALSE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-END  
+    SYMBOL
+  NAME 'octahedron'
+  TYPE VECTOR
+  POINTS
+    20 18
+    22 18
+    24 20
+    24 22
+    22 24
+    20 24
+    18 22
+    18 20
+    20 18
+  END
+  FILLED FALSE
+  END
     SYMBOL
         NAME "marsh_isom"
         TYPE VECTOR
@@ -181,17 +181,15 @@ END
         END
         CLASS
             EXPRESSION "forest"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-  STYLE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    #COLOR 231 255 170                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-    COLOR 34 139 34
-  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-  STYLE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    SYMBOL "tree" # "octahedron"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    SIZE 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-    COLOR 100 100 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-  END  
-
+             STYLE
+                #COLOR 231 255 170
+                COLOR 34 139 34
+              END
+              STYLE
+                SYMBOL "tree" # "octahedron"
+                SIZE 10
+                COLOR 100 100 100
+            END
             #STYLE
             #    SYMBOL "paper"
             #END

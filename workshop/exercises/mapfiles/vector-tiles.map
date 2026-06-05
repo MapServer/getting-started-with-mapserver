@@ -3,13 +3,13 @@ MAP
     EXTENT -20037508.34 -20048966.1 20037508.34 20048966.1
     SIZE 256 256
     PROJECTION
-        "init=epsg:3857"
+        "epsg:3857"
     END
     LAYER
         NAME "countries"
         TYPE POLYGON
         PROJECTION
-            "init=epsg:4326"
+            "epsg:4326"
         END
         EXTENT -180.0 -90.0 180.0 90
         STATUS OFF

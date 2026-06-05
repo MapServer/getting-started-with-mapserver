@@ -8,7 +8,7 @@ MAP
 
     # the projection used for the map
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
 
 
