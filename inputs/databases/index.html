@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.43">
+      <meta name="generator" content="zensical-0.0.44">
     
     
       
@@ -1588,9 +1588,9 @@ creating a new PostgreSQL connection:</p>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># navigate to the folder containing the OSM FlatGeobuf files</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">cd</span><span class="w"> </span>/etc/mapserver/data/osm
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># import the water polygons dataset to the Postgres database in the Postgres Docker image</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;PostgreSQL&quot;</span><span class="w"> </span>PG:<span class="s2">&quot;dbname=gis user=docker password=docker host=db port=5432&quot;</span><span class="w"> </span>-nln<span class="w"> </span>water_a<span class="w"> </span>water_a.fgb
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>gdal<span class="w"> </span>vector<span class="w"> </span>convert<span class="w"> </span>water_a.fgb<span class="w"> </span>PG:<span class="s2">&quot;dbname=gis user=docker password=docker host=db port=5432&quot;</span><span class="w"> </span>--output-layer<span class="w"> </span>water_a<span class="w"> </span>--overwrite
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># now check the data details in the database</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>ogrinfo<span class="w"> </span>PG:<span class="s2">&quot;host=db user=docker password=docker dbname=gis port=5432&quot;</span><span class="w"> </span>water_a<span class="w"> </span>-summary
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span>PG:<span class="s2">&quot;host=db user=docker password=docker dbname=gis port=5432&quot;</span><span class="w"> </span>--layer<span class="w"> </span>water_a<span class="w"> </span>--summary
 </span></code></pre></div>
 <h2 id="code">Code</h2>
 <!--
@@ -1653,7 +1653,7 @@ Online example not available as no PostGIS installation on the server
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="mi">600</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nc">PROJECTION</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="s">&quot;init=epsg:4326&quot;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="s">&quot;epsg:4326&quot;</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nc">END</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nc">WEB</span>
