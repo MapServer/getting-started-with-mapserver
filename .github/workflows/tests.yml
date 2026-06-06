@@ -22,7 +22,7 @@ jobs:
       - name: Test Mapfiles
         run: |
           pip install mappyfile
-          mappyfile validate exercises/mapfiles/**/*.map
+          mappyfile validate exercises/mapfiles/*.map
       - name: Install doc requirements 📦
         run: |
           cd content
