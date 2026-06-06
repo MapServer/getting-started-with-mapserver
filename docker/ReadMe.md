@@ -16,23 +16,14 @@ cd D:\GitHub\getting-started-with-mapserver\docker
 # MAPSERVER_BRANCH=main
 # MAPSERVER_BRANCH=branch-8-6
 
-docker build `
-    --tag "mapserver-workshop" `
-    --target=runner `
-    --build-arg=MAPSERVER_BRANCH=main `
-    --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
-    .
-
 # add --no-cache to the command below to force getting the latest code
+
 docker build `
     --tag "mapserver-workshop" `
     --target=runner `
     --build-arg=MAPSERVER_BRANCH=main `
     --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
-    --no-cache `
     .
-
-# docker run -it --name mapserver-workshop -p 8080:8080 mapserver-workshop
 
 docker tag mapserver-workshop geographika/mapserver-workshop
 # docker login
