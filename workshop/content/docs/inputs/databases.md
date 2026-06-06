@@ -60,9 +60,9 @@ docker exec -it mapserver2 bash
 # navigate to the folder containing the OSM FlatGeobuf files
 cd /etc/mapserver/data/osm
 # import the water polygons dataset to the Postgres database in the Postgres Docker image
-ogr2ogr -f "PostgreSQL" PG:"dbname=gis user=docker password=docker host=db port=5432" -nln water_a water_a.fgb
+gdal vector convert water_a.fgb PG:"dbname=gis user=docker password=docker host=db port=5432" --output-layer water_a --overwrite
 # now check the data details in the database
-ogrinfo PG:"host=db user=docker password=docker dbname=gis port=5432" water_a -summary
+gdal vector info PG:"host=db user=docker password=docker dbname=gis port=5432" --layer water_a --summary
 ```
 
 ## Code

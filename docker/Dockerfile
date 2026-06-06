@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-full-3.12.2 AS gdal
+FROM ghcr.io/osgeo/gdal:ubuntu-full-3.13.1 AS gdal
 # see https://github.com/OSGeo/gdal/tree/master/docker#ubuntu-based
 
 FROM gdal AS builder
@@ -73,14 +73,18 @@ RUN cmake .. \
     -DWITH_CAIRO=1 \
     -DWITH_RSVG=1 \
     -DUSE_PROJ=1 \
+    -DPROJ_INCLUDE_DIR=/usr/local/gdal-internal/include \
+    -DPROJ_LIBRARY=/usr/local/gdal-internal/lib/libinternalproj.so \
     -DUSE_WFS_SVR=1 \
     -DUSE_OGCAPI_SVR=1 \
     -DWITH_ORACLESPATIAL=0 \
     -DWITH_PYTHON=1 \
     -DWITH_MSSQL2008=0
 
+# Run the make command for pythonmapscript-wheel
 RUN cmake --build . --target pythonmapscript-wheel
 RUN ninja install
+
 
 FROM gdal AS runner
 LABEL maintainer="sethg@geographika.co.uk"

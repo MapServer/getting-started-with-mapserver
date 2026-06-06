@@ -3,9 +3,9 @@ MAP
     EXTENT 393234.3937012631 5208170.531190613 495403.1713263091 5303964.876754144
     SIZE 800 600
     PROJECTION
-        "init=epsg:26915"
+        "epsg:26915"
     END
-    FONTSET "data/fonts/fontset.txt"    
+    FONTSET "data/fonts/fontset.txt"
     WEB
         METADATA
             "ows_enable_request" "*" 

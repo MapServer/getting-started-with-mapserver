@@ -7,7 +7,7 @@ MAP
   IMAGETYPE PNG24
 
   PROJECTION
-    "init=epsg:4326"
+    "epsg:4326"
   END
 
   WEB

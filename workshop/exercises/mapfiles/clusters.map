@@ -4,7 +4,7 @@ MAP
     UNITS DD
     SIZE 800 600
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
     FONTSET "data/fonts/fontset.txt"
     WEB

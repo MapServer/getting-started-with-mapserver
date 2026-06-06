@@ -4,7 +4,7 @@ MAP
     UNITS DD
     SIZE 800 600
     PROJECTION
-        "init=epsg:4326"
+        "epsg:4326"
     END
     SYMBOL
         NAME "vertline" # we can use this to reference the SYMBOL in STYLEs
@@ -99,7 +99,6 @@ MAP
                 COLOR 102 102 102
                 SIZE 18
             END
-        END
         END
     END
 END

@@ -1,13 +1,14 @@
-name: Test documentation ⚙️
+name: Test documentation and Mapfiles ⚙️
 
 on:
   pull_request:
     paths:
       - 'workshop/content/**'
+      - 'workshop/exercises/mapfiles/**'
 
 defaults:
   run:
-    working-directory: workshop/content
+    working-directory: workshop
 
 jobs:
   build:
@@ -18,9 +19,16 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.x'
-      - name: Install requirements 📦
+      - name: Test Mapfiles
         run: |
+          pip install mappyfile
+          mappyfile validate exercises/mapfiles/*.map
+      - name: Install doc requirements 📦
+        run: |
+          cd content
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Deploy 📦
-        run: zensical build --clean --strict
+        run: |
+          cd content
+          zensical build --clean --strict

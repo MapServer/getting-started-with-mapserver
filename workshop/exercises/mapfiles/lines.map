@@ -4,7 +4,7 @@ MAP
   SIZE 800 600
 
   PROJECTION
-    "init=epsg:4326"
+    "epsg:4326"
   END
 
   WEB

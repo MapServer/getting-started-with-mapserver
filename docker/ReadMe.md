@@ -13,23 +13,17 @@ start "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 
 cd D:\GitHub\getting-started-with-mapserver\docker
 
-docker build `
-    --tag "mapserver-workshop" `
-    --target=runner `
-    --build-arg=MAPSERVER_BRANCH=main `
-    --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
-    .
+# MAPSERVER_BRANCH=main
+# MAPSERVER_BRANCH=branch-8-6
 
 # add --no-cache to the command below to force getting the latest code
+
 docker build `
     --tag "mapserver-workshop" `
     --target=runner `
     --build-arg=MAPSERVER_BRANCH=main `
     --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
-    --no-cache `
     .
-
-# docker run -it --name mapserver-workshop -p 8080:8080 mapserver-workshop
 
 docker tag mapserver-workshop geographika/mapserver-workshop
 # docker login
@@ -49,8 +43,13 @@ Also check https://status.canonical.com/
 ## Testing
 
 ```
+docker pull geographika/mapserver-workshop:latest
+# docker stop mapserver-workshop
+# docker rm mapserver-workshop
+docker run -it --name mapserver-workshop geographika/mapserver-workshop:latest bash
 docker start mapserver-workshop
 docker exec -it mapserver-workshop bash
+# mapserv -v
 ```
 
 ## Build the Demo Image
