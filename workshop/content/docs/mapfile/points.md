@@ -44,7 +44,7 @@ LiberationMono         LiberationMono-Regular.ttf
 LiberationSans         LiberationSans-Regular.ttf
 ```
 
-In the Mapfile itself we then reference this file and use any of the font aliases for symbols and labels. 
+We then reference this file in the Mapfile, and use any of the font aliases for symbols and labels. 
 
 In the example below we're using a
 cinema character from Google's [Material Symbols](https://fonts.google.com/icons).
@@ -66,6 +66,7 @@ END
 !!! example
 
     - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+    - Inbuilt OpenLayers viewer: <http://localhost:7000/points/?template=openlayers&mode=browse&layers=all>
     - Local OpenLayers example: <http://localhost:7001/points.html>
 
 ??? JavaScript "points.js"
