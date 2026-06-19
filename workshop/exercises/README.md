@@ -7,6 +7,8 @@ First ensure the Docker service is running, then to start Docker Compose,
 navigate to the `workshop/exercises` folder and run the following command:
 
 ```bash
+# change the path below to match your setup
+cd D:\GitHub\getting-started-with-mapserver\workshop\exercises
 docker compose up -d
 ```
 

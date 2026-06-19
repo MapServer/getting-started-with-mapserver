@@ -4,7 +4,7 @@ title: Getting Started with MapServer
 
 # Welcome to the Getting Started with MapServer workshop!
 
-Version: 1.0
+Version: 1.1
 
 ![mapserver logo](assets/images/mapserver-banner-large.png)
 
