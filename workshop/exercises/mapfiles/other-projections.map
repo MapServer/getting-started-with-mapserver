@@ -1,5 +1,5 @@
 MAP
-    NAME "OTHER_PROJECTIONS"
+    NAME "Other_Projections"
     SIZE 1200 1200
     EXTENT -18019909.21 -9009954.61 18019909.21 9009954.61
 
@@ -23,7 +23,6 @@ MAP
     WEB
         METADATA
             "ows_enable_request" "*"
-            "ows_onlineresource" "http://localhost/path/to/other-projections?"
             "ows_srs" "ESRI:53009 EPSG:4326"
             "wfs_getfeature_formatlist" "geojson"
         END
