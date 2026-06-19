@@ -7,6 +7,7 @@ MAP
     "init=epsg:4326"
   END
   WEB
+    IMAGEPATH "/etc/mapserver/tmp/"
     METADATA
       "ows_enable_request" "*"
       "ows_srs" "EPSG:4326 EPSG:3857"

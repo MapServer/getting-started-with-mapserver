@@ -11,6 +11,9 @@ MAP
         "epsg:4326"
     END
 
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
+    END
 
     # the extent of the map in the projection
     EXTENT -180 -90 180 90
