@@ -1,10 +1,14 @@
 MAP
     NAME "WFS"
     EXTENT -180 -90 180 90
-    SIZE 400 400 #
+    SIZE 400 400
     PROJECTION
-        "epsg:4326"
+        "EPSG:4326"
     END
+
+    SYMBOLSET "symbols.sym"
+
+    IMAGETYPE "png"
 
     OUTPUTFORMAT
         NAME "geojson"
@@ -21,7 +25,6 @@ MAP
             "ows_enable_request" "*" # this enables all OGC requests
             "wfs_getfeature_formatlist" "geojson"
             "wfs_srs" "EPSG:4326 EPSG:3857"
-            "ows_onlineresource" "http://localhost:7000/"
         END
     END
     LAYER
@@ -43,9 +46,9 @@ MAP
         DATA "ne_50m_populated_places_simple"
         CLASS
             STYLE
-                COLOR 60 179 113
-                OUTLINECOLOR 255 255 255
-                OUTLINEWIDTH 0.1
+                SYMBOL "circle"
+                SIZE 22
+                COLOR "#60616c"
             END
         END
     END
