@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.44">
+      <meta name="generator" content="zensical-0.0.45">
     
     
       
@@ -1361,17 +1361,17 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>mapserv<span class="w"> </span>-v
 </span></code></pre></div>
 <p>This should output the MapServer version, along with other details such as PROJ and GDAL versions, and supported input and output formats:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MapServer version 8.4.0 PROJ version 9.5 GDAL version 3.10 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MapServer version 8.7-dev PROJ version 9.8 GDAL version 3.13 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE 
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=RSVG SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER 
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=OGCAPI_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS SUPPORTS=PBF INPUT=JPEG 
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=OGCAPI_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS SUPPORTS=PBF INPUT=JPEG INPUT=POSTGIS 
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
 </span></code></pre></div>
 <p>When run through a web server, data is passed to the <code>mapserv</code> application, which generates output that is then sent back through the web server.
 All web requests can be recreated and tested on the command line, this makes it a handy debugging tool. </p>
 <p>To test a URL such as <a href="http://localhost:7000/?map=/etc/mapserver/countries.map&amp;mode=map">http://localhost:7000/?map=/etc/mapserver/countries.map&amp;mode=map</a> run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mapserv<span class="w"> </span><span class="s2">&quot;QUERY_STRING=map=/etc/mapserver/countries.map&amp;mode=map&quot;</span>
 </span></code></pre></div>
-<p>This will output a PNG image to the command line - this will look like gargabe!</p>
+<p>This will output a PNG image to the command line - this will look like garbage!</p>
 <p>We can save the output by redirecting it to a file using <code>&gt;</code>. 
 As the <code>mapserv</code> program returns responses for a web client it also returns HTTP headers. To create a valid image file we need to strip these
 header by using the <code>-nh</code> (no headers) switch.</p>
@@ -1390,7 +1390,7 @@ This is set in in the <code>volumes</code> section, using the syntax <code>- LOC
 </span></code></pre></div>
 </div>
 <p>We can see all command options using the <code>--help</code> switch:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mapserver<span class="w"> </span>--help
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mapserv<span class="w"> </span>--help
 </span></code></pre></div>
 <p>All MapServer output can be returned on the command line, not just images. For example, to see a WMS GetCapabilities XML response, run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mapserv<span class="w"> </span>-nh<span class="w"> </span><span class="s2">&quot;QUERY_STRING=map=/etc/mapserver/points.map&amp;SERVICE=WMS&amp;REQUEST=GetCapabilities&quot;</span>

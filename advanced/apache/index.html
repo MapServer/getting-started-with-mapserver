@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.44">
+      <meta name="generator" content="zensical-0.0.45">
     
     
       
@@ -1380,9 +1380,9 @@
 <h2 id="overview">Overview</h2>
 <p>The Apache web server is used by the workshop Docker image. Since version 8.0 MapServer has a global config file.</p>
 <p>At its heart MapServer is a command-line application that can be accessed through a web server.</p>
-<p>https://github.com/camptocamp/docker-mapserver/blob/master/runtime/usr/local/bin/start-server</p>
-<p>Apache has a <a href="https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/apache2/conf-enabled/mapserver.conf">configuration file</a>.</p>
-<p><a href="https://httpd.apache.org/mod_fcgid/">mod_fcgid module</a>, which is an Apache module that provides FastCGI support.</p>
+<p>Apache has a <a href="https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/runtime/etc/apache2/conf-enabled/mapserver.conf">configuration file</a>.
+The Docker image uses a [start-up script(https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/runtime/usr/local/bin/start-server).</p>
+<p>MapServer uses the <a href="https://httpd.apache.org/mod_fcgid/">mod_fcgid module</a>, which is an Apache module that provides FastCGI support.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FcgidMaxRequestsPerProcess ${MAX_REQUESTS_PER_PROCESS}
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>FcgidMinProcessesPerClass ${MIN_PROCESSES}
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>FcgidMaxProcessesPerClass ${MAX_PROCESSES}
@@ -1391,7 +1391,7 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>FcgidIOTimeout ${IO_TIMEOUT}
 </span></code></pre></div>
 <p>These are all documented on the [reference page(https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html).</p>
-<p>These all have defaults in the Docker file, but can be overriden using environment variables.</p>
+<p>These all have defaults in the Docker file, but can be overridden using environment variables.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ENV MS_DEBUGLEVEL=0 \
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    MS_ERRORFILE=stderr \
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    MAPSERVER_CONFIG_FILE=/etc/mapserver.conf \
@@ -1402,7 +1402,7 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    BUSY_TIMEOUT=300 \
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    IDLE_TIMEOUT=300 \
 </span></code></pre></div>
-<p>All requests to the server are mapped to <code>mapserv_wrapper</code> - a small </p>
+<p>All requests to the server are mapped to <a href="https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/runtime/usr/local/bin/mapserv_wrapper">mapserv_wrapper</a> - a small wrapper script. </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ScriptAliasMatch &quot;^${MAPSERVER_BASE_PATH}/(.*)&quot; /usr/local/bin/mapserv_wrapper/$1
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ScriptAliasMatch &quot;^${MAPSERVER_BASE_PATH}&quot; /usr/local/bin/mapserv_wrapper
 </span></code></pre></div>

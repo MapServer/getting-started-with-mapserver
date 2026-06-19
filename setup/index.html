@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.44">
+      <meta name="generator" content="zensical-0.0.45">
     
     
       
@@ -1661,7 +1661,7 @@ We strongly advise to install Docker before the workshop starts.</p>
 <p>MapServer can be installed directly to various operating systems (see the <a href="https://www.mapserver.org/installation/index.html">documentation</a>
 for more information), but Docker is used so a fully reproducible environment can be setup.</p>
 <p><a href="https://docs.docker.com/compose">Docker Compose</a> is an addition to Docker to facilitate
-the orchestration (configuration) of one or more Docker 'Containers' (a Container is a running instance of a Docker image)
+the orchestration (configuration) of one or more Docker 'Containers' (a container is a running instance of a Docker image)
 using a configuration convention (the Docker Compose YAML file), usually named <code>docker-compose.yml</code>.</p>
 <h2 id="docker-installation">Docker Installation</h2>
 <p>Docker installation has greatly progressed over the years. This is the only part of the workshop
@@ -1687,7 +1687,7 @@ system the Docker website provides detailed installation instructions. Please fo
 </ul>
 <h3 id="mac">Mac</h3>
 <ul>
-<li>If you are using <a href="https://brew.sh">Homebrew</a>, consider using the <a href="https://formulae.brew.sh/formula/Docker">brew Docker formula</a></li>
+<li>If you are using <a href="https://brew.sh">Homebrew</a>, consider using the <a href="https://formulae.brew.sh/formula/docker">brew Docker formula</a></li>
 </ul>
 <h3 id="linux">Linux</h3>
 <ul>
@@ -1730,10 +1730,10 @@ system the Docker website provides detailed installation instructions. Please fo
 <h3 id="testing-the-docker-installation">Testing the Docker installation</h3>
 <p>If all goes well, you should be able to run Docker from the command line as follows:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>--version
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Docker version 28.2.2, build e6534b4</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Docker version 29.4.0, build 9d7ad9f</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Docker Compose version v2.36.2-desktop.1</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Docker Compose version v5.1.1</span>
 </span></code></pre></div>
 <p>Your version numbers don't have to match those above exactly.</p>
 <h2 id="quickstart">Quickstart</h2>
@@ -1753,7 +1753,7 @@ can continue to use the shell. If you want to stop the containers you can run:</
 <p>Once the containers are downloaded you can test they are running and you can connect to them. Open a web browser
 and navigate to <a href="http://localhost:7000/">http://localhost:7000/</a>, and you should see the "MapServer Homepage" which means MapServer
 is running correctly.</p>
-<p>Next we can check that the front-end container is running by opening <a href="http://localhost:7001/points.html">http://localhost:7001/points.html</a>.
+<p>Next we will check that the front-end container is running by opening <a href="http://localhost:7001/points.html">http://localhost:7001/points.html</a>.
 Hopefully you'll see a map, and we're ready to start the workshop.</p>
 <h2 id="possible-errors">Possible Errors</h2>
 <ul>
@@ -1763,8 +1763,8 @@ Hopefully you'll see a map, and we're ready to start the workshop.</p>
 by another program trying to update Ubuntu. Rebooting may fix this, or you can try running <code>sudo kill &lt;process_id&gt;</code> for example in this case <code>sudo kill 46288</code>. </li>
 <li><code>docker-desktop : Depends: docker-ce-cli but it is not installable</code> - you are attempting to install Docker Desktop, but have not yet installed the Docker Engine.</li>
 <li><code>unable to get image 'node:lts-slim': error during connect: in the default daemon configuration on Windows, the docker client must be 
-   run with elevated privileges to connect: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.50/images/node:lts-slim/json": open //./pipe/docker_engine: The system cannot find the file specified.</code></li>
-<li>you will need </li>
+   run with elevated privileges to connect: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.50/images/node:lts-slim/json": open //./pipe/docker_engine: The system cannot find the file specified.</code> - 
+   Docker Desktop is not running or the Docker daemon has not started. Start Docker Desktop and wait until it reports that Docker is running. If the problem persists, restart Docker Desktop and run the terminal as Administrator.</li>
 </ul>
 
 
