@@ -7,8 +7,8 @@ This workshop is divided into the major topics listed below.
 1. **Introduction**. An introduction to MapServer and the software used for the workshop. This
 includes Docker, OpenLayers, and Apache.
 
-2. The **Mapfile**. A Mapfile is MapServer's configuration file. It points
-to the data the Map will display, it defines how the data will be displayed,
+2. The **Mapfile**. A Mapfile defines a map and its layers in MapServer. It points
+to the data the map will display, it defines how the data will be displayed,
 and how the data will be served to client applications such as an Internet
 browser. This first set of exercises will help to get familiar with the structure,
 keywords, and syntax of a Mapfile. 
@@ -24,7 +24,7 @@ standards as these are free, open and interoperable.
 5. **Advanced** topics. These are a collection of miscellaneous exercises that cover
 a wide range of MapServer functionality. Selected exercises will be chosen based on the
 needs to the workshop participants. MapServer has over 25 years of development and 
-features so new topics will be added over time. 
+features, so new topics will be added over time. 
 
 ## Workshop Outline
 

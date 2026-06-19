@@ -33,7 +33,7 @@ MapServer can be installed directly to various operating systems (see the [docum
 for more information), but Docker is used so a fully reproducible environment can be setup.
 
 [Docker Compose](https://docs.docker.com/compose) is an addition to Docker to facilitate
-the orchestration (configuration) of one or more Docker 'Containers' (a Container is a running instance of a Docker image)
+the orchestration (configuration) of one or more Docker 'Containers' (a container is a running instance of a Docker image)
 using a configuration convention (the Docker Compose YAML file), usually named `docker-compose.yml`.
 
 ## Docker Installation
@@ -66,7 +66,7 @@ Some installation notes for different operating systems:
 
 ### Mac
 
-* If you are using [Homebrew](https://brew.sh), consider using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
+* If you are using [Homebrew](https://brew.sh), consider using the [brew Docker formula](https://formulae.brew.sh/formula/docker)
 
 ### Linux
 
@@ -116,10 +116,10 @@ If all goes well, you should be able to run Docker from the command line as foll
 
 ```bash
 docker --version
-# Docker version 28.2.2, build e6534b4
+# Docker version 29.4.0, build 9d7ad9f
 
 docker compose version
-# Docker Compose version v2.36.2-desktop.1
+# Docker Compose version v5.1.1
 ```
 
 Your version numbers don't have to match those above exactly.
@@ -150,7 +150,7 @@ Once the containers are downloaded you can test they are running and you can con
 and navigate to <http://localhost:7000/>, and you should see the "MapServer Homepage" which means MapServer
 is running correctly.
 
-Next we can check that the front-end container is running by opening <http://localhost:7001/points.html>.
+Next we will check that the front-end container is running by opening <http://localhost:7001/points.html>.
 Hopefully you'll see a map, and we're ready to start the workshop.
 
 ## Possible Errors
@@ -161,5 +161,5 @@ Hopefully you'll see a map, and we're ready to start the workshop.
 by another program trying to update Ubuntu. Rebooting may fix this, or you can try running `sudo kill <process_id>` for example in this case `sudo kill 46288`. 
 * `docker-desktop : Depends: docker-ce-cli but it is not installable` - you are attempting to install Docker Desktop, but have not yet installed the Docker Engine.
 * `unable to get image 'node:lts-slim': error during connect: in the default daemon configuration on Windows, the docker client must be 
-   run with elevated privileges to connect: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.50/images/node:lts-slim/json": open //./pipe/docker_engine: The system cannot find the file specified.`
-   - you will need 
+   run with elevated privileges to connect: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.50/images/node:lts-slim/json": open //./pipe/docker_engine: The system cannot find the file specified.` - 
+   Docker Desktop is not running or the Docker daemon has not started. Start Docker Desktop and wait until it reports that Docker is running. If the problem persists, restart Docker Desktop and run the terminal as Administrator.

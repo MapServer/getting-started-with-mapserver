@@ -4,13 +4,13 @@ We will be using MapServer on a Docker image for the workshop. This ensures that
 
 ## Docker MapServer
 
-The MapServer Docker image is provided by [Camptocamp](https://github.com/camptocamp/docker-mapserver), and the Dockerfile is found [here](https://github.com/camptocamp/docker-mapserver/blob/master/Dockerfile). 
+A custom MapServer Docker image has been created for the workshop, and the Dockerfile is found [here](https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/Dockerfile). 
 
 MapServer runs on the Apache web server - see the [Apache page](../advanced/apache.md) page for further details. 
 
 It uses the Apache [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), module that provides FastCGI support.
 
-MapServer runs on port 80 on the Docker container, which is mapped to port 7000 on the local machine, as can be seen in the Docker compose file
+MapServer runs on port `8080` on the Docker container, which is mapped to port `7000` on the local machine, as can be seen in the Docker compose file
 located at `workshop\exercises\docker-compose.yml`:
 
 ```yaml
@@ -18,7 +18,7 @@ located at `workshop\exercises\docker-compose.yml`:
     image: geographika/mapserver-workshop:latest
     container_name: mapserver
     ports:
-      - 7000:80
+      - 7000:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -30,7 +30,7 @@ located at `workshop\exercises\docker-compose.yml`:
 
 ## JavaScript Application
 
-A second container that serves the JavaScript example pages is also run using Docker. This uses node and runs on port 7001 on both the container and the host machine.
+A second container that serves the JavaScript example pages is also run using Docker. This uses Node and runs on port 7001 on both the container and the host machine.
 
 ```yaml
   node:

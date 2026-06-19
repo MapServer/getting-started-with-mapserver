@@ -12,10 +12,10 @@ mapserv -v
 This should output the MapServer version, along with other details such as PROJ and GDAL versions, and supported input and output formats:
 
 ```
-MapServer version 8.4.0 PROJ version 9.5 GDAL version 3.10 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE 
+MapServer version 8.7-dev PROJ version 9.8 GDAL version 3.13 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE 
 SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=RSVG SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER 
-SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=OGCAPI_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS SUPPORTS=PBF INPUT=JPEG 
-INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
+SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=OGCAPI_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS SUPPORTS=PBF INPUT=JPEG INPUT=POSTGIS 
+INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
 ```
 
 When run through a web server, data is passed to the `mapserv` application, which generates output that is then sent back through the web server.
@@ -27,7 +27,7 @@ To test a URL such as <http://localhost:7000/?map=/etc/mapserver/countries.map&m
 mapserv "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map"
 ```
 
-This will output a PNG image to the command line - this will look like gargabe!
+This will output a PNG image to the command line - this will look like garbage!
 
 We can save the output by redirecting it to a file using `>`. 
 As the `mapserv` program returns responses for a web client it also returns HTTP headers. To create a valid image file we need to strip these
@@ -56,7 +56,7 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map" > /etc/maps
 We can see all command options using the `--help` switch:
 
 ```bash
-mapserver --help
+mapserv --help
 ```
 
 All MapServer output can be returned on the command line, not just images. For example, to see a WMS GetCapabilities XML response, run the following command:
