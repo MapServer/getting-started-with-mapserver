@@ -65,6 +65,7 @@ END
 !!! example
 
     - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
+    - Inbuilt OpenLayers viewer: <http://localhost:7000/lines/?template=openlayers&mode=browse&layers=all>
     - Local OpenLayers example: <http://localhost:7001/lines.html>
 
 !!! tip

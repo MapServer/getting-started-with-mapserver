@@ -42,6 +42,7 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
 !!! example
 
     - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/lakes.map&mode=map&layer=lakes&layer=lake-labels>
+    - Inbuilt OpenLayers viewer: <http://localhost:7000/lakes/?template=openlayers&mode=browse&layers=all>
     - Local OpenLayers example: <http://localhost:7001/lakes.html>
 
 ??? JavaScript "lakes.js"
@@ -61,7 +62,7 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
 1. Use a different font for the label by adding the following to the `LABEL` block: `FONT MonsieurLaDoulaise` and increasing the `SIZE` to `28`.
    The list of fonts available can be found in `workshop/exercises/mapfiles/data/fonts/fontset.txt`.
 2. Comment out the `GEOMTRANSFORM (centerline([shape]))` and `ANGLE FOLLOW` lines (using `#`) to see its effect on the map.
-3. If you have time, download a font you like from https://fonts.google.com/ and unzip the .TTF file to `workshop/exercises/mapfiles/data/fonts/`
+3. If you have time, download a font you like from <https://fonts.google.com/> and unzip the .TTF file to `workshop/exercises/mapfiles/data/fonts/`
    add a new entry to `fontset.txt` and use this font to draw your Map labels.
 <!--
 ``` xml
