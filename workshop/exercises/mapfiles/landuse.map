@@ -7,21 +7,21 @@ MAP
         "epsg:4326"
     END
     SYMBOL
-  NAME 'octahedron'
-  TYPE VECTOR
-  POINTS
-    20 18
-    22 18
-    24 20
-    24 22
-    22 24
-    20 24
-    18 22
-    18 20
-    20 18
-  END
-  FILLED FALSE
-  END
+        NAME "octahedron"
+        TYPE VECTOR
+        POINTS
+            20 18
+            22 18
+            24 20
+            24 22
+            22 24
+            20 24
+            18 22
+            18 20
+            20 18
+        END
+        FILLED FALSE
+    END
     SYMBOL
         NAME "marsh_isom"
         TYPE VECTOR
@@ -166,7 +166,6 @@ MAP
                 SYMBOL "wetland"
             END
         END
-
         CLASS
             EXPRESSION {park,grass}
             STYLE
@@ -181,19 +180,18 @@ MAP
         END
         CLASS
             EXPRESSION "forest"
-             STYLE
-                #COLOR 231 255 170
+            STYLE
                 COLOR 34 139 34
-              END
-              STYLE
+            END
+            STYLE
                 SYMBOL "tree" # "octahedron"
                 SIZE 10
                 COLOR 100 100 100
             END
-            #STYLE
-            #    SYMBOL "paper"
-            #END
         END
+        #STYLE
+        #    SYMBOL "paper"
+        #END
         #CLASS
         #    STYLE
         #        SYMBOL "marsh_isom" # uncrossablemarsh_isom  indistinctmarsh_isom  marsh_isom
