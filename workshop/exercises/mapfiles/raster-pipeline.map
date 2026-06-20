@@ -1,0 +1,46 @@
+MAP
+    NAME "RASTER-PIPELINE"
+    IMAGETYPE "png"
+    MAXSIZE 4096
+    NAME "GDAL"
+    RESOLUTION 72
+    SIZE 800 800
+    EXTENT 977816 6742006 998431 6755017
+    PROJECTION
+        "EPSG:2154"
+    END
+
+    LAYER
+        NAME "dtm"
+        EXTENT 977816 6742006 998431 6755017
+        STATUS OFF
+        TYPE RASTER
+        PROCESSING "SCALE=AUTO" # otherwise just black and white
+        # Map data: IGN 
+        DATA "data/raster/clipped.tif"
+        PROJECTION
+            "EPSG:2154"
+        END
+        COMPOSITE
+            OPACITY 80
+        END
+    END
+
+
+    # LAYER
+    #     NAME "dtm"
+    #     EXTENT 977816 6742006 998431 6755017
+    #     STATUS OFF
+    #     TYPE RASTER
+    #     PROCESSING "SCALE=AUTO" # otherwise just black and white
+    #     # Map data: IGN 
+    #     DATA "data/raster/clipped.tif"
+    #     PROJECTION
+    #         "EPSG:2154"
+    #     END
+    #     COMPOSITE
+    #         OPACITY 80
+    #     END
+    # END
+
+END
