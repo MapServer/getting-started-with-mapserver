@@ -61,6 +61,9 @@
         <loc>https://mapserver.github.io/getting-started-with-mapserver/outputs/ogcapi-features/</loc>
       </url>
       <url>
+        <loc>https://mapserver.github.io/getting-started-with-mapserver/outputs/ogcapi-features-query/</loc>
+      </url>
+      <url>
         <loc>https://mapserver.github.io/getting-started-with-mapserver/advanced/arcgis/</loc>
       </url>
       <url>
