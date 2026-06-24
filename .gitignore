@@ -3,3 +3,5 @@ workshop/content/site
 # /notes.txt
 workshop/exercises/postgis-data
 notes.ignore
+/workshop/exercises/mapfiles/tmp/*
+!/workshop/exercises/mapfiles/tmp/.gitkeep

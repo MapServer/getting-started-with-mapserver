@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timișoara</title>
+    <style>
+        #building-filter {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+            #building-filter label {
+                margin-right: 8px;
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <div id="loading-mask">
+        <div id="loading-spinner">Loading...</div>
+    </div>
+    <div id="map"></div>
+    <div id="building-filter">
+        <label for="building-select">Building type:</label>
+        <select id="building-select">
+            <option value="apartments">Apartments</option>
+            <option value="church">Church</option>
+            <option value="commercial">Commercial</option>
+            <option value="hospital">Hospital</option>
+            <option value="office">Office</option>
+            <option selected value="university">University</option>
+        </select>
+    </div>
+    <script type="module" src="./js/timisoara.js"></script>
+</body>
+</html>

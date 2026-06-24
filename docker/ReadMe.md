@@ -47,9 +47,9 @@ docker pull geographika/mapserver-workshop:latest
 # docker stop mapserver-workshop
 # docker rm mapserver-workshop
 docker run -it --name mapserver-workshop geographika/mapserver-workshop:latest bash
-docker start mapserver-workshop
-docker exec -it mapserver-workshop bash
 # mapserv -v
+# docker start mapserver-workshop
+# docker exec -it mapserver-workshop bash
 ```
 
 ## Build the Demo Image

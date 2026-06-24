@@ -2,7 +2,7 @@
 site_name = "Getting Started with MapServer"
 site_description = "MapServer is an Open Source platform for publishing spatial data and interactive mapping applications to the web. This workshop will cover publishing geospatial data to the Web using MapServer in support of the suite of OGC API standards."
 site_author = "The MapServer community"
-copyright = "© 2025 Seth Girvin and the MapServer community"
+copyright = "© 2026 Seth Girvin and the MapServer community"
 site_url = "https://mapserver.github.io/getting-started-with-mapserver"
 repo_url = "https://github.com/mapserver/getting-started-with-mapserver"
 docs_dir = "docs"
@@ -42,7 +42,8 @@ nav = [
         { "WCS" = "outputs/wcs.md" },
         { "Tiles" = "outputs/tiles.md" },
         { "Vector Tiles" = "outputs/vector-tiles.md" },
-        { "OGC API - Features" = "outputs/ogcapi-features.md" }
+        { "OGC API - Features" = "outputs/ogcapi-features.md" },
+        { "OGC API - Filtering" = "outputs/ogcapi-features-query.md" }
     ]},
     { "Advanced" = [
         { "ArcGIS Feature Server" = "advanced/arcgis.md" },

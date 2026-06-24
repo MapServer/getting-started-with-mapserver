@@ -1,0 +1,204 @@
+MAP
+    NAME "Timisoara"
+    SIZE 800 800
+    EXTENT 20.9984994 45.6280885 21.5152955 45.8955907
+    PROJECTION
+        "EPSG:4326"
+    END
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/" # end-slash is important!
+        METADATA
+            "ows_enable_request" "*"
+            "ows_srs" "EPSG:4326 EPSG:3857"
+            "ows_use_default_extent_for_getfeature" "false"
+        END
+    END
+    LAYER
+        NAME "buildings"
+        PROJECTION
+            "EPSG:4326"
+        END
+        STATUS OFF
+        TYPE POLYGON
+        PROCESSING "OGR_EXPOSE_FID=TRUE"
+        CONNECTIONTYPE OGR
+        CONNECTION "data/osm/timisoara/buildings.gpkg"
+        TEMPLATE "ttt"
+        METADATA
+            "ows_title" "Buildings"
+            "gml_include_items" "all"
+            "gml_featureid" "fid"
+            "gml_types" "auto"
+            "oga_queryable_items" "all"
+            "oga_sortable_items" "all"
+        END
+        CLASSITEM "building"
+        CLASS
+            STYLE
+                COLOR 220 80 60
+            END
+            EXPRESSION {house}
+        END
+        CLASS
+            STYLE
+                COLOR 60 130 220
+            END
+            EXPRESSION {apartments}
+        END
+        CLASS
+            STYLE
+                COLOR 180 100 40
+            END
+            EXPRESSION {industrial}
+        END
+        CLASS
+            STYLE
+                COLOR 100 180 80
+            END
+            EXPRESSION {residential}
+        END
+        CLASS
+            STYLE
+                COLOR 240 160 60
+            END
+            EXPRESSION {detached}
+        END
+        CLASS
+            STYLE
+                COLOR 130 110 170
+            END
+            EXPRESSION {garages}
+        END
+        CLASS
+            STYLE
+                COLOR 150 125 185
+            END
+            EXPRESSION {garage}
+        END
+        CLASS
+            STYLE
+                COLOR 60 190 190
+            END
+            EXPRESSION {commercial}
+        END
+        CLASS
+            STYLE
+                COLOR 210 140 90
+            END
+            EXPRESSION {semidetached_house}
+        END
+        CLASS
+            STYLE
+                COLOR 80 160 200
+            END
+            EXPRESSION {school}
+        END
+        CLASS
+            STYLE
+                COLOR 160 140 110
+            END
+            EXPRESSION {warehouse}
+        END
+        CLASS
+            STYLE
+                COLOR 190 190 100
+            END
+            EXPRESSION {roof}
+        END
+        CLASS
+            STYLE
+                COLOR 100 200 120
+            END
+            EXPRESSION {greenhouse}
+        END
+        CLASS
+            STYLE
+                COLOR 220 110 150
+            END
+            EXPRESSION {retail}
+        END
+        CLASS
+            STYLE
+                COLOR 200 160 80
+            END
+            EXPRESSION {construction}
+        END
+        CLASS
+            STYLE
+                COLOR 180 120 100
+            END
+            EXPRESSION {terrace}
+        END
+        CLASS
+            STYLE
+                COLOR 170 130 200
+            END
+            EXPRESSION {church}
+        END
+        CLASS
+            STYLE
+                COLOR 240 180 130
+            END
+            EXPRESSION {kindergarten}
+        END
+        CLASS
+            STYLE
+                COLOR 200 80 100
+            END
+            EXPRESSION {hospital}
+        END
+        CLASS
+            STYLE
+                COLOR 80 110 190
+            END
+            EXPRESSION {university}
+        END
+        CLASS
+            STYLE
+                COLOR 120 170 210
+            END
+            EXPRESSION {dormitory}
+        END
+        CLASS
+            STYLE
+                COLOR 160 155 140
+            END
+            EXPRESSION {shed}
+        END
+        CLASS
+            STYLE
+                COLOR 90 150 170
+            END
+            EXPRESSION {office}
+        END
+        CLASS
+            STYLE
+                COLOR 140 200 160
+            END
+            EXPRESSION {public}
+        END
+        CLASS
+            STYLE
+                COLOR 170 165 150
+            END
+            EXPRESSION {service}
+        END
+        CLASS
+            STYLE
+                COLOR 100 100 160
+            END
+            EXPRESSION {train_station}
+        END
+        CLASS
+            STYLE
+                COLOR 210 150 170
+            END
+            EXPRESSION {hotel}
+        END
+        CLASS
+            STYLE
+                COLOR 220 220 220
+            END
+        END
+    END
+END

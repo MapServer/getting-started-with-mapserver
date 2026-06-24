@@ -1,0 +1,40 @@
+MAP
+    NAME "RASTER-PIPELINE"
+    IMAGETYPE "png"
+    MAXSIZE 4096
+    SIZE 800 800
+    EXTENT 977816 6742006 998431 6755017
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
+    END
+
+    PROJECTION
+        "EPSG:2154"
+    END
+
+    IMAGECOLOR 255 255 255
+
+    OUTPUTFORMAT
+        NAME "png"
+        DRIVER "AGG/PNG"
+        MIMETYPE "image/png"
+        IMAGEMODE RGBA
+        EXTENSION "png"
+        TRANSPARENT ON
+    END
+
+    LAYER
+        NAME "dtm-pipeline"
+        EXTENT 977816 6742006 998431 6755017
+        STATUS DEFAULT
+        TYPE RASTER
+        PROCESSING "NODATA=0" # set NoData to empty
+        # Map data: IGN 
+        # note we need to use the full path to the dataset using the inline pipeline
+        DATA '{"type": "gdal_streamed_alg","command_line": "gdal raster pipeline ! read /etc/mapserver/data/raster/clipped.tif ! color-map --color-map /etc/mapserver/data/raster/color-map-percentage.txt ! blend --operator=hsv-value --overlay [ read /etc/mapserver/data/raster/clipped.tif ! hillshade -z 2 ] "}'
+        # DATA "data/raster/clipped.gdalg.json"
+        PROJECTION
+            "EPSG:2154"
+        END
+    END
+END

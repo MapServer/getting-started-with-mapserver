@@ -189,7 +189,7 @@ const wmsLayer = new ImageLayer({
 
 !!! note
 
-    OpenLayers does not natively support WCS. In this example we use the same approach as in the [Web Coverage Services (WCS)](../outputs/wcs.md) tutorial for testing the WCS protocol.
+    OpenLayers does not natively support WCS. In this example we use the same approach as in the [Web Coverage Services (WCS)](/outputs/wcs/) tutorial for testing the WCS protocol.
     Images are requested as PNGs using the [ImageWMS](https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html) class and a custom
     [imageLoadFunction](https://openlayers.org/en/latest/apidoc/module-ol_Image.html#~LoadFunction),
     as displaying GeoTIFFs directly in OpenLayers is not supported without additional libraries.

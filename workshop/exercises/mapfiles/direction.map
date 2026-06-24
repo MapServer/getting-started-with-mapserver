@@ -1,0 +1,149 @@
+MAP
+    NAME "Direction"
+    EXTENT -1136368 6840385 -1131379 6843727
+    SIZE 800 800
+    IMAGETYPE "PNG24"
+    PROJECTION
+        "epsg:3857"
+    END
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:3857 EPSG:4326" 
+        END
+    END
+    SYMBOL
+        NAME "arrow"
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 0
+            5 10
+            10 0
+            7 0
+            7 -10
+            3 -10
+            3 0
+            0 0
+        END
+    END
+    LAYER
+        NAME "raster"
+        # TYPE RASTER
+        STATUS OFF
+        DATA "data/raster/flow.tif"
+        PROCESSING "BANDS=1"
+        TYPE POINT
+        CONNECTIONTYPE RASTERLABEL
+        PROCESSING "RESAMPLE=NEAREST"
+        CLASS
+            TEXT (tostring([value],"%.0f"))
+            LABEL
+                TYPE TRUETYPE
+                COLOR 50 50 50
+                SIZE 8
+            END
+        END
+    END
+
+    LAYER
+        NAME "flow"
+        STATUS OFF
+        TYPE POINT
+        CONNECTIONTYPE UVRASTER
+        DATA "data/raster/flow.tif"
+        PROCESSING "BANDS=1,1"
+        # PROCESSING "UV_SPACING=32"
+        # PROCESSING "UV_SIZE_SCALE=1"
+        PROCESSING "RESAMPLE=NEAREST"
+        # CLASSITEM "[u]" # does not seem to be available
+
+        # MINSCALEDENOM 5000
+        # MAXSCALEDENOM 50000
+
+        # https://grass.osgeo.org/grass-stable/manuals/r.watershed.html
+        # Drainage is 8 directions numbered counter-clockwise starting from 1 in north-east direction
+
+        # 2 = North
+        CLASS
+            EXPRESSION ([u] = 2 OR [u] = -2)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 0
+                COLOR "#483D8B"
+            END
+        END
+        # 1 = North-East
+        CLASS
+            EXPRESSION ([u] = 1 OR [u] = -1)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 45
+                COLOR "#483D8B"
+            END
+        END
+        # 8 = East
+        CLASS
+            EXPRESSION ([u] = 8 OR [u] = -8)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 90
+                COLOR "#483D8B"
+            END
+        END
+        # 7 = South-East
+        CLASS
+            EXPRESSION ([u] = 7 OR [u] = -7)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 135
+                COLOR "#483D8B"
+            END
+        END
+        # 6 = South
+        CLASS
+            EXPRESSION ([u] = 6 OR [u] = -6)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 180
+                COLOR "#483D8B"
+            END
+        END
+        # 5 = South-West
+        CLASS
+            EXPRESSION ([u] = 5 OR [u] = -5)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 225
+                COLOR "#483D8B"
+            END
+        END
+        # 4 = West
+        CLASS
+            EXPRESSION ([u] = 4 OR [u] = -4)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 270
+                COLOR "#483D8B"
+            END
+        END
+        # 3 = North-West
+        CLASS
+            EXPRESSION ([u] = 3 OR [u] = -3)
+            STYLE
+                SYMBOL "arrow"
+                SIZE 12
+                ANGLE 315
+                COLOR "#483D8B"
+            END
+        END
+    END
+END

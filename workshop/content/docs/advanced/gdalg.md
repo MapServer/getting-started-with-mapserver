@@ -5,7 +5,7 @@
 MapServer can dynamically run a [GDAL Vector Pipeline](https://gdal.org/en/latest/programs/gdal_vector_pipeline.html), and render its output -
 all through a simple Mapfile.
 
-In this workshop we'll use the Tartu roads dataset used in the [Line Styling](../mapfile/lines.md) exercise, dynamically
+In this workshop we'll use the Tartu roads dataset used in the [Line Styling](/mapfile/lines/) exercise, dynamically
 buffer it using GDAL, and display the result in OpenLayers using a MapServer WMS.
 
 This is a simple example of a pipeline, but additional steps can be chained together to create more complex workflows.

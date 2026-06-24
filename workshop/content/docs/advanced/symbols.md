@@ -10,7 +10,7 @@ In this exercise we'll look at how [SYMBOL](https://mapserver.org/mapfile/symbol
 
 ## Vector Symbols
 
-We've looked at `ELLIPSE`, and `TRUETYPE` symbols in the [Points Styling](../mapfile/points.md) exercise. In this example 
+We've looked at `ELLIPSE`, and `TRUETYPE` symbols in the [Points Styling](/mapfile/points/) exercise. In this example 
 we'll be looking at [Vector Symbols](https://mapserver.org/mapfile/symbology/construction.html#symbols-of-type-vector-and-ellipse) - which
 use vector drawings to define the shape of a symbol.
 
