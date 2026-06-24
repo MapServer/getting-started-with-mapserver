@@ -15,7 +15,7 @@ const mapfilesPath = import.meta.env.VITE_MAPFILES_PATH;
 const baseUrl = mapserverUrl.replace(/\?+$/, '');
 
 function buildOgcUrl(buildingType) {
-    const cqlFilter = `building='${buildingType}'`;
+    const cqlFilter = `building = '${buildingType}'`;
     return `${baseUrl}/timisoara/ogcapi/collections/buildings/items?` +
         `filter=${encodeURIComponent(cqlFilter)}&filter-lang=cql2-text&limit=1000&f=json`;
 }
