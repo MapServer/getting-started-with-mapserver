@@ -1,0 +1,4 @@
+{
+    "type": "gdal_streamed_alg",
+    "command_line": "gdal raster pipeline ! read /etc/mapserver/data/raster/clipped.tif ! color-map --color-map /etc/mapserver/data/raster/color-map-percentage.txt ! blend --operator=hsv-value --overlay [ read /etc/mapserver/data/raster/clipped.tif ! hillshade -z 2 ] "
+}

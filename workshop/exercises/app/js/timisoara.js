@@ -46,7 +46,7 @@ const layers = [
         visible: false,
     }),
     new ImageLayer({
-        opacity: 0.6,
+        opacity: 0.2,
         source: new ImageWMS({
             url: mapserverUrl + mapfilesPath + 'timisoara.map&',
             params: { 'LAYERS': 'buildings', 'STYLES': '' },

@@ -20,17 +20,17 @@ MAP
         END
         STATUS OFF
         TYPE POLYGON
-        # PROCESSING "ITEMS=fid,building"
+        PROCESSING "ITEMS=fid,building,name,osm_id"
         PROCESSING "OGR_EXPOSE_FID=TRUE"
         CONNECTIONTYPE OGR
         CONNECTION "data/osm/timisoara/buildings.gpkg"
         TEMPLATE "ttt"
         METADATA
             "ows_title" "Buildings"
-            #"gml_include_items" "fid,building"
             "gml_include_items" "all"
             "gml_featureid" "fid"
             "gml_types" "auto"
+            "gml_fid_type" "Long"
             "oga_queryable_items" "all"
             "oga_sortable_items" "all"
         END

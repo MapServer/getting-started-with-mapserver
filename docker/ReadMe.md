@@ -21,8 +21,8 @@ cd D:\GitHub\getting-started-with-mapserver\docker
 docker build `
     --tag "mapserver-workshop" `
     --target=runner `
-    --build-arg=MAPSERVER_BRANCH=latest `
-    --build-arg=MAPSERVER_REPO=https://github.com/geographika/mapserver `
+    --build-arg=MAPSERVER_BRANCH=main `
+    --build-arg=MAPSERVER_REPO=https://github.com/mapserver/mapserver `
     .
 
 docker tag mapserver-workshop geographika/mapserver-workshop

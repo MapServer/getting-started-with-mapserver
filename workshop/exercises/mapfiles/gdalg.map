@@ -4,7 +4,7 @@ MAP
   SIZE 800 600
   IMAGECOLOR "#0A1E50"
   PROJECTION
-    "init=epsg:4326"
+    "epsg:4326"
   END
   WEB
     IMAGEPATH "/etc/mapserver/tmp/"
@@ -25,10 +25,9 @@ MAP
     STATUS OFF
     CONNECTIONTYPE OGR
     # note we need to use the full path to the dataset using the inline pipeline
-    CONNECTION '{"type": "gdal_streamed_alg","command_line": "gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001"}'
+    CONNECTION '{"type": "gdal_streamed_alg","command_line": "gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! buffer --distance=0.0001"}'
+    # CONNECTION "data/osm/roads.gdalg.json"
     DATA "0"
-    # CONNECTION "roads.gdalg.json"
-    # DATA "0"
     CLASS
       STYLE
         COLOR 50 100 180
@@ -36,7 +35,7 @@ MAP
       STYLE
         SYMBOL "hatchsymbol"
         COLOR "#78C8FF"
-        WIDTH 0.1
+        WIDTH 0.3
         ANGLE 45
         SIZE 8
       END
