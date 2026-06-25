@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://mapserver.github.io/getting-started-with-mapserver/mapfile/config/">
       
       
+        <link rel="prev" href="../polygons/">
+      
+      
+        <link rel="next" href="../../inputs/raster/">
       
       
         
@@ -448,8 +452,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -461,15 +467,17 @@
       
         
       
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -489,7 +497,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -602,6 +610,135 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuration File
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuration File
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overview
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>ENV</code> Settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>MAPS</code> Settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exercises
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1372,6 +1509,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#env-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>ENV</code> Settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>MAPS</code> Settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exercises
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1391,14 +1572,264 @@
 
 
 <h1 id="mapserver-configuration-file">MapServer Configuration File</h1>
+<p>MapServer 8.0 introduced support for a global <a href="https://mapserver.org/mapfile/config.html">CONFIG</a> file.
+This allows settings to be defined once and applied to all Mapfiles in a MapServer deployment,
+reducing duplication and simplifying configuration.</p>
+<p>This tutorial provides an introduction to the <code>CONFIG</code> file, and highlights the <a href="https://mapserver.org/output/index-page.html">Index Page</a>
+functionality that it enables.</p>
+<p><img alt="MapServer Index Page" src="../../assets/images/mapserver-index-page.png" /></p>
 <h2 id="overview">Overview</h2>
-<p>Set this in the config file
-    MS_ONLINERESOURCE "/"</p>
-<div class="language-text highlight"><pre><span></span><code>Include the one used by the workshop
-</code></pre></div>
-<p>Any changes in the CONFIG file you need to restart the web server:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>restart<span class="w"> </span>mapserver
+<p>The configuration file used for the workshop can be found at <code>workshop/exercises/mapfiles/mapserver.conf</code>.
+It uses a structure similar to a Mapfile, with configuration organized into blocks that are terminated with <code>END</code>.</p>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">CONFIG</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nc">ENV</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="p">...</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nc">MAPS</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p">...</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nc">PLUGINS</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">currently</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">workshop</span><span class="p">,</span><span class="w"> </span><span class="bp">this</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">plugins</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nc">Oracle</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nc">Microsoft</span><span class="w"> </span><span class="nc">SQL</span><span class="w"> </span><span class="nc">Server</span><span class="w"> </span><span class="n">drivers</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="p">...</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nc">END</span>
 </span></code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you make changes in the <code>CONFIG</code> file you need to restart the web server.
+The configuration file is read only when the web server (Apache in this workshop) starts.
+The easiest way to do this in the workshop is to restart the <code>mapserver</code> container:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>restart<span class="w"> </span>mapserver
+</span></code></pre></div>
+</div>
+<h2 id="env-settings"><code>ENV</code> Settings</h2>
+<p>The <code>ENV</code> (Environment) block is used to store
+<a href="https://mapserver.org/optimization/environment_variables.html">Environment Variables</a> used by MapServer.
+Placing them in the configuration file means they do not have to be duplicated in every Mapfile.
+Settings defined in the configuration file can be overridden by settings in individual Mapfiles.
+When both are present, the Mapfile value takes precedence.</p>
+<p>In the workshop configuration file, the following variables are set:</p>
+<ul>
+<li><code>MS_ONLINERESOURCE ""</code> the <code>ONLINERESOURCE</code> is used by various services, such as WMS, and WFS, to generate
+  links, for example in <code>GetCapabilities</code> requests. An option to set this globally in the <code>CONFIG</code> file
+  was added in MapServer 8.8 (see <a href="https://mapserver.org/development/rfc/ms-rfc-141.html">RFC 141</a>) to avoid having to set
+ <code>ows_onlineresource</code> for different servers (for example in development and production) in every Mapfile.
+  In this workshop it is set to an empty string, allowing MapServer to automatically generate URLs based
+  on the incoming request host and path.</li>
+<li><code>OGCAPI_HTML_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/"</code>
+  this setting points MapServer to the folder containing the Bootstrap HTML templates used when generating
+  the OGC API interface, for example at <a href="http://localhost:7000/timisoara/ogcapi/?f=html">http://localhost:7000/timisoara/ogcapi/?f=html</a>.</li>
+<li><code>MS_INDEX_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/"</code>
+  a similar setting, but used to point to the Bootstrap templates used when generating the MapServer
+  <a href="https://mapserver.org/output/index-page.html">Index Pages</a>.</li>
+<li><code>MS_MAP_PATTERN "^/etc/mapserver/"</code> - This is a required setting used to restrict Mapfiles
+  to specific filesystem locations. This prevents users from requesting arbitrary Mapfiles,
+  reducing the risk of unauthorised data access. In the workshop Mapfiles are restricted
+  to <code>/etc/mapserver</code> and subdirectories.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There are several other settings commented out in the configuration file, to show the different
+environment variables available.</p>
+<p>These can be set globally in the <code>CONFIG</code> file, and then overridden in individual Mapfiles,
+using the syntax <code>CONFIG "VARIABLE_NAME" "VARIABLE_VALUE"</code>, for example <code>CONFIG  "MS_ERRORFILE" "stderr"</code>.</p>
+</div>
+<h2 id="maps-settings"><code>MAPS</code> Settings</h2>
+<p>The <code>MAPS</code> block contains a list of all Mapfiles available on the server, in the form of
+<code>key "path"</code>:</p>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">MAPS</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">here</span><span class="p">,</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">paths</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">within</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">MapServer</span><span class="w"> </span><span class="nc">Docker</span><span class="w"> </span><span class="n">container</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/clusters.map&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/contours.map&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">mapfiles</span><span class="p">...</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nc">END</span>
+</span></code></pre></div>
+<p>The keys allow us to access the Mapfile using the URL in the form <code>http://server/KEY/</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mapfiles explicitly registered in the <code>MAPS</code> section are considered trusted and are not
+subject to <code>MS_MAP_PATTERN</code> validation because they are defined server-side rather than
+provided by client requests.</p>
+<p><code>MS_MAP_PATTERN</code> is only applied when a Mapfile path is supplied by a client
+request, for example:</p>
+<p><code>?map=/etc/mapserver/lines.map</code></p>
+</div>
+<p>If we have set the <code>MS_INDEX_TEMPLATE_DIRECTORY</code> path in the <code>ENV</code> section above, then MapServer
+will return an "Index Page", listing all these maps at the root of the MapServer URL: <a href="http://localhost:7000/">http://localhost:7000/</a>.</p>
+<p>Clicking on one of these links takes you to an individual Mapfile Landing Page, which lists the
+services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For example <a href="http://localhost:7000/timisoara/">http://localhost:7000/timisoara/</a>.</p>
+<h2 id="code">Code</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>MapServer Index Page request: <a href="http://localhost:7000/">http://localhost:7000/</a></li>
+<li>MapServer Mapfile Landing Page example: <a href="http://localhost:7000/timisoara/">http://localhost:7000/timisoara/</a></li>
+</ul>
+</div>
+<details class="config file">
+<summary>mapserver.conf</summary>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">#</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">#</span><span class="w"> </span><span class="nc">MapServer</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="nc">File</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">#</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">workshop</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">#</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nc">CONFIG</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">#</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="nc">Environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//mapserver.org/environment_variables.html)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">#</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nc">ENV</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nc">MS_ONLINERESOURCE</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">OGC</span><span class="w"> </span><span class="nc">API</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="nc">OGCAPI_HTML_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">&quot;/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/&quot;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Landing</span><span class="w"> </span><span class="n">page</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="nc">MS_INDEX_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">&quot;/usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/&quot;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Limit</span><span class="w"> </span><span class="nc">Mapfile</span><span class="w"> </span><span class="nc">Access</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nc">Mapfiles</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="bp">this</span><span class="w"> </span><span class="n">regex</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">&quot;^/etc/mapserver/&quot;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_NO_PATH</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">&quot;^/opt/mapserver&quot;</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Global</span><span class="w"> </span><span class="nc">Log</span><span class="o">/</span><span class="nc">Debug</span><span class="w"> </span><span class="nc">Setup</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_DEBUGLEVEL</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_ERRORFILE</span><span class="w"> </span><span class="s">&quot;/opt/mapserver/logs/mapserver.log&quot;</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Default</span><span class="w"> </span><span class="nc">Map</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE</span><span class="w"> </span><span class="s">&quot;/opt/mapserver/test/test.map&quot;</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Proj</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">proj</span><span class="p">.</span><span class="n">db</span><span class="p">)</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">PROJ_DATA</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Request</span><span class="w"> </span><span class="nc">Control</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="nc">POST</span><span class="w"> </span><span class="n">requests</span><span class="w"> </span><span class="p">(</span><span class="n">allowed</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">do</span><span class="p">)</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_NO_POST</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Other</span><span class="w"> </span><span class="nc">Options</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">        </span><span class="n">#</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_ENCRYPTION_KEY</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_USE_GLOBAL_FT_CACHE</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_PDF_CREATION_DATE</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE_PATTERN</span><span class="w"> </span><span class="s">&quot;\.map$&quot;</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_XMLMAPFILE_XSLT</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MODE</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_OPENLAYERS_JS_URL</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_TEMPPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp&quot;</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAX_OPEN_FILES</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="w">    </span><span class="n">#</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="nc">Map</span><span class="w"> </span><span class="nc">Aliases</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">    </span><span class="n">#</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">    </span><span class="nc">MAPS</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">        </span><span class="nc">ARCGIS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/arcgis.map&quot;</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">        </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/clusters.map&quot;</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">        </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/contours.map&quot;</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">        </span><span class="nc">COUNTRIES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/countries.map&quot;</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">        </span><span class="nc">DIRECTION</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/direction.map&quot;</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">        </span><span class="nc">GDALG</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/gdalg.map&quot;</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">        </span><span class="nc">LAKES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/lakes.map&quot;</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">        </span><span class="nc">LANDUSE</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/landuse.map&quot;</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">        </span><span class="nc">LINES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/lines.map&quot;</span>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">        </span><span class="nc">OGCAPI</span><span class="o">-</span><span class="nc">FEATURES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/ogcapi-features.map&quot;</span>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">        </span><span class="nc">OTHER</span><span class="o">-</span><span class="nc">PROJECTIONS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/other-projections.map&quot;</span>
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="w">        </span><span class="nc">POINTS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/points.map&quot;</span>
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a><span class="w">        </span><span class="nc">POLYGONS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/polygons.map&quot;</span>
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a><span class="w">        </span><span class="nc">POSTGIS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/postgis.map&quot;</span>
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a><span class="w">        </span><span class="nc">RAILWAYS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/railways.map&quot;</span>
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a><span class="w">        </span><span class="nc">RASTER</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/raster.map&quot;</span>
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a><span class="w">        </span><span class="nc">RASTER</span><span class="o">-</span><span class="nc">PIPELINE</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/raster-pipeline.map&quot;</span>
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a><span class="w">        </span><span class="nc">SLD</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/sld.map&quot;</span>
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a><span class="w">        </span><span class="nc">STAC</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/stac.map&quot;</span>
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a><span class="w">        </span><span class="nc">STARS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/stars.map&quot;</span>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a><span class="w">        </span><span class="nc">TILES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tiles.map&quot;</span>
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a><span class="w">        </span><span class="nc">TIMISOARA</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/timisoara.map&quot;</span>
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a><span class="w">        </span><span class="nc">VECTOR</span><span class="o">-</span><span class="nc">TILES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/vector-tiles.map&quot;</span>
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a><span class="w">        </span><span class="nc">WCS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/wcs.map&quot;</span>
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a><span class="w">        </span><span class="nc">WFS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/wfs.map&quot;</span>
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">workshop</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">mapfile</span><span class="o">/</span><span class="n">config</span><span class="p">.</span><span class="n">md</span>
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">CONFIG_MAP</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/config.map&quot;</span>
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a><span class="nc">END</span>
+</span></code></pre></div>
+</details>
+<details class="example mapfile file">
+<summary>config.map</summary>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">MAP</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;CONFIG_MAP&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="mi">400</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nc">PROJECTION</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="s">&quot;epsg:4326&quot;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nc">IMAGECOLOR</span><span class="w"> </span><span class="s">&quot;#37929E&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nc">WEB</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp/&quot;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="nc">METADATA</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">            </span><span class="n">#</span><span class="s">&quot;ms_enable_modes&quot;</span><span class="w"> </span><span class="s">&quot;!*&quot;</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="o">!*</span><span class="w"> </span><span class="n">disables</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="nc">CGI</span><span class="w"> </span><span class="n">requests</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wms_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wcs_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wfs_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;ows_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nc">END</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nc">EXTENT</span><span class="w"> </span><span class="o">-</span><span class="mi">180</span><span class="w"> </span><span class="o">-</span><span class="mi">90</span><span class="w"> </span><span class="mi">180</span><span class="w"> </span><span class="mi">90</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nc">LAYER</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;countries&quot;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">POLYGON</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nc">STATUS</span><span class="w"> </span><span class="nc">DEFAULT</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">FLATGEOBUF</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;data/naturalearth/ne_110m_admin_0_countries.fgb&quot;</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="nc">CLASS</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="nc">STYLE</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">                </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">&quot;#C7CAB0&quot;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                </span><span class="nc">OUTLINECOLOR</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">                </span><span class="nc">WIDTH</span><span class="w"> </span><span class="mf">0.1</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="nc">END</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="nc">END</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="nc">END</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nc">END</span>
+</span></code></pre></div>
+</details>
+<h2 id="exercises">Exercises</h2>
+<ul>
+<li>Add the Mapfile <code>./workshop/exercises/mapfiles/config.map</code> to the configuration file
+  <code>./workshop/exercises/mapfiles/mapserver.conf</code>. Check it appears in the MapServer Index page
+  at <a href="http://localhost:7000/">http://localhost:7000/</a>. You will need to restart the MapServer container to see this change.</li>
+<li>Enable the CGI functionality in the Mapfile by changing <code>"ms_enable_modes" "!*"</code>
+  to <code>"*"</code> (or comment-out the whole line). This should create a new "OpenLayers Viewer"
+  link at <a href="http://localhost:7000/CONFIG_MAP/">http://localhost:7000/CONFIG_MAP/</a>.</li>
+<li>Comment and uncomment the various <code>enable_request</code> <code>METADATA</code> items, and see how they affect
+  the available services for the Mapfile at <a href="http://localhost:7000/CONFIG_MAP/">http://localhost:7000/CONFIG_MAP/</a>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When editing a Mapfile, changes are instantly reflected in the HTML Index Pages
+(when you refresh the browser). You only need to restart the MapServer Docker container
+if you edit the <code>mapserver.conf</code> file, as this is read once when the Apache web server
+starts.</p>
+</div>
 
 
 
