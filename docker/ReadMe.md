@@ -57,6 +57,8 @@ docker run -it --name mapserver-workshop geographika/mapserver-workshop:latest b
 This image contains both MapServer and all the MapServer workshop files so it can be deployed
 in the cloud. This is not required for the workshop itself, and users will use local files from the repository.
 
+It first requires the `mapserver-workshop` Docker image above is built and available locally.
+
 ```
 start "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 # note parent path
@@ -79,6 +81,7 @@ docker tag mapserver-workshop-demo geographika/mapserver-workshop-demo
 # https://mapserver-workshop-k8hvw.ondigitalocean.app/
 # used for https://mapserver.github.io/getting-started-with-mapserver-demo/
 # Login and get a new API token with permissions for "registry"
+# https://cloud.digitalocean.com/account/api/tokens
 
 doctl auth init -t dop_v1_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 doctl registry login
