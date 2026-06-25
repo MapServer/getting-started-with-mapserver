@@ -29,7 +29,8 @@ nav = [
         { "Lines" = "mapfile/lines.md" },
         { "Points" = "mapfile/points.md" },
         { "Labels" = "mapfile/labels.md" },
-        { "Polygons" = "mapfile/polygons.md" }
+        { "Polygons" = "mapfile/polygons.md" },
+        { "Configuration File" = "mapfile/config.md" }
     ]},
     { "Inputs" = [
         { "Raster Data" = "inputs/raster.md" },
