@@ -1,5 +1,11 @@
 # MapServer Configuration File
 
+The MapServer 8.0 release saw the introduction of a global [CONFIG](https://mapserver.org/mapfile/config.html) file. This allowed
+adding settings that apply to all Mapfiles in a MapServer deployment, avoiding duplication and making configuration more straight forward.
+
+This tutorial provides an introduction to the `CONFIG` file, and highhlights 
+
+
 ## Overview
 
 
