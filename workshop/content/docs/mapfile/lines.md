@@ -30,7 +30,9 @@ LAYER
 Key attributes for the layer are:
 
 - the [NAME](https://mapserver.org/mapfile/layer.html#mapfile-layer-name) is used by client applications to refer to the `LAYER` and should be unique.
-- the [STATUS](https://mapserver.org/mapfile/layer.html#mapfile-layer-status) is a slightly confusing property. When we use a client application such as OpenLayers, we want to set this to `OFF` and let the client request layers. A `STATUS` of `default` means the layer will always be visible whether the client requests it or not.
+- the [STATUS](https://mapserver.org/mapfile/layer.html#mapfile-layer-status) is a slightly confusing property. 
+  When using a client application such as OpenLayers, we typically set this to `OFF` so that layers are only rendered when explicitly requested by the client.
+  A `STATUS` of `default` means the layer will always be visible whether the client requests it or not.
 - all layers have a [TYPE](https://mapserver.org/mapfile/layer.html#mapfile-layer-type) which decides how the layer should be drawn. We use a simple `LINE` type to display the roads.
 
 ## Data Sources
@@ -50,7 +52,7 @@ The path to the `roads.fgb` is added to the `DATA` property and is relative to t
 
 ## Styling
 
-In this example all roads will be in the same `CLASS` and displayed in a single `STYLE`:
+In this example all roads are placed in a single `CLASS` and styled using a single `STYLE`:
 
 ```scala
 CLASS
@@ -70,7 +72,7 @@ END
 
 !!! tip
 
-    Note the layer name in `layer=roads` is case-sensitive and had to match the LAYER NAME in the Mapfile
+    Note the layer name in `layer=roads` is case-sensitive and must match the LAYER NAME in the Mapfile
     exactly.
 
 ??? JavaScript "lines.js"
@@ -89,6 +91,6 @@ END
 
 1. Change the `STYLE` to use a different RGB colour. 
 2. Add a [WIDTH](https://www.mapserver.org/mapfile/style.html#mapfile-style-width) property to the `STYLE`.
-2. Add a second `STYLE` block to the `CLASS`, but use a larger width to create stacked lines. Styles are drawn in the order they appear in the Mapfile.
-3. Experiment with adding a [PATTERN](https://www.mapserver.org/mapfile/style.html#mapfile-style-pattern) to the line style for example `PATTERN 5 5 END`.
+3. Add a second `STYLE` block to the `CLASS`, but use a larger width to create stacked lines. Styles are rendered in the order they appear in the Mapfile.
+4. Experiment with adding a [PATTERN](https://www.mapserver.org/mapfile/style.html#mapfile-style-pattern) to the line style for example `PATTERN 5 5 END`.
 

@@ -19,7 +19,7 @@ MapServer documentation.
 ## Remote Datasets using  Virtual File Systems
 
 GDAL's [Virtual File Systems](https://gdal.org/user/virtual_file_systems.html) can be used to
-access data over stored on a network, for example on a server or Amazon S3 bucket. 
+access data stored on a network, for example on a server or Amazon S3 bucket. 
 
 ```scala
 CONNECTIONTYPE OGR
@@ -75,7 +75,7 @@ than a huge GeoTIFF file.
     END
     ```
 
-    In the `stars.js` you will need to ensure the `milkyway` layer is added to the OpenLayers map:
+    In the `stars.js` file you will need to ensure the `milkyway` layer is added to the OpenLayers map:
 
     ```js
     params: { 'LAYERS': 'constellations,stars,stars2,milkyway'},

@@ -3,9 +3,8 @@
 ## Overview
 
 MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
-
 The dataset used in this example is elevation data from the [Estonian Geoportal](https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html),
-and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.
+provided by the Estonian Land Board (2024). It covers Tartu center and is from map sheet 474659.
 
 <div class="map">
   <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
@@ -47,7 +46,7 @@ LAYER
 END
 ```
 
-There are a few points to note in this Mapfile. 
+There are a few points to note about this Mapfile.
 
 ## Include Files
 
@@ -80,7 +79,7 @@ END
 
 ## Composite Blocks
 
-A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the layer to make it 20% transparent.
+A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used to make the layer 20% transparent.
 
 ## Code
 

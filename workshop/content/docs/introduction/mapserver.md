@@ -24,7 +24,7 @@ In its most basic form, MapServer is a CGI program that sits inactive on your we
 
 A Mapfile is used to define the data contained in a map and how it will be displayed.
 
-Mapfiles are text files, that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:
+Mapfiles are text files that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:
 
 ``` scala
 --8<-- "countries.map"
@@ -34,7 +34,7 @@ Mapfiles are text files, that contain hierarchical and nested blocks. An annotat
 
 ## MapServer development
 
-The first release of MapServer was in 1997, and is written in a combination of C and C++. 
+The first release of MapServer was in 1997 and is written in a combination of C and C++. 
 
 A summary of MapServer development from [OpenHub](https://openhub.net/p/MapServer) is shown below:
 
@@ -43,7 +43,7 @@ A summary of MapServer development from [OpenHub](https://openhub.net/p/MapServe
 ## MapServer dependencies
 
 MapServer is built on several image rendering and geospatial C/C++ libraries. 
-The below image shows MapServer's key dependencies:
+The image below shows MapServer's key dependencies:
 
 ![MapServer dependencies](../assets/images/mapserver-libs.png)
 
@@ -52,4 +52,4 @@ This means that improvements and features in libraries like GDAL also become ava
 ## Interacting with MapServer
 
 Before services like WMS and WFS were added to MapServer, interaction was done using the custom keywords listed on the
-[MapServer CGI Controls](https://mapserver.org/cgi/controls.html) page.These are still available for use in MapServer, but this workshop will focus on OGC services. For example we will use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.
+[MapServer CGI Controls](https://mapserver.org/cgi/controls.html) page. These are still available for use in MapServer, but this workshop will focus on OGC services. For example we will use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.

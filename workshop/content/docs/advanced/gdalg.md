@@ -15,6 +15,19 @@ MapServer reads a vector pipeline using the [GDALG: GDAL Streamed Algorithm](htt
   <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/gdalg.html"></iframe>
 </div>
 
+The pipeline we will be running in this example reads a dataset from a FlatGeoBuf file, and applies
+a buffer to it:
+
+<div>
+<object
+    type="image/svg+xml"
+    data="/assets/images/roads.gdalg.svg"
+    width="100%"
+    height="200">
+</object>
+</div>
+
+
 ## Checking the Pipelines with GDAL
 
 Before configuring MapServer, it is often easier to test your pipelines directly with GDAL, to ensure they run correctly.

@@ -1,6 +1,8 @@
 # Debugging MapServer
 
-TODO
+!!! warning
+
+    This page is currently in a draft form.
 
 ```scala
     LAYER
@@ -14,4 +16,6 @@ TODO
 
 Then follow live logs:
 
+```
 docker logs -f mapserver
+```

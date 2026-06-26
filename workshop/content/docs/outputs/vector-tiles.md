@@ -10,7 +10,8 @@ This example displays [Mapbox Vector Tiles](https://mapserver.org/development/rf
 
 ## Mapfile Configuration
 
-The Mapbox Vector Tile (MVT) output format is available by default in MapServer, and so no particular changes are required in a Mapfile to
+The Mapbox Vector Tile (MVT) output format is available if MapServer is built with MVT support enabled, as in the case
+of the MapServer Docker image used by the workshop. No particular changes are required in a Mapfile to
 serve vector tiles.
 
 ## Adding Vector Tiles to OpenLayers
@@ -23,7 +24,7 @@ There are two ways to request vector tiles from MapServer:
 2. Using a [WMS](wms.md) interface, and adding the following to the
 request strings - `&FORMAT=application/x-protobuf`.
 
-In this example we are are using the tile mode approach, based on the
+In this example we are using the tile mode approach, based on the
 [OpenLayers vector tile example](https://openlayers.org/workshop/en/vectortile/interact.html). We supply a template URL, and make sure we include `&map.imagetype=mvt` as part of the querystring:
 
 ```js

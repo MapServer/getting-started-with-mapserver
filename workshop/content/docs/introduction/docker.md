@@ -6,12 +6,12 @@ We will be using MapServer on a Docker image for the workshop. This ensures that
 
 A custom MapServer Docker image has been created for the workshop, and the Dockerfile is found [here](https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/Dockerfile). 
 
-MapServer runs on the Apache web server - see the [Apache page](../advanced/apache.md) page for further details. 
+MapServer runs on the Apache web server - see the [Apache page](../advanced/apache.md) for further details. 
 
-It uses the Apache [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), module that provides FastCGI support.
+It uses the Apache [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), a module that provides FastCGI support.
 
 MapServer runs on port `8080` on the Docker container, which is mapped to port `7000` on the local machine, as can be seen in the Docker compose file
-located at `workshop\exercises\docker-compose.yml`:
+located at `workshop/exercises/docker-compose.yml`:
 
 ```yaml
   mapserver:
@@ -30,7 +30,7 @@ located at `workshop\exercises\docker-compose.yml`:
 
 ## JavaScript Application
 
-A second container that serves the JavaScript example pages is also run using Docker. This uses Node and runs on port 7001 on both the container and the host machine.
+A second Docker container serves the JavaScript example pages. This uses Node and runs on port 7001 on both the container and the host machine.
 
 ```yaml
   node:

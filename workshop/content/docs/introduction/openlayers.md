@@ -18,9 +18,10 @@ The HTML pages are served using a Docker container, and when the containers are
 running an index page for all workshop exercises is available at <http://localhost:7001/>. 
 
 The HTML files used in the workshop are located in `exercises/app`.
-The JavaScript files can be found in `exercises/app/js`. These files can be edited, and changes viewed in the browser. 
+The JavaScript files can be found in `exercises/app/js`. These files can be edited and changes viewed in the browser. 
 
-To display MapServer WMS services we use an [ImageLayer](https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html) with a [ImageWMS](https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html) source.
+To display MapServer WMS services we use an [ImageLayer](https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html)
+with an [ImageWMS](https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html) source.
 
 These are created as follows:
 
@@ -33,12 +34,12 @@ new ImageLayer({
 }),
 ```
 
-The `LAYERS`parameter can be set to the Mapfile `MAP NAME` to show all layers, or you can add individual
+The `LAYERS` parameter can be set to the Mapfile `MAP NAME` to show all layers, or you can add individual
 layers using a comma-separated list of `LAYER NAME`.
 
 ## WMS
 
-We use the WMS protocol to serve out data. To configure this in our Mapfiles we need to include the following `WEB` block:
+We use the WMS protocol to serve data. To configure this in our Mapfiles we need to include the following `WEB` block:
 
 ```scala
 WEB
@@ -51,7 +52,7 @@ END
 
 ## Centres and Extents
 
-In our OpenLayers maps we often want to set a starting extent or centre for the map. If our Mapfile contains an EXTENT in a different projection we can use the GDAL programs installed on the Docker image to convert coordinates to the OpenLayers projection:
+In our OpenLayers maps we often want to set an initial extent or centre. If our Mapfile contains an `EXTENT` in a different projection we can use the GDAL programs installed on the Docker image to convert coordinates to the OpenLayers projection:
 
 
 ```bash

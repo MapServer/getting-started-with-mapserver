@@ -1,5 +1,5 @@
 import '../css/style.css';
-import Vector from 'ol/source/Vector.js';
+import VectorSource from 'ol/source/Vector.js';
 import Map from 'ol/Map.js';
 import GeoJSON from 'ol/format/GeoJSON.js';
 import OSM from 'ol/source/OSM.js';
@@ -17,7 +17,7 @@ const layers = [
             'fill-color': 'rgba(255, 255, 0, 0.7)',
             'stroke-width': 1.3,
         },
-        source: new Vector({
+        source: new VectorSource({
             url: mapserverUrl + 'ogcapi-features/ogcapi/collections/pois_polygon/items?f=json&limit=500',
             format: new GeoJSON(),
         }),
