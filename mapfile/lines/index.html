@@ -1615,7 +1615,9 @@ a dataset that will be displayed in your map. In this example we have a single "
 <p>Key attributes for the layer are:</p>
 <ul>
 <li>the <a href="https://mapserver.org/mapfile/layer.html#mapfile-layer-name">NAME</a> is used by client applications to refer to the <code>LAYER</code> and should be unique.</li>
-<li>the <a href="https://mapserver.org/mapfile/layer.html#mapfile-layer-status">STATUS</a> is a slightly confusing property. When we use a client application such as OpenLayers, we want to set this to <code>OFF</code> and let the client request layers. A <code>STATUS</code> of <code>default</code> means the layer will always be visible whether the client requests it or not.</li>
+<li>the <a href="https://mapserver.org/mapfile/layer.html#mapfile-layer-status">STATUS</a> is a slightly confusing property. 
+  When using a client application such as OpenLayers, we typically set this to <code>OFF</code> so that layers are only rendered when explicitly requested by the client.
+  A <code>STATUS</code> of <code>default</code> means the layer will always be visible whether the client requests it or not.</li>
 <li>all layers have a <a href="https://mapserver.org/mapfile/layer.html#mapfile-layer-type">TYPE</a> which decides how the layer should be drawn. We use a simple <code>LINE</code> type to display the roads.</li>
 </ul>
 <h2 id="data-sources">Data Sources</h2>
@@ -1628,7 +1630,7 @@ a dataset that will be displayed in your map. In this example we have a single "
 <p>MapServer can display many different <a href="https://mapserver.org/input/vector/index.html">vector formats</a>. In this case we are pointing to a FlatGeobuf file on disk so we set the <a href="https://mapserver.org/mapfile/layer.html#mapfile-layer-connectiontype">CONNECTIONTYPE</a> to <a href="https://mapserver.org/input/vector/flatgeobuf.html">FLATGEOBUF</a>. FlatGeobuf can be simpler to use than Shapefiles, as they are a single file and don't have any restrictions on attribute names. </p>
 <p>The path to the <code>roads.fgb</code> is added to the <code>DATA</code> property and is relative to the Mapfile. </p>
 <h2 id="styling">Styling</h2>
-<p>In this example all roads will be in the same <code>CLASS</code> and displayed in a single <code>STYLE</code>:</p>
+<p>In this example all roads are placed in a single <code>CLASS</code> and styled using a single <code>STYLE</code>:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">CLASS</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nc">STYLE</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nc">COLOR</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="mi">50</span>
@@ -1646,7 +1648,7 @@ a dataset that will be displayed in your map. In this example we have a single "
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Note the layer name in <code>layer=roads</code> is case-sensitive and had to match the LAYER NAME in the Mapfile
+<p>Note the layer name in <code>layer=roads</code> is case-sensitive and must match the LAYER NAME in the Mapfile
 exactly.</p>
 </div>
 <details class="javascript">
@@ -1718,7 +1720,7 @@ exactly.</p>
 <ol>
 <li>Change the <code>STYLE</code> to use a different RGB colour. </li>
 <li>Add a <a href="https://www.mapserver.org/mapfile/style.html#mapfile-style-width">WIDTH</a> property to the <code>STYLE</code>.</li>
-<li>Add a second <code>STYLE</code> block to the <code>CLASS</code>, but use a larger width to create stacked lines. Styles are drawn in the order they appear in the Mapfile.</li>
+<li>Add a second <code>STYLE</code> block to the <code>CLASS</code>, but use a larger width to create stacked lines. Styles are rendered in the order they appear in the Mapfile.</li>
 <li>Experiment with adding a <a href="https://www.mapserver.org/mapfile/style.html#mapfile-style-pattern">PATTERN</a> to the line style for example <code>PATTERN 5 5 END</code>.</li>
 </ol>
 

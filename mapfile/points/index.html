@@ -1582,7 +1582,8 @@ city for <a href="https://2025.europe.foss4g.org/">FOSS4G Europe 2025</a>.</p>
 <p>The diagram below shows the Mapfile directives used for the point map:</p>
 <p><img alt="Mapfile classes used in the Points map" src="../../assets/images/point-map-classes.png" title="Mapfile Classes" /></p>
 <h2 id="symbols">Symbols</h2>
-<p>The Mapfile symbolises the points using different <a href="https://mapserver.org/mapfile/symbol.html">SYMBOLs</a>. There are several different symbol <a href="https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type">TYPEs</a> available in MapServer.</p>
+<p>The Mapfile symbolises the points using different <a href="https://mapserver.org/mapfile/symbol.html">SYMBOL</a> definitions.
+There are several different symbol <a href="https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type">TYPEs</a> available in MapServer.</p>
 <p>A simple circle symbol is defined in the Mapfile as follows:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">SYMBOL</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;circle&quot;</span>
@@ -1602,11 +1603,11 @@ city for <a href="https://2025.europe.foss4g.org/">FOSS4G Europe 2025</a>.</p>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>LiberationMono         LiberationMono-Regular.ttf
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>LiberationSans         LiberationSans-Regular.ttf
 </span></code></pre></div>
-<p>We then reference this file in the Mapfile, and use any of the font aliases for symbols and labels. </p>
+<p>We then reference this file in the Mapfile and use any of the font aliases for symbols and labels. </p>
 <p>In the example below we're using a
 cinema character from Google's <a href="https://fonts.google.com/icons">Material Symbols</a>.
-We use HTML entity number of the symbol we want in the <a href="https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character">CHARACTER</a> keyword.
-A list of these codes and their associated symbols can be seen at <a href="http://localhost:7001/fonts.html">http://localhost:7001/fonts.html</a>.</p>
+We specify the symbol using its HTML entity code in the <a href="https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character">CHARACTER</a> keyword.
+A list of these codes and their associated symbols is available at <a href="http://localhost:7001/fonts.html">http://localhost:7001/fonts.html</a>.</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">FONTSET</span><span class="w"> </span><span class="s">&quot;data/fonts/fontset.txt&quot;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nc">SYMBOL</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;cinema&quot;</span>
@@ -1761,8 +1762,8 @@ A list of these codes and their associated symbols can be seen at <a href="http:
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li>Edit the <code>workshop/exercises/app/js/points.js</code> to show the OpenStreetMap base layer. You need to set the <code>visible: false</code> to <code>visible: true</code>.</li>
-<li>Change the default <code>CLASS</code> to use larger points in a more visible colour.</li>
-<li>Add another class to display another point type. Choose an appropriate symbol from the list at <a href="http://localhost:7001/fonts.html">http://localhost:7001/fonts.html</a>. Some example attribute types include <code>fast_food</code>, <code>monument</code>, and <code>post_box</code>. The source dataset is <code>workshop/exercises/mapfiles/data/osm/pois.fgb</code> - this can be opened in QGIS to view all available attributes and values. </li>
+<li>Change the default <code>CLASS</code> to use larger points and a more visible colour.</li>
+<li>Add another <code>CLASS</code> to display another point type. Choose an appropriate symbol from the list at <a href="http://localhost:7001/fonts.html">http://localhost:7001/fonts.html</a>. Some example attribute types include <code>fast_food</code>, <code>monument</code>, and <code>post_box</code>. The source dataset is <code>workshop/exercises/mapfiles/data/osm/pois.fgb</code> - this can be opened in QGIS to view all available attributes and values. </li>
 </ol>
 <!--
 

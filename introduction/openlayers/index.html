@@ -1538,8 +1538,9 @@
 <p>The HTML pages are served using a Docker container, and when the containers are
 running an index page for all workshop exercises is available at <a href="http://localhost:7001/">http://localhost:7001/</a>. </p>
 <p>The HTML files used in the workshop are located in <code>exercises/app</code>.
-The JavaScript files can be found in <code>exercises/app/js</code>. These files can be edited, and changes viewed in the browser. </p>
-<p>To display MapServer WMS services we use an <a href="https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html">ImageLayer</a> with a <a href="https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html">ImageWMS</a> source.</p>
+The JavaScript files can be found in <code>exercises/app/js</code>. These files can be edited and changes viewed in the browser. </p>
+<p>To display MapServer WMS services we use an <a href="https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html">ImageLayer</a>
+with an <a href="https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html">ImageWMS</a> source.</p>
 <p>These are created as follows:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ow">new</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="p">({</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="p">({</span>
@@ -1548,10 +1549,10 @@ The JavaScript files can be found in <code>exercises/app/js</code>. These files 
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}),</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}),</span>
 </span></code></pre></div>
-<p>The <code>LAYERS</code>parameter can be set to the Mapfile <code>MAP NAME</code> to show all layers, or you can add individual
+<p>The <code>LAYERS</code> parameter can be set to the Mapfile <code>MAP NAME</code> to show all layers, or you can add individual
 layers using a comma-separated list of <code>LAYER NAME</code>.</p>
 <h2 id="wms">WMS</h2>
-<p>We use the WMS protocol to serve out data. To configure this in our Mapfiles we need to include the following <code>WEB</code> block:</p>
+<p>We use the WMS protocol to serve data. To configure this in our Mapfiles we need to include the following <code>WEB</code> block:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">WEB</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nc">METADATA</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">ows_enable_request</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="bp">this</span><span class="w"> </span><span class="n">enables</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="nc">OGC</span><span class="w"> </span><span class="n">protocols</span><span class="w"> </span><span class="n">supported</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="nc">MapServer</span>
@@ -1560,7 +1561,7 @@ layers using a comma-separated list of <code>LAYER NAME</code>.</p>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nc">END</span>
 </span></code></pre></div>
 <h2 id="centres-and-extents">Centres and Extents</h2>
-<p>In our OpenLayers maps we often want to set a starting extent or centre for the map. If our Mapfile contains an EXTENT in a different projection we can use the GDAL programs installed on the Docker image to convert coordinates to the OpenLayers projection:</p>
+<p>In our OpenLayers maps we often want to set an initial extent or centre. If our Mapfile contains an <code>EXTENT</code> in a different projection we can use the GDAL programs installed on the Docker image to convert coordinates to the OpenLayers projection:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># connect to the Docker image</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapserver<span class="w"> </span>/bin/bash
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>

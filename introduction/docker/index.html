@@ -1553,10 +1553,10 @@
 <p>We will be using MapServer on a Docker image for the workshop. This ensures that the MapServer version and the Apache web server configuration are identical.</p>
 <h2 id="docker-mapserver">Docker MapServer</h2>
 <p>A custom MapServer Docker image has been created for the workshop, and the Dockerfile is found <a href="https://github.com/MapServer/getting-started-with-mapserver/blob/main/docker/Dockerfile">here</a>. </p>
-<p>MapServer runs on the Apache web server - see the <a href="../../advanced/apache/">Apache page</a> page for further details. </p>
-<p>It uses the Apache <a href="https://httpd.apache.org/mod_fcgid/">mod_fcgid module</a>, module that provides FastCGI support.</p>
+<p>MapServer runs on the Apache web server - see the <a href="../../advanced/apache/">Apache page</a> for further details. </p>
+<p>It uses the Apache <a href="https://httpd.apache.org/mod_fcgid/">mod_fcgid module</a>, a module that provides FastCGI support.</p>
 <p>MapServer runs on port <code>8080</code> on the Docker container, which is mapped to port <code>7000</code> on the local machine, as can be seen in the Docker compose file
-located at <code>workshop\exercises\docker-compose.yml</code>:</p>
+located at <code>workshop/exercises/docker-compose.yml</code>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">mapserver</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geographika/mapserver-workshop:latest</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mapserver</span>
@@ -1571,7 +1571,7 @@ located at <code>workshop\exercises\docker-compose.yml</code>:</p>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mynetwork</span>
 </span></code></pre></div>
 <h2 id="javascript-application">JavaScript Application</h2>
-<p>A second container that serves the JavaScript example pages is also run using Docker. This uses Node and runs on port 7001 on both the container and the host machine.</p>
+<p>A second Docker container serves the JavaScript example pages. This uses Node and runs on port 7001 on both the container and the host machine.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="nt">node</span><span class="p">:</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:lts-slim</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node</span>

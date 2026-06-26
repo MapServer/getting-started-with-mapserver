@@ -1425,23 +1425,23 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
 </span></code></pre></div>
 <p>When run through a web server, data is passed to the <code>mapserv</code> application, which generates output that is then sent back through the web server.
-All web requests can be recreated and tested on the command line, this makes it a handy debugging tool. </p>
+All web requests can be recreated and tested on the command line, making it a handy debugging tool.</p>
 <p>To test a URL such as <a href="http://localhost:7000/?map=/etc/mapserver/countries.map&amp;mode=map">http://localhost:7000/?map=/etc/mapserver/countries.map&amp;mode=map</a> run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mapserv<span class="w"> </span><span class="s2">&quot;QUERY_STRING=map=/etc/mapserver/countries.map&amp;mode=map&quot;</span>
 </span></code></pre></div>
 <p>This will output a PNG image to the command line - this will look like garbage!</p>
 <p>We can save the output by redirecting it to a file using <code>&gt;</code>. 
 As the <code>mapserv</code> program returns responses for a web client it also returns HTTP headers. To create a valid image file we need to strip these
-header by using the <code>-nh</code> (no headers) switch.</p>
+headers by using the <code>-nh</code> (no headers) switch.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mapserv<span class="w"> </span>-nh<span class="w"> </span><span class="s2">&quot;QUERY_STRING=map=/etc/mapserver/countries.map&amp;mode=map&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/mapserver/test.png
 </span></code></pre></div>
-<p><code>test.png</code> should now be on your local disk at <code>getting-started-with-mapserver/workshop/exercises/mapfiles</code>.</p>
+<p><code>test.png</code> should now be available on your local disk at <code>getting-started-with-mapserver/workshop/exercises/mapfiles</code>.</p>
 <p><img alt="Test output generated at the command line" src="../../assets/images/command-line-test.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <code>docker-compose.yml</code> file maps local folders to folders on the Docker container. Files created in the Docker
 container will be visible on your local disk, and files on your local disk will be visible in the container.
-This is set in in the <code>volumes</code> section, using the syntax <code>- LOCAL_FOLDER:CONTAINER_FOLDER</code></p>
+This is set in the <code>volumes</code> section, using the syntax <code>- LOCAL_FOLDER:CONTAINER_FOLDER</code></p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">volumes</span><span class="p">:</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./scripts:/scripts</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mapfiles:/etc/mapserver</span>

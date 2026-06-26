@@ -1579,7 +1579,8 @@
 </div>
 
 <h2 id="mapfile-configuration">Mapfile Configuration</h2>
-<p>The Mapbox Vector Tile (MVT) output format is available by default in MapServer, and so no particular changes are required in a Mapfile to
+<p>The Mapbox Vector Tile (MVT) output format is available if MapServer is built with MVT support enabled, as in the case
+of the MapServer Docker image used by the workshop. No particular changes are required in a Mapfile to
 serve vector tiles.</p>
 <h2 id="adding-vector-tiles-to-openlayers">Adding Vector Tiles to OpenLayers</h2>
 <p>There are two ways to request vector tiles from MapServer: </p>
@@ -1592,7 +1593,7 @@ serve vector tiles.</p>
 request strings - <code>&amp;FORMAT=application/x-protobuf</code>.</p>
 </li>
 </ol>
-<p>In this example we are are using the tile mode approach, based on the
+<p>In this example we are using the tile mode approach, based on the
 <a href="https://openlayers.org/workshop/en/vectortile/interact.html">OpenLayers vector tile example</a>. We supply a template URL, and make sure we include <code>&amp;map.imagetype=mvt</code> as part of the querystring:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ow">new</span><span class="w"> </span><span class="nx">VectorTileLayer</span><span class="p">({</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">VectorTileSource</span><span class="p">({</span>

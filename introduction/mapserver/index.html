@@ -1611,7 +1611,7 @@ at <a href="https://mapserver.org/">https://mapserver.org/</a>. </p>
 <p><img alt="MapServer overview diagram" src="../../assets/images/mapserver-overview.png" /></p>
 <h2 id="mapfiles">Mapfiles</h2>
 <p>A Mapfile is used to define the data contained in a map and how it will be displayed.</p>
-<p>Mapfiles are text files, that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:</p>
+<p>Mapfiles are text files that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">#</span><span class="w"> </span><span class="nc">Comment</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="p">(</span><span class="n">#</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">line</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">#</span><span class="w"> </span><span class="nc">All</span><span class="w"> </span><span class="nc">Mapfiles</span><span class="w"> </span><span class="n">begin</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nc">MAP</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">finish</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="nc">END</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nc">MAP</span>
@@ -1654,18 +1654,18 @@ at <a href="https://mapserver.org/">https://mapserver.org/</a>. </p>
 </span></code></pre></div>
 <p><img alt="Mapfile classes used in the Countries map" src="../../assets/images/countries-map-classes.png" title="Mapfile Classes" /></p>
 <h2 id="mapserver-development">MapServer development</h2>
-<p>The first release of MapServer was in 1997, and is written in a combination of C and C++. </p>
+<p>The first release of MapServer was in 1997 and is written in a combination of C and C++. </p>
 <p>A summary of MapServer development from <a href="https://openhub.net/p/MapServer">OpenHub</a> is shown below:</p>
 <script type='text/javascript' src='https://openhub.net/p/MapServer/widgets/project_factoids_stats?format=js'></script>
 
 <h2 id="mapserver-dependencies">MapServer dependencies</h2>
 <p>MapServer is built on several image rendering and geospatial C/C++ libraries. 
-The below image shows MapServer's key dependencies:</p>
+The image below shows MapServer's key dependencies:</p>
 <p><img alt="MapServer dependencies" src="../../assets/images/mapserver-libs.png" /></p>
 <p>This means that improvements and features in libraries like GDAL also become available in MapServer. Any GDAL <a href="https://gdal.org/drivers/raster/index.html">raster driver</a> or <a href="https://gdal.org/drivers/vector/index.html">vector driver</a> can be used by MapServer. </p>
 <h2 id="interacting-with-mapserver">Interacting with MapServer</h2>
 <p>Before services like WMS and WFS were added to MapServer, interaction was done using the custom keywords listed on the
-<a href="https://mapserver.org/cgi/controls.html">MapServer CGI Controls</a> page.These are still available for use in MapServer, but this workshop will focus on OGC services. For example we will use the <a href="https://mapserver.org/ogc/wms_server.html">WMS</a> protocol to display the MapServer layer on top of an OSM background using OpenLayers.</p>
+<a href="https://mapserver.org/cgi/controls.html">MapServer CGI Controls</a> page. These are still available for use in MapServer, but this workshop will focus on OGC services. For example we will use the <a href="https://mapserver.org/ogc/wms_server.html">WMS</a> protocol to display the MapServer layer on top of an OSM background using OpenLayers.</p>
 
 
 

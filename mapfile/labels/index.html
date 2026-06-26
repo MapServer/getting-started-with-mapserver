@@ -1573,14 +1573,14 @@
 
 <h1 id="labels">Labels</h1>
 <h2 id="overview">Overview</h2>
-<p>In this exercises we'll look at labelling features in a map. We'll be using a lakes dataset from the original Itasca County, Minnesota MapServer demo.</p>
+<p>In this exercise we'll look at labelling features in a map. We'll be using a lakes dataset from the original Itasca County, Minnesota MapServer demo.</p>
 <div class="map">
   <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/lakes.html"></iframe>
 </div>
 
 <h2 id="labels_1">Labels</h2>
-<p><a href="https://mapserver.org/mapfile/label.html">LABEL</a>s are placed within a <code>CLASS</code>. 
-Each class can label features differently.</p>
+<p><a href="https://mapserver.org/mapfile/label.html">LABEL</a> elements are placed within a <code>CLASS</code>. 
+Each class can label features differently from others.</p>
 <p>Here is the <code>LABEL</code> block used in our example:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">LABEL</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nc">COLOR</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span>
@@ -1595,7 +1595,7 @@ Each class can label features differently.</p>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nc">END</span>
 </span></code></pre></div>
 <h2 id="label-positions">Label Positions</h2>
-<p>We use the <a href="https://mapserver.org/mapfile/geomtransform.html#centerline">centerline</a> function as part of a <a href="https://mapserver.org/mapfile/geomtransform.html">GEOMTRANSFORM</a> expression:</p>
+<p>We use the <a href="https://mapserver.org/mapfile/geomtransform.html#centerline">centerline</a> function within a <a href="https://mapserver.org/mapfile/geomtransform.html">GEOMTRANSFORM</a> expression:</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">GEOMTRANSFORM</span><span class="w"> </span><span class="p">(</span><span class="n">centerline</span><span class="p">(</span><span class="n">densify</span><span class="p">([</span><span class="n">shape</span><span class="p">],</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)))</span>
 </span></code></pre></div>
 <h2 id="code">Code</h2>
@@ -1706,7 +1706,7 @@ Each class can label features differently.</p>
 <li>Use a different font for the label by adding the following to the <code>LABEL</code> block: <code>FONT MonsieurLaDoulaise</code> and increasing the <code>SIZE</code> to <code>28</code>.
    The list of fonts available can be found in <code>workshop/exercises/mapfiles/data/fonts/fontset.txt</code>.</li>
 <li>Comment out the <code>GEOMTRANSFORM (centerline([shape]))</code> and <code>ANGLE FOLLOW</code> lines (using <code>#</code>) to see its effect on the map.</li>
-<li>If you have time, download a font you like from <a href="https://fonts.google.com/">https://fonts.google.com/</a> and unzip the .TTF file to <code>workshop/exercises/mapfiles/data/fonts/</code>
+<li>If you have time, download a font from <a href="https://fonts.google.com/">https://fonts.google.com/</a> and unzip the .TTF file to <code>workshop/exercises/mapfiles/data/fonts/</code>
    add a new entry to <code>fontset.txt</code> and use this font to draw your Map labels.</li>
 </ol>
 <!--
@@ -1716,7 +1716,7 @@ Each class can label features differently.</p>
 </span></code></pre></div>
 
 # EXTENT 26.668678 58.339241 26.796582 58.409410 # EPSG:4326
-# adding a value of 0.1 causes the request to take over 5 minutes
+# uisng a value of 0.1 causes the request to take over 5 minutes
 # GEOMTRANSFORM (centerline(densify([shape], 0.5)))
 
 # workaround for https://github.com/MapServer/MapServer/issues/7058

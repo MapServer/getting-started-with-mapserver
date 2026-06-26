@@ -1617,9 +1617,9 @@
 
 <h1 id="raster-data">Raster Data</h1>
 <h2 id="overview">Overview</h2>
-<p>MapServer can serve both <a href="https://mapserver.org/input/vector/index.html">vector</a> and <a href="https://mapserver.org/input/raster.html">raster</a> data.</p>
-<p>The dataset used in this example is elevation data from the <a href="https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html">Estonian Geoportal</a>,
-and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.</p>
+<p>MapServer can serve both <a href="https://mapserver.org/input/vector/index.html">vector</a> and <a href="https://mapserver.org/input/raster.html">raster</a> data.
+The dataset used in this example is elevation data from the <a href="https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html">Estonian Geoportal</a>,
+provided by the Estonian Land Board (2024). It covers Tartu center and is from map sheet 474659.</p>
 <div class="map">
   <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
 </div>
@@ -1652,7 +1652,7 @@ MapServer Docker container.</p>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nc">INCLUDE</span><span class="w"> </span><span class="s">&quot;terrain.include&quot;</span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nc">END</span>
 </span></code></pre></div>
-<p>There are a few points to note in this Mapfile. </p>
+<p>There are a few points to note about this Mapfile.</p>
 <h2 id="include-files">Include Files</h2>
 <p>We are making use of the <a href="https://mapserver.org/mapfile/include.html">INCLUDE</a> 
 directive. This allows us to include additional files within our Mapfile. Any file extensions can be used, and paths are always relative to the main
@@ -1677,7 +1677,7 @@ based on the <code>[pixel]</code> value for each cell:</p>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nc">END</span>
 </span></code></pre></div>
 <h2 id="composite-blocks">Composite Blocks</h2>
-<p>A <a href="https://mapserver.org/mapfile/composite.html">COMPOSITE</a> block is used on the layer to make it 20% transparent.</p>
+<p>A <a href="https://mapserver.org/mapfile/composite.html">COMPOSITE</a> block is used to make the layer 20% transparent.</p>
 <h2 id="code">Code</h2>
 <div class="admonition example">
 <p class="admonition-title">Example</p>

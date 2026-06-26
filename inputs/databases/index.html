@@ -1598,10 +1598,10 @@
 <p>MapServer can connect to most geospatial databases. There are native MapServer drivers for <a href="https://mapserver.org/input/vector/postgis.html">PostgreSQL/PostGIS</a>,
 <a href="https://mapserver.org/input/vector/oracle.html">Oracle</a>, and <a href="https://mapserver.org/input/vector/mssql.html">Microsoft SQL Server</a>. Other databases
 can be accessed through OGR, for example <a href="https://mapserver.org/input/vector/mysql.html">MySQL</a>.</p>
-<p>In this exercise we'll be connecting to a PostGIS database to display water polygon features using a MapServer WMS. <a href="https://postgis.net/">PostGIS</a> spatially enables the <a href="https://www.postgresql.org/">PostgreSQL</a>
-databases. </p>
+<p>In this exercise we'll be connecting to a PostGIS database to display water polygon features using a MapServer WMS.
+<a href="https://postgis.net/">PostGIS</a> spatially enables <a href="https://www.postgresql.org/">PostgreSQL</a> databases. </p>
 <h2 id="docker-setup">Docker Setup</h2>
-<p>To avoid having to install and setup a database we'll be using the <a href="https://hub.docker.com/r/kartoza/postgis/">PostGIS Docker image</a> provided
+<p>To avoid having to install and set up a database we'll be using the <a href="https://hub.docker.com/r/kartoza/postgis/">PostGIS Docker image</a> provided
 by <a href="https://kartoza.com/">Kartoza</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1640,7 +1640,7 @@ creating a new PostgreSQL connection:</p>
 </ul>
 </div>
 <h2 id="adding-data-to-the-database">Adding Data to The Database</h2>
-<p>We can use the OGR tool <a href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a> installed on the MapServer container to add datasets to the PostgreSQL database.</p>
+<p>We can use the GDAL CLI tool <a href="https://gdal.org/en/stable/programs/gdal_vector_convert.html">gdal vector convert</a> installed on the MapServer container to add datasets to the PostgreSQL database.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># connect to the MapServer Docker image which includes OGR tools for importing data</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapserver2<span class="w"> </span>bash
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># navigate to the folder containing the OSM FlatGeobuf files</span>
@@ -1745,11 +1745,11 @@ Online example not available as no PostGIS installation on the server
 </details>
 <h2 id="exercises">Exercises</h2>
 <ol>
-<li>Try and load another dataset into the database using the <code>ogr2ogr</code> approach above.</li>
+<li>Try to load another dataset into the database using the <code>gdal vector convert</code> approach above.</li>
 <li>Now add a new layer to the Mapfile to display the layer. You can make a direct request to MapServer in the form:
   <a href="http://localhost:7000/?map=/etc/mapserver/postgis.map&amp;mode=map&amp;layers=water%20NEWLAYERNAME">http://localhost:7000/?map=/etc/mapserver/postgis.map&amp;mode=map&amp;layers=water%20NEWLAYERNAME</a>.</li>
 <li>
-<p>Now update the JS file so the layer is visible as part of the interactive map, through WMS:</p>
+<p>Now update the JS file so the layer is visible in the interactive map via WMS:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="p">({</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;postgis.map&amp;&#39;</span><span class="p">,</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;LAYERS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;water,NEWLAYERNAME&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;STYLES&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">},</span>

@@ -1564,7 +1564,7 @@ MapServer documentation.</p>
 
 <h2 id="remote-datasets-using-virtual-file-systems">Remote Datasets using  Virtual File Systems</h2>
 <p>GDAL's <a href="https://gdal.org/user/virtual_file_systems.html">Virtual File Systems</a> can be used to
-access data over stored on a network, for example on a server or Amazon S3 bucket. </p>
+access data stored on a network, for example on a server or Amazon S3 bucket. </p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">OGR</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">&quot;/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/constellations.lines.json&quot;</span>
 </span></code></pre></div>
@@ -1725,7 +1725,7 @@ than a huge GeoTIFF file.</p>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="nc">END</span>
 </span></code></pre></div>
-<p>In the <code>stars.js</code> you will need to ensure the <code>milkyway</code> layer is added to the OpenLayers map:</p>
+<p>In the <code>stars.js</code> file you will need to ensure the <code>milkyway</code> layer is added to the OpenLayers map:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;LAYERS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;constellations,stars,stars2,milkyway&#39;</span><span class="p">},</span>
 </span></code></pre></div>
 </li>
