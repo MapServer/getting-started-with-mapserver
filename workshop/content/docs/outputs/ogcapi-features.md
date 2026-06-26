@@ -40,11 +40,12 @@ END
 
 ## The MapServer CONFIG File
 
-In MapServer version 8.0 a new global [CONFIG](https://www.mapserver.org/mapfile/config.html) file was added. 
+In MapServer version 8.0 a new global [CONFIG](https://www.mapserver.org/mapfile/config.html) file was added.
+This allows us to map URL paths to specific Mapfiles.
 
-This allows us to set which URL path is handled by which Mapfile. 
+See the [CONFIG](/mapfile/config/) tutorial for an introduction to working with the `CONFIG` file.
 
-The file is located at `workshop\exercises\mapfiles\mapserver.conf` (in the same folder as the Mapfiles), and is read by the Docker container.
+The file is located at `workshop/exercises/mapfiles/mapserver.conf` (in the same folder as the Mapfiles), and is read by the Docker container.
 
 !!! tip
 
@@ -66,7 +67,7 @@ The other relevant setting is the environment variable `OGCAPI_HTML_TEMPLATE_DIR
 
 ```scala
 ENV
-    OGCAPI_HTML_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-bootstrap4/"
+    OGCAPI_HTML_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/"
 END
 ```
 
@@ -90,7 +91,7 @@ new VectorLayer({
         'fill-color': 'rgba(255, 255, 0, 0.7)',
         'stroke-width': 1.3,
     },
-    source: new Vector({
+    source: new VectorSource({
         url: mapserverUrl + 'ogcapi-features/ogcapi/collections/pois_polygon/items?f=json&limit=500',
         format: new GeoJSON(),
     }),
@@ -102,7 +103,7 @@ new VectorLayer({
 !!! example
 
     - Direct MapServer request: <http://localhost:7000/ogcapi-features/ogcapi/>
-    - Direct MapServer request: <http://localhost:7000/ogcapi-features/ogcapi/collections/pois/items?f=html>    
+    - Direct MapServer request: <http://localhost:7000/ogcapi-features/ogcapi/collections/pois/items?f=html>
     - Local OpenLayers example: <http://localhost:7001/ogcapi-features.html>
 
 ??? JavaScript "ogcapi-features.js"

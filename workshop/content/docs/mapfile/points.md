@@ -15,7 +15,8 @@ The diagram below shows the Mapfile directives used for the point map:
 
 ## Symbols
 
-The Mapfile symbolises the points using different [SYMBOLs](https://mapserver.org/mapfile/symbol.html). There are several different symbol [TYPEs](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type) available in MapServer.
+The Mapfile symbolises the points using different [SYMBOL](https://mapserver.org/mapfile/symbol.html) definitions.
+There are several different symbol [TYPEs](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type) available in MapServer.
 
 A simple circle symbol is defined in the Mapfile as follows:
 
@@ -44,12 +45,12 @@ LiberationMono         LiberationMono-Regular.ttf
 LiberationSans         LiberationSans-Regular.ttf
 ```
 
-We then reference this file in the Mapfile, and use any of the font aliases for symbols and labels. 
+We then reference this file in the Mapfile and use any of the font aliases for symbols and labels. 
 
 In the example below we're using a
 cinema character from Google's [Material Symbols](https://fonts.google.com/icons).
-We use HTML entity number of the symbol we want in the [CHARACTER](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character) keyword.
-A list of these codes and their associated symbols can be seen at [http://localhost:7001/fonts.html](http://localhost:7001/fonts.html).
+We specify the symbol using its HTML entity code in the [CHARACTER](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character) keyword.
+A list of these codes and their associated symbols is available at [http://localhost:7001/fonts.html](http://localhost:7001/fonts.html).
 
 ```scala
 FONTSET "data/fonts/fontset.txt"
@@ -84,8 +85,8 @@ END
 ## Exercises
 
 1. Edit the `workshop/exercises/app/js/points.js` to show the OpenStreetMap base layer. You need to set the `visible: false` to `visible: true`.
-2. Change the default `CLASS` to use larger points in a more visible colour.
-3. Add another class to display another point type. Choose an appropriate symbol from the list at <http://localhost:7001/fonts.html>. Some example attribute types include `fast_food`, `monument`, and `post_box`. The source dataset is `workshop/exercises/mapfiles/data/osm/pois.fgb` - this can be opened in QGIS to view all available attributes and values. 
+2. Change the default `CLASS` to use larger points and a more visible colour.
+3. Add another `CLASS` to display another point type. Choose an appropriate symbol from the list at <http://localhost:7001/fonts.html>. Some example attribute types include `fast_food`, `monument`, and `post_box`. The source dataset is `workshop/exercises/mapfiles/data/osm/pois.fgb` - this can be opened in QGIS to view all available attributes and values. 
 
 <!--
 

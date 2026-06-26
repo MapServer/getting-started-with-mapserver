@@ -18,17 +18,17 @@ MapServer. Both vector data and raster data are covered.
 
 4. MapServer **Outputs**. These exercises show how MapServer can publish data. When first
 created MapServer was used to produce map images, but now it can serve data out in
-a large number of open geospatial formats. Focus is given to [OGC](https://www.ogc.org/standards/)
+a large number of open geospatial formats. The focus is on [OGC](https://www.ogc.org/standards/)
 standards as these are free, open and interoperable.
 
 5. **Advanced** topics. These are a collection of miscellaneous exercises that cover
 a wide range of MapServer functionality. Selected exercises will be chosen based on the
-needs to the workshop participants. MapServer has over 25 years of development and 
+needs of the workshop participants. MapServer has over 25 years of development and 
 features, so new topics will be added over time. 
 
 ## Workshop Outline
 
-Below is a rough timeline for how the timings of the 4-hour workshop, with a 15 minute break.
+Below is a rough timeline for the 4-hour workshop, including a 15-minute break.
 These can be adapted based on the needs of the participants.
 
 - 0h00 - 0h30 - Introduction to the workshop, Docker setup and tests
@@ -43,7 +43,7 @@ These can be adapted based on the needs of the participants.
 ## Test the Docker Compose config
 
 Before making any changes, we will make sure that the initial Docker Compose
-setup provided to you is actually working. The configuration file for Docker Compose is found at the following location:
+setup provided to you is actually working. The Docker Compose configuration file is located at:
 
 * `workshop/exercises/docker-compose.yml`
 
@@ -59,9 +59,9 @@ setup provided to you is actually working. The configuration file for Docker Com
     2. Open <http://localhost:7000> in your browser, you should see an error message!
     3. Close by pressing `CTRL-C`
 
-# Displaying your First Map
+# Displaying Your First Map
 
-- Ensure that you have MapServer setup and running at <http://localhost:7000>.
+- Ensure that you have MapServer set up and running at <http://localhost:7000>.
 - Now try opening the following MapServer URL in your browser - <http://localhost:7000/?map=/etc/mapserver/countries.map&mode=map>
 
 

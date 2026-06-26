@@ -35,8 +35,8 @@ END
 
 In this Mapfile we have two different classes for the dataset.
 
-The first class has an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits 
-which features will be drawn. This compares the value for the "type" field for each feature with "university".
+The first class has an [EXPRESSION](https://mapserver.org/mapfile/expressions.html) that limits 
+which features are drawn. This compares the value for the "type" field for each feature with "university".
 If there is a match then the feature is drawn with the `STYLE`s from the `CLASS`.
 
 ```scala
@@ -57,9 +57,9 @@ CLASS
 !!! tip
 
     A LAYER has a [CONNECTIONTYPE](https://mapserver.org/mapfile/layer.html#mapfile-layer-connectiontype)
-    that is used to connect to different data sources. The connection types are "native" -
-    when the reading of the data is handled by MapServer code. The OGR connection type uses GDAL/OGR
-    to read data sources. For some data types, as in the flatgeobuf example used here, there is an option
+    that is used to connect to different data sources. "Native" connection types mean the data is read directly by MapServer.
+    The OGR connection type uses GDAL/OGR to read data sources.
+    For some data types, as in the flatgeobuf example used here, there is an option
     to use either a native connection or an OGR connection.
 
     There is also a PLUGIN connection type to allow connections to MS SQL Server and Oracle databases.
@@ -95,7 +95,7 @@ CLASS
         CLASSGROUP "university" # can switch the default set of CLASSes here
     ```
 
-2. Switch the style used in the `polygon.js` file from `university` to `other`:
+2. Switch the style used in the `polygons.js` file from `university` to `other`:
 
     ```js
     source: new ImageWMS({
