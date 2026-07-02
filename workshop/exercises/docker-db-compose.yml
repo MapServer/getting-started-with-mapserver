@@ -36,8 +36,8 @@ services:
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
-      - ./scripts:/scripts
-      - ./mapfiles:/etc/mapserver
+      - ./scripts:/scripts:z
+      - ./mapfiles:/etc/mapserver:z
     networks:
       - mynetwork
 
@@ -48,7 +48,7 @@ services:
       - 7001:7001
     working_dir: /home/node/app
     volumes:
-      - ./app:/home/node/app
+      - ./app:/home/node/app:z
     networks:
       - mynetwork
     command: >
@@ -59,7 +59,7 @@ services:
     image: kartoza/postgis:18-3.6
     container_name: db
     volumes:
-      - ./postgis-data:/var/lib/postgresql
+      - ./postgis-data:/var/lib/postgresql:z
     environment:
       - POSTGRES_DB=gis
       - POSTGRES_USER=docker
