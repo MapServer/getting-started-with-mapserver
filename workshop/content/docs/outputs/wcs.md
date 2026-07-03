@@ -14,9 +14,9 @@ Cloud-Optimized GeoTIFF (COG) from the Estonian Land Board as the source dataset
 
 Some sample MapServer requests for testing the WCS service are listed below. You can test these in your browser.
 
-- [GetCapabilities](http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities&VERSION=2.0.1)
-- [DescribeCoverage 2.0](http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=DescribeCoverage&COVERAGEID=dtm)
-- [GetCoverage 2.0 image/tiff full](http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=image/tiff)
+- [GetCapabilities](http://localhost:9090/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities&VERSION=2.0.1)
+- [DescribeCoverage 2.0](http://localhost:9090/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=DescribeCoverage&COVERAGEID=dtm)
+- [GetCoverage 2.0 image/tiff full](http://localhost:9090/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=image/tiff)
 
 You can also connect to the MapServer Docker container and use `mapserv` to test the requests from the command line.
 
@@ -77,7 +77,6 @@ WEB
         "wcs_srs" "EPSG:4326 EPSG:3857"
         "wcs_title" "Example WCS Mapfile"
         "wcs_description" "Test description"
-        "wcs_onlineresource" "http://localhost:7000/"
     END
 END
 ```

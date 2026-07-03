@@ -45,8 +45,8 @@ new TileLayer({
 
 !!! example
 
-    -  MapServer request: <http://localhost:7000/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap>
-    - Local OpenLayers example: <http://localhost:7001/tiles.html>
+    -  MapServer request: <http://localhost:9090/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap>
+    - Local OpenLayers example: <http://localhost:9091/tiles.html>
 
 ??? JavaScript "tiles.js"
 

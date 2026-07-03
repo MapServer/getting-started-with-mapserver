@@ -32,7 +32,7 @@ services:
     image: geographika/mapserver-workshop:latest
     container_name: mapserver2
     ports:
-      - 7000:8080
+      - 9090:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -45,7 +45,7 @@ services:
     image: node:lts-slim
     container_name: node2
     ports:
-      - 7001:7001
+      - 9091:9091
     working_dir: /home/node/app
     volumes:
       - ./app:/home/node/app:z

@@ -15,7 +15,7 @@ A useful introduction to OpenLayers can be found [here](https://openlayers.org/w
 ## HTML example pages
 
 The HTML pages are served using a Docker container, and when the containers are
-running an index page for all workshop exercises is available at <http://localhost:7001/>. 
+running an index page for all workshop exercises is available at <http://localhost:9091/>. 
 
 The HTML files used in the workshop are located in `exercises/app`.
 The JavaScript files can be found in `exercises/app/js`. These files can be edited and changes viewed in the browser. 

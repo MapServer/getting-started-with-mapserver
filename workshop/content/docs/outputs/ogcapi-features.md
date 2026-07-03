@@ -77,9 +77,9 @@ The OGC API - Features can be viewed as HTML pages, which are rendered using tem
 
 The services use hierarchical URLs for example:
 
-* The root of the service is at <http://localhost:7000/ogcapi-features/ogcapi/>
-* The feature collections are listed at <http://localhost:7000/ogcapi-features/ogcapi/collections?f=html>
-* The Polygon feature collection is available at <http://localhost:7000/ogcapi-features/ogcapi/collections/pois_polygon?f=html>
+* The root of the service is at <http://localhost:9090/ogcapi-features/ogcapi/>
+* The feature collections are listed at <http://localhost:9090/ogcapi-features/ogcapi/collections?f=html>
+* The Polygon feature collection is available at <http://localhost:9090/ogcapi-features/ogcapi/collections/pois_polygon?f=html>
 
 ## Adding OGC API - Features to OpenLayers
 
@@ -102,9 +102,9 @@ new VectorLayer({
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:7000/ogcapi-features/ogcapi/>
-    - Direct MapServer request: <http://localhost:7000/ogcapi-features/ogcapi/collections/pois/items?f=html>
-    - Local OpenLayers example: <http://localhost:7001/ogcapi-features.html>
+    - Direct MapServer request: <http://localhost:9090/ogcapi-features/ogcapi/>
+    - Direct MapServer request: <http://localhost:9090/ogcapi-features/ogcapi/collections/pois/items?f=html>
+    - Local OpenLayers example: <http://localhost:9091/ogcapi-features.html>
 
 ??? JavaScript "ogcapi-features.js"
 
@@ -136,7 +136,7 @@ new VectorLayer({
         You need to add `TEMPLATE "void"` to each of the layers you want to make available through the OGC API - Features. 
         [TEMPLATE](https://mapserver.org/mapfile/layer.html#mapfile-layer-template) is a left-over from when HTML templates were used to return features, and allows the layer to be queried. 
 
-    Once setup correctly you should be able to browse the OGC API - Features at <http://localhost:7000/railways/ogcapi/>.
+    Once setup correctly you should be able to browse the OGC API - Features at <http://localhost:9090/railways/ogcapi/>.
 
 ## Possible Errors
 

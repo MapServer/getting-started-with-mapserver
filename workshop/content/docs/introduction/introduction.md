@@ -56,13 +56,13 @@ setup provided to you is actually working. The Docker Compose configuration file
     docker compose up
     ```
 
-    2. Open <http://localhost:7000> in your browser, you should see an error message!
+    2. Open <http://localhost:9090> in your browser, you should see an error message!
     3. Close by pressing `CTRL-C`
 
 # Displaying Your First Map
 
-- Ensure that you have MapServer set up and running at <http://localhost:7000>.
-- Now try opening the following MapServer URL in your browser - <http://localhost:7000/?map=/etc/mapserver/countries.map&mode=map>
+- Ensure that you have MapServer set up and running at <http://localhost:9090>.
+- Now try opening the following MapServer URL in your browser - <http://localhost:9090/?map=/etc/mapserver/countries.map&mode=map>
 
 
 !!! note
@@ -72,7 +72,7 @@ setup provided to you is actually working. The Docker Compose configuration file
     ```bash
     docker compose up -d
     docker container ls  # verify that the mapserver container is running
-    # visit http://localhost:7000 in your browser
+    # visit http://localhost:9090 in your browser
     docker logs --follow mapserver  # view logs
     docker compose stop
     ```

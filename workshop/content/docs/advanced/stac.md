@@ -135,7 +135,7 @@ new ImageLayer({
 
 !!! example
 
-    - Local OpenLayers example: <http://localhost:7001/stac.html>
+    - Local OpenLayers example: <http://localhost:9091/stac.html>
 
 ??? JavaScript "stac.js"
 
