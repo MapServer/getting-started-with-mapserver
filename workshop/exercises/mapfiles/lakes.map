@@ -7,7 +7,7 @@ MAP
     END
     FONTSET "data/fonts/fontset.txt"
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/"
+        IMAGEPATH "/tmp/mapserver-data/"
         METADATA
             "ows_enable_request" "*" 
             "ows_srs" "EPSG:4326 EPSG:3857" 
