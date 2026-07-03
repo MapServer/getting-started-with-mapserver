@@ -79,8 +79,8 @@ Online example not available as no PostGIS installation on the server
 
 !!! example "Exercise Links"
 
-    - MapServer request: <http://localhost:7000/?map=/etc/mapserver/postgis.map&mode=map&layer=water>
-    - OpenLayers example: <http://localhost:7001/postgis.html>
+    - MapServer request: <http://localhost:9090/?map=/etc/mapserver/postgis.map&mode=map&layer=water>
+    - OpenLayers example: <http://localhost:9091/postgis.html>
 
 ??? JavaScript "postgis.js"
 
@@ -98,7 +98,7 @@ Online example not available as no PostGIS installation on the server
 
 1. Try to load another dataset into the database using the `gdal vector convert` approach above.
 2. Now add a new layer to the Mapfile to display the layer. You can make a direct request to MapServer in the form:
-  <http://localhost:7000/?map=/etc/mapserver/postgis.map&mode=map&layers=water%20NEWLAYERNAME>.
+  <http://localhost:9090/?map=/etc/mapserver/postgis.map&mode=map&layers=water%20NEWLAYERNAME>.
 3. Now update the JS file so the layer is visible in the interactive map via WMS:
 
     ```js

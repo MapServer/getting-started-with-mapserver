@@ -125,8 +125,8 @@ LAYER
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/gdalg.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=buffered_roads%2Croads&WIDTH=1707&HEIGHT=848&CRS=EPSG%3A3857&BBOX=2974643.6269619283%2C8046226.818245997%2C2976682.478528896%2C8047239.608870775>
-    - Local OpenLayers example: <http://localhost:7001/gdalg.html>
+    - Direct MapServer request: <http://localhost:9090/?map=/etc/mapserver/gdalg.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=buffered_roads%2Croads&WIDTH=1707&HEIGHT=848&CRS=EPSG%3A3857&BBOX=2974643.6269619283%2C8046226.818245997%2C2976682.478528896%2C8047239.608870775>
+    - Local OpenLayers example: <http://localhost:9091/gdalg.html>
 
 ??? JavaScript "gdalg.js"
 

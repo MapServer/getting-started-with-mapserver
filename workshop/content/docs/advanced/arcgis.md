@@ -173,9 +173,9 @@ labelsCheckbox.addEventListener('change', (event) => {
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/arcgis.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=PoolPermits&WIDTH=3840&HEIGHT=1907&CRS=EPSG%3A3857&BBOX=-13076703%2C4014686%2C-13072117.389151445%2C4016958>
-    - Direct MapServer request with labels: <http://localhost:7000/?map=/etc/mapserver/arcgis.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=PoolPermits&LABELS=visible&WIDTH=3840&HEIGHT=1907&CRS=EPSG%3A3857&BBOX=-13076703%2C4014686%2C-13072117.389151445%2C4016958>
-    - Local OpenLayers example: <http://localhost:7001/arcgis.html>
+    - Direct MapServer request: <http://localhost:9090/?map=/etc/mapserver/arcgis.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=PoolPermits&WIDTH=3840&HEIGHT=1907&CRS=EPSG%3A3857&BBOX=-13076703%2C4014686%2C-13072117.389151445%2C4016958>
+    - Direct MapServer request with labels: <http://localhost:9090/?map=/etc/mapserver/arcgis.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image%2Fpng&STYLES=&TRANSPARENT=TRUE&LAYERS=PoolPermits&LABELS=visible&WIDTH=3840&HEIGHT=1907&CRS=EPSG%3A3857&BBOX=-13076703%2C4014686%2C-13072117.389151445%2C4016958>
+    - Local OpenLayers example: <http://localhost:9091/arcgis.html>
 
 ??? JavaScript "arcgis.js"
 

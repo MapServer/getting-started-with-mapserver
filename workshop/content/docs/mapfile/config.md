@@ -58,7 +58,7 @@ In the workshop configuration file, the following variables are set:
   on the incoming request host and path.
 - `OGCAPI_HTML_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/"`
   this setting points MapServer to the folder containing the Bootstrap HTML templates used when generating
-  the OGC API interface, for example at <http://localhost:7000/timisoara/ogcapi/?f=html>.
+  the OGC API interface, for example at <http://localhost:9090/timisoara/ogcapi/?f=html>.
 - `MS_INDEX_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/"`
   a similar setting, but used to point to the Bootstrap templates used when generating the MapServer
   [Index Pages](https://mapserver.org/output/index-page.html).
@@ -104,17 +104,17 @@ The keys allow us to access the Mapfile using the URL in the form `http://server
     `?map=/etc/mapserver/lines.map`
 
 If we have set the `MS_INDEX_TEMPLATE_DIRECTORY` path in the `ENV` section above, then MapServer
-will return an "Index Page", listing all these maps at the root of the MapServer URL: <http://localhost:7000/>.
+will return an "Index Page", listing all these maps at the root of the MapServer URL: <http://localhost:9090/>.
 
 Clicking on one of these links takes you to an individual Mapfile Landing Page, which lists the
-services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For example <http://localhost:7000/timisoara/>.
+services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For example <http://localhost:9090/timisoara/>.
 
 ## Code
 
 !!! example
 
-    - MapServer Index Page request: <http://localhost:7000/>
-    - MapServer Mapfile Landing Page example: <http://localhost:7000/timisoara/>
+    - MapServer Index Page request: <http://localhost:9090/>
+    - MapServer Mapfile Landing Page example: <http://localhost:9090/timisoara/>
 
 ??? Config file "mapserver.conf"
 
@@ -132,12 +132,12 @@ services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For ex
 
 - Add the Mapfile `./workshop/exercises/mapfiles/config.map` to the configuration file
   `./workshop/exercises/mapfiles/mapserver.conf`. Check it appears in the MapServer Index page
-  at <http://localhost:7000/>. You will need to restart the MapServer container to see this change.
+  at <http://localhost:9090/>. You will need to restart the MapServer container to see this change.
 - Enable the CGI functionality in the Mapfile by changing `"ms_enable_modes" "!*"`
   to `"*"` (or comment-out the whole line). This should create a new "OpenLayers Viewer"
-  link at <http://localhost:7000/CONFIG_MAP/>.
+  link at <http://localhost:9090/CONFIG_MAP/>.
 - Comment and uncomment the various `enable_request` `METADATA` items, and see how they affect
-  the available services for the Mapfile at <http://localhost:7000/CONFIG_MAP/>.
+  the available services for the Mapfile at <http://localhost:9090/CONFIG_MAP/>.
 
 !!! tip
 

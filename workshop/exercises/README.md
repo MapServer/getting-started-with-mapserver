@@ -12,8 +12,8 @@ cd D:\GitHub\getting-started-with-mapserver\workshop\exercises
 docker compose up -d
 ```
 
-This will start a Docker container with MapServer (reachable from the browser at <http://localhost:7000/>), and
-a Docker container with an OpenLayers development environment (reachable from the browser at <http://localhost:7001/>).
+This will start a Docker container with MapServer (reachable from the browser at <http://localhost:9090/>), and
+a Docker container with an OpenLayers development environment (reachable from the browser at <http://localhost:9091/>).
 
 To stop, use the command:
 
