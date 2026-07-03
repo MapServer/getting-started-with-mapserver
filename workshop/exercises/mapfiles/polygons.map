@@ -7,7 +7,7 @@ MAP
         "epsg:4326"
     END
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/"
+        IMAGEPATH "/tmp/mapserver-data/"
         METADATA
             "ows_title" "OSM Buildings"
             "ows_enable_request" "*"
