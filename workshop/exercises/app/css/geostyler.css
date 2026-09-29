@@ -1,0 +1,131 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+/* 2 x 2 layout: maps on top, source text below */
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#maps,
+#sources {
+    flex: 1;
+    display: flex;
+    min-height: 0; /* lets the halves shrink so the code panels can scroll */
+}
+
+#maps {
+    border-bottom: 2px solid #ccc;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+    .panel + .panel {
+        border-left: 2px solid #ccc;
+    }
+
+.panel-title {
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-name {
+    font-weight: normal;
+    color: #777;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Maps */
+.map {
+    flex: 1;
+    min-height: 0;
+}
+
+/* Greyscale basemap, so the styled layers stand out */
+.bw {
+    filter: grayscale(100%);
+}
+
+/* The layer selector sits in the top-right corner of the left map */
+#panel-left {
+    position: relative;
+}
+
+#toolbar {
+    position: absolute;
+    top: 32px; /* just below the panel title bar */
+    right: 8px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+}
+
+#layer-select {
+    font-size: 13px;
+    padding: 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Bottom-left panel: Classes takes any remaining space, Symbols only what
+   it needs. If both don't fit, they shrink in proportion to their content. */
+.subpanel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+    .subpanel[hidden] {
+        display: none;
+    }
+
+#class-panel {
+    flex: 1 1 auto;
+}
+
+#sym-panel {
+    flex: 0 1 auto;
+    border-top: 2px solid #ccc;
+}
+
+/* Read-only CodeMirror viewers */
+.code {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+    .code .cm-editor {
+        flex: 1;
+        min-height: 0;
+        font-size: 12px;
+    }
+
+    /* Keep the last line visible above a horizontal scrollbar */
+    .code .cm-content {
+        padding-bottom: 40px;
+    }
