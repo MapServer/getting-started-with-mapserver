@@ -1,0 +1,8 @@
+CLASS
+    STYLE
+        SYMBOL "arrow-wide"
+        SIZE 10
+        GAP -30 # draw in direction of the line
+        COLOR 200 0 0
+    END
+END

@@ -1,0 +1,12 @@
+CLASS
+    STYLE
+        SYMBOL "wave"
+        COLOR "#4A90D9"
+        WIDTH 1
+        SIZE 14
+    END
+    STYLE
+        OUTLINECOLOR 0 0 0
+        WIDTH 1
+    END
+END

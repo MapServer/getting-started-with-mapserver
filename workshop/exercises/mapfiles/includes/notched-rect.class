@@ -1,0 +1,8 @@
+CLASS
+    STYLE
+        SYMBOL "notched-rect"
+        OUTLINECOLOR 0 0 0
+        COLOR "#96DCF8"
+        SIZE 16
+    END
+END

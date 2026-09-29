@@ -1,0 +1,12 @@
+CLASS
+    STYLE
+        COLOR "#FFC000"
+        SYMBOL "square-spaced"
+        WIDTH 12
+        SIZE 5
+    END
+    STYLE
+        OUTLINECOLOR "#FFC000"
+        WIDTH 2
+    END
+END
