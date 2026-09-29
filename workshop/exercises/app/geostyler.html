@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenLayers and GeoStyler Demo</title>
+</head>
+<body>
+    <main id="container">
+        <!-- Top half: MapServer's WMS on the left (with the layer selector),
+             and the same layer styled in OpenLayers from the SLD on the right -->
+        <section id="maps">
+            <div class="panel" id="panel-left">
+                <div class="panel-title">MapServer WMS</div>
+                <div id="toolbar">
+                    <label for="layer-select">Layer:</label>
+                    <select id="layer-select"></select>
+                </div>
+                <div id="map-left" class="map"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">OpenLayers + GeoStyler (SLD)</div>
+                <div id="map-right" class="map"></div>
+            </div>
+        </section>
+
+        <!-- Bottom half: the Mapfile includes and the SLD generated from them -->
+        <section id="sources">
+            <div class="panel">
+                <div class="subpanel" id="class-panel">
+                    <div class="panel-title">Classes <span id="class-file-name" class="file-name"></span></div>
+                    <div id="class-text" class="code"></div>
+                </div>
+                <div class="subpanel" id="sym-panel" hidden>
+                    <div class="panel-title">Symbols <span id="sym-file-name" class="file-name"></span></div>
+                    <div id="sym-text" class="code"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">SLD (applied in OpenLayers)</div>
+                <div id="sld-text" class="code"></div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./js/geostyler.js"></script>
+</body>
+</html>

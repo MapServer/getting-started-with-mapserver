@@ -1,0 +1,11 @@
+SYMBOL
+    NAME "arrow-wide"
+    TYPE VECTOR
+    FILLED TRUE
+    POINTS
+        0 0
+        3 0.5
+        0 1
+        0 0
+    END
+END
