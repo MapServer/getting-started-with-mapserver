@@ -32,8 +32,12 @@ jobs:
           git checkout gh-pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          ls | grep -v ".nojekyll"| xargs rm -fr
+          ls | grep -v ".nojekyll" | xargs rm -fr
           mv -f /tmp/site/* .
-          git add .
-          git commit -am "update website via GitHub Actions"
-          git push
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "update website via GitHub Actions"
+            git push
+          fi
