@@ -2,7 +2,7 @@
 #
 # Authors: Seth Girvin <sethg@geoggraphika.co.uk>
 #
-# Copyright (c) 2024 Seth Girvin
+# Copyright (c) 2026 Seth Girvin
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -35,6 +35,9 @@ services:
       - 7000:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
+      MIN_PROCESSES: 2
+      IDLE_TIMEOUT: 3600 # 1 hour
+    command: ["bash", "/scripts/start-with-warmup.sh"]
     volumes:
       - ./scripts:/scripts:z
       - ./mapfiles:/etc/mapserver:z
@@ -49,6 +52,8 @@ services:
     working_dir: /home/node/app
     volumes:
       - ./app:/home/node/app:z
+      # Used for the GeoStyler demo
+      - ./mapfiles/includes:/home/node/app/public/includes:ro,z-
     networks:
       - mynetwork
     command: >

@@ -4,7 +4,8 @@ echo "Starting with apache2"
 
 # save the environment to be able to restore it in the FCGI daemon (used
 # in /usr/local/bin/qgis_mapsev_wrapper) for the startup code.
-${GET_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
+# hide any PassEnv variable _ was undefined warnings
+${GET_ENV} | grep -v '^_=' | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
 
 # Save the environment to be able to restore it in the FCGI daemon (used in /usr/local/bin/mapserv_wrapper)
 ${GET_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init_env
