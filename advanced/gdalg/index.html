@@ -25,18 +25,18 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.46">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
-        <title>Working with GDAL Vector Pipelines - Getting Started with MapServer</title>
+        <title>GDAL Pipeline - Getting Started with MapServer</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.82a87433.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
       
       
 
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with GDAL Vector Pipelines
+              GDAL Pipeline
             
           </span>
         </div>
@@ -142,7 +142,7 @@
         <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -187,7 +187,7 @@
       <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -296,18 +296,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Introduction
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -331,10 +332,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -358,10 +359,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -385,10 +386,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -412,10 +413,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -439,10 +440,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -495,18 +497,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Mapfile
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -530,10 +533,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -557,10 +560,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -584,10 +587,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -611,10 +614,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -638,10 +641,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -690,18 +694,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Inputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -725,10 +730,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -752,10 +757,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -779,10 +784,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -839,18 +845,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Outputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -874,10 +881,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -901,10 +908,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -928,10 +935,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -955,10 +962,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -982,10 +989,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1009,10 +1016,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1036,10 +1043,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1098,18 +1106,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Advanced
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1133,10 +1142,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -1301,10 +1310,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1328,10 +1337,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1355,10 +1364,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1382,10 +1391,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1409,10 +1418,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1436,10 +1445,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1685,17 +1695,17 @@ Run the commands below to connect to the MapServer Docker container and use GDAL
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span>roads.gdalg.json
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># test an inline pipeline using a single-quoted string (recommended)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span><span class="s1">&#39;{&quot;type&quot;: &quot;gdal_streamed_alg&quot;,&quot;command_line&quot;: &quot;gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001&quot;}&#39;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span><span class="s1">'{"type": "gdal_streamed_alg","command_line": "gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001"}'</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># alternatively escape the double quotes</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span><span class="s2">&quot;{\&quot;type\&quot;: \&quot;gdal_streamed_alg\&quot;,\&quot;command_line\&quot;: \&quot;gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.0001\&quot;}&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>gdal<span class="w"> </span>vector<span class="w"> </span>info<span class="w"> </span><span class="s2">"{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.0001\"}"</span>
 </span></code></pre></div>
 <h2 id="the-mapfile">The Mapfile</h2>
 <h3 id="embedding-pipelines-in-a-mapfile">Embedding Pipelines in a Mapfile</h3>
 <p>The pipeline <code>LAYER</code> in this example uses <code>CONNECTIONTYPE OGR</code> and includes the GDAL pipeline "inline" - meaning the pipeline is defined
 directly in the Mapfile. Our example pipeline looks like this:</p>
-<div class="language-scala highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="p">&#39;{</span><span class="s">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gdal_streamed_alg&quot;</span><span class="p">,</span><span class="s">&quot;command_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001&quot;</span><span class="p">}</span><span class="err">&#39;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;0&quot;</span>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="p">'{</span><span class="s">"type"</span><span class="p">:</span><span class="w"> </span><span class="s">"gdal_streamed_alg"</span><span class="p">,</span><span class="s">"command_line"</span><span class="p">:</span><span class="w"> </span><span class="s">"gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001"</span><span class="p">}</span><span class="err">'</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nc">DATA</span><span class="w"> </span><span class="s">"0"</span>
 </span></code></pre></div>
 <p>Key points to note:</p>
 <ul>
@@ -1709,34 +1719,34 @@ directly in the Mapfile. Our example pipeline looks like this:</p>
 <li>Wrap the JSON string in single quotes (as in the example above) - this is simpler and easier to read or copy/paste.</li>
 <li>Escape the double quotes using <code>\"</code> as in the example below:</li>
 </ol>
-<div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">&quot;{\&quot;type\&quot;: \&quot;gdal_streamed_alg\&quot;,\&quot;command_line\&quot;: \&quot;gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001\&quot;}&quot;</span>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">"{\"type\": \"gdal_streamed_alg\",\"command_line\": \"gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! geom buffer --distance=0.0001\"}"</span>
 </span></code></pre></div>
 <h3 id="referencing-pipelines-in-a-json-file">Referencing Pipelines in a JSON File</h3>
 <p>MapServer can also reference a JSON file containing a pipeline, which makes it easy to test and reuse the pipeline with GDAL.
 By convention GDALG files should use the <code>.gdalg.json</code> extension.</p>
-<div class="language-scala highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">&quot;roads.gdalg.json&quot;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;0&quot;</span>
+<div class="language-scala highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">"roads.gdalg.json"</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nc">DATA</span><span class="w"> </span><span class="s">"0"</span>
 </span></code></pre></div>
 <p>The contents of pipeline JSON file <code>roads.gdalg.json</code> are shown below. Notice that the dataset path <code>data/osm/roads.fgb</code> is relative to the JSON file.</p>
 <p>Using relative paths in a JSON file makes the pipeline more portable, because it can be moved to a different folder or system without changing the dataset paths.</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdal_streamed_alg&quot;</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;command_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.0001&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gdal_streamed_alg"</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">"command_line"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gdal vector pipeline ! read data/osm/roads.fgb ! geom buffer --distance=0.0001"</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="hatch-styling">Hatch Styling</h3>
 <p>Finally, we use a <a href="https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type">hatch symbol</a> to style the buffered roads.
 Hatch symbols allow you to add patterned fills, and you can adjust their angle, width, and size in the <a href="https://mapserver.org/mapfile/style.html">STYLE</a> block.</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nc">SYMBOL</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;hatchsymbol&quot;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"hatchsymbol"</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nc">TYPE</span><span class="w"> </span><span class="n">hatch</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nc">END</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">...</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nc">LAYER</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nc">CLASS</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nc">STYLE</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="nc">SYMBOL</span><span class="w"> </span><span class="s">&quot;hatchsymbol&quot;</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">&quot;#78C8FF&quot;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="nc">SYMBOL</span><span class="w"> </span><span class="s">"hatchsymbol"</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">"#78C8FF"</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="nc">WIDTH</span><span class="w"> </span><span class="mf">0.1</span>
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">      </span><span class="nc">ANGLE</span><span class="w"> </span><span class="mi">45</span>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">8</span>
@@ -1752,11 +1762,11 @@ Hatch symbols allow you to add patterned fills, and you can adjust their angle, 
 </div>
 <details class="javascript">
 <summary>gdalg.js</summary>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;../css/style.css&#39;</span><span class="p">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/source/ImageWMS.js&#39;</span><span class="p">;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">import</span><span class="w"> </span><span class="nb">Map</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/Map.js&#39;</span><span class="p">;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/View.js&#39;</span><span class="p">;</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Image</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/layer.js&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">'../css/style.css'</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/source/ImageWMS.js'</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">import</span><span class="w"> </span><span class="nb">Map</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/Map.js'</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/View.js'</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Image</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/layer.js'</span><span class="p">;</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VITE_MAPSERVER_BASE_URL</span><span class="p">;</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VITE_MAPFILES_PATH</span><span class="p">;</span>
@@ -1764,15 +1774,15 @@ Hatch symbols allow you to add patterned fills, and you can adjust their angle, 
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">layers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="p">({</span>
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="p">({</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;gdalg.map&amp;&#39;</span><span class="p">,</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">            </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;LAYERS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;buffered_roads,roads&#39;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'gdalg.map&amp;'</span><span class="p">,</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">            </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'LAYERS'</span><span class="o">:</span><span class="w"> </span><span class="s1">'buffered_roads,roads'</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">            </span><span class="nx">ratio</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="p">}),</span>
 </span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="p">}),</span>
 </span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">];</span>
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="kd">const</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Map</span><span class="p">({</span>
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="nx">layers</span><span class="o">:</span><span class="w"> </span><span class="nx">layers</span><span class="p">,</span>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">'map'</span><span class="p">,</span>
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="nx">view</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">View</span><span class="p">({</span>
 </span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2975862.75916499</span><span class="p">,</span><span class="w"> </span><span class="mf">8046369.8646329</span><span class="p">],</span>
 </span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">        </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="p">,</span>
@@ -1783,42 +1793,42 @@ Hatch symbols allow you to add patterned fills, and you can adjust their angle, 
 <details class="mapfile">
 <summary>gdalg.map</summary>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nc">MAP</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;GDALG&quot;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"GDALG"</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nc">EXTENT</span><span class="w"> </span><span class="mf">26.668678</span><span class="w"> </span><span class="mf">58.339241</span><span class="w"> </span><span class="mf">26.796582</span><span class="w"> </span><span class="mf">58.409410</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="mi">600</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nc">IMAGECOLOR</span><span class="w"> </span><span class="s">&quot;#0A1E50&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nc">IMAGECOLOR</span><span class="w"> </span><span class="s">"#0A1E50"</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nc">PROJECTION</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="s">&quot;epsg:4326&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="s">"epsg:4326"</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nc">END</span>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="nc">WEB</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp/&quot;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">"/etc/mapserver/tmp/"</span>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nc">METADATA</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="s">&quot;ows_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="s">&quot;ows_srs&quot;</span><span class="w"> </span><span class="s">&quot;EPSG:4326 EPSG:3857&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="s">"ows_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="s">"ows_srs"</span><span class="w"> </span><span class="s">"EPSG:4326 EPSG:3857"</span>
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="nc">END</span>
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">  </span><span class="nc">SYMBOL</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;hatchsymbol&quot;</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"hatchsymbol"</span>
 </span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="nc">TYPE</span><span class="w"> </span><span class="n">hatch</span>
 </span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span><span class="nc">END</span>
 </span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
 </span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span><span class="nc">LAYER</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;buffered_roads&quot;</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"buffered_roads"</span>
 </span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">POLYGON</span>
 </span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="nc">STATUS</span><span class="w"> </span><span class="nc">OFF</span>
 </span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">    </span><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">OGR</span>
 </span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inline</span><span class="w"> </span><span class="n">pipeline</span>
-</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="p">&#39;{</span><span class="s">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gdal_streamed_alg&quot;</span><span class="p">,</span><span class="s">&quot;command_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! buffer --distance=0.0001&quot;</span><span class="p">}</span><span class="err">&#39;</span>
-</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">&quot;data/osm/roads.gdalg.json&quot;</span>
-</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">    </span><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;0&quot;</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="p">'{</span><span class="s">"type"</span><span class="p">:</span><span class="w"> </span><span class="s">"gdal_streamed_alg"</span><span class="p">,</span><span class="s">"command_line"</span><span class="p">:</span><span class="w"> </span><span class="s">"gdal vector pipeline ! read /etc/mapserver/data/osm/roads.fgb ! buffer --distance=0.0001"</span><span class="p">}</span><span class="err">'</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">"data/osm/roads.gdalg.json"</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">    </span><span class="nc">DATA</span><span class="w"> </span><span class="s">"0"</span>
 </span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">    </span><span class="nc">CLASS</span>
 </span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">      </span><span class="nc">STYLE</span>
 </span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">        </span><span class="nc">COLOR</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">180</span>
 </span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">      </span><span class="nc">END</span>
 </span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">      </span><span class="nc">STYLE</span>
-</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">        </span><span class="nc">SYMBOL</span><span class="w"> </span><span class="s">&quot;hatchsymbol&quot;</span>
-</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">        </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">&quot;#78C8FF&quot;</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">        </span><span class="nc">SYMBOL</span><span class="w"> </span><span class="s">"hatchsymbol"</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">        </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">"#78C8FF"</span>
 </span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">        </span><span class="nc">WIDTH</span><span class="w"> </span><span class="mf">0.3</span>
 </span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">        </span><span class="nc">ANGLE</span><span class="w"> </span><span class="mi">45</span>
 </span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="w">        </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">8</span>
@@ -1828,15 +1838,15 @@ Hatch symbols allow you to add patterned fills, and you can adjust their angle, 
 </span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>
 </span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a><span class="w">  </span><span class="n">#</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">unbuffered</span><span class="w"> </span><span class="n">roads</span><span class="w"> </span><span class="n">dataset</span>
 </span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="w">  </span><span class="nc">LAYER</span>
-</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;roads&quot;</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"roads"</span>
 </span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a><span class="w">    </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">LINE</span>
 </span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a><span class="w">    </span><span class="nc">STATUS</span><span class="w"> </span><span class="nc">OFF</span>
 </span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a><span class="w">    </span><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">FLATGEOBUF</span>
-</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a><span class="w">    </span><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;data/osm/roads.fgb&quot;</span>
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a><span class="w">    </span><span class="nc">DATA</span><span class="w"> </span><span class="s">"data/osm/roads.fgb"</span>
 </span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a><span class="w">    </span><span class="nc">CLASS</span>
 </span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a><span class="w">      </span><span class="nc">STYLE</span>
 </span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a><span class="w">        </span><span class="nc">WIDTH</span><span class="w"> </span><span class="mf">0.8</span>
-</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a><span class="w">        </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">&quot;#DCF0FF&quot;</span>
+</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a><span class="w">        </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">"#DCF0FF"</span>
 </span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a><span class="w">      </span><span class="nc">END</span>
 </span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57" href="#__codelineno-7-57"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a><span class="w">  </span><span class="nc">END</span>
@@ -1913,10 +1923,14 @@ Hatch symbols allow you to add patterned fills, and you can adjust their angle, 
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="../../assets/javascripts/custom.js"></script>
       

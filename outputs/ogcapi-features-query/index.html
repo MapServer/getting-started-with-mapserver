@@ -25,18 +25,18 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.46">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
-        <title>OGCAPI Features Part 3 Filtering - Getting Started with MapServer</title>
+        <title>OGC API - Filtering - Getting Started with MapServer</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.82a87433.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
       
       
 
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OGCAPI Features Part 3 Filtering
+              OGC API - Filtering
             
           </span>
         </div>
@@ -142,7 +142,7 @@
         <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -187,7 +187,7 @@
       <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -296,18 +296,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Introduction
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -331,10 +332,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -358,10 +359,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -385,10 +386,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -412,10 +413,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -439,10 +440,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -495,18 +497,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Mapfile
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -530,10 +533,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -557,10 +560,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -584,10 +587,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -611,10 +614,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -638,10 +641,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -690,18 +694,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Inputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -725,10 +730,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -752,10 +757,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -779,10 +784,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -841,18 +847,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Outputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -876,10 +883,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -903,10 +910,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -930,10 +937,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -957,10 +964,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -984,10 +991,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1011,10 +1018,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -1129,10 +1136,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1189,18 +1197,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Advanced
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1224,10 +1233,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1251,10 +1260,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1278,10 +1287,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1305,10 +1314,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1332,10 +1341,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1359,10 +1368,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1386,10 +1395,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1577,19 +1587,19 @@ In this example we use the special value <code>all</code>, which exposes all lay
 (similar to <code>gml_include_items</code> when set to <code>all</code>). If we only want selected attributes we can
 use a comma-separated list.</p>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nc">LAYER</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;buildings&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"buildings"</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">POLYGON</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">allow</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">OGR</span><span class="w"> </span><span class="nc">FeatureId</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">querying</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//github.com/MapServer/MapServer/pull/7533</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nc">PROCESSING</span><span class="w"> </span><span class="s">&quot;OGR_EXPOSE_FID=TRUE&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nc">PROCESSING</span><span class="w"> </span><span class="s">"OGR_EXPOSE_FID=TRUE"</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nc">METADATA</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="s">&quot;ows_title&quot;</span><span class="w"> </span><span class="s">&quot;Buildings&quot;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="s">&quot;gml_include_items&quot;</span><span class="w"> </span><span class="s">&quot;all&quot;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="s">&quot;gml_featureid&quot;</span><span class="w"> </span><span class="s">&quot;fid&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="s">&quot;gml_types&quot;</span><span class="w"> </span><span class="s">&quot;auto&quot;</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="s">&quot;oga_queryable_items&quot;</span><span class="w"> </span><span class="s">&quot;all&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="s">"ows_title"</span><span class="w"> </span><span class="s">"Buildings"</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="s">"gml_include_items"</span><span class="w"> </span><span class="s">"all"</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="s">"gml_featureid"</span><span class="w"> </span><span class="s">"fid"</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="s">"gml_types"</span><span class="w"> </span><span class="s">"auto"</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="s">"oga_queryable_items"</span><span class="w"> </span><span class="s">"all"</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">properties</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;oga_queryable_items&quot;</span><span class="w"> </span><span class="s">&quot;name,osm_id&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">"oga_queryable_items"</span><span class="w"> </span><span class="s">"name,osm_id"</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">...</span>
 </span></code></pre></div>
 <p>The default MapServer Bootstrap templates then expose these queryables as simple filter inputs in the HTML interface. 
@@ -1608,10 +1618,10 @@ The filter itself is URL-encoded (for example spaces become <code>+</code> and s
 which is required because it is being passed in a URL query string.</p>
 <p>We can also write the same query using CQL2-JSON:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;like&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;building&quot;</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="s2">&quot;%hospital%&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"like"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"building"</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="s2">"%hospital%"</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -1629,12 +1639,12 @@ This is convenient for quick lookups but lacks the expressiveness of full CQL2.<
 simple API calls. <a href="http://localhost:7001/timisoara.html">http://localhost:7001/timisoara.html</a> links to a custom OpenLayers application,
 using the OGC filtering API to filter buildings by type, and highlight them on a map.</p>
 <p>The key parts of the code relating to filtering are building the filter string (as <code>cql2-text</code>):</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cqlFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`building = &#39;</span><span class="si">${</span><span class="nx">buildingType</span><span class="si">}</span><span class="sb">&#39;`</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cqlFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`building = '</span><span class="si">${</span><span class="nx">buildingType</span><span class="si">}</span><span class="sb">'`</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">baseUrl</span><span class="si">}</span><span class="sb">/timisoara/ogcapi/collections/buildings/items?`</span><span class="w"> </span><span class="o">+</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="sb">`filter=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">cqlFilter</span><span class="p">)</span><span class="si">}</span><span class="sb">&amp;filter-lang=cql2-text&amp;limit=1000&amp;f=json`</span><span class="p">;</span>
 </span></code></pre></div>
 <p>And updating the data source when the selection changes:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;building-select&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'building-select'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'change'</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">VectorSource</span><span class="p">({</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GeoJSON</span><span class="p">(),</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">buildOgcUrl</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">),</span>
@@ -1644,13 +1654,13 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">});</span>
 </span></code></pre></div>
 <p>The options for the drop-down list are defined in the <code>./workshop/exercises/app/timisoara.html</code> page.</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;building-select&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;apartments&quot;</span><span class="p">&gt;</span>Apartments<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;church&quot;</span><span class="p">&gt;</span>Church<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;commercial&quot;</span><span class="p">&gt;</span>Commercial<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;hospital&quot;</span><span class="p">&gt;</span>Hospital<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;office&quot;</span><span class="p">&gt;</span>Office<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;university&quot;</span><span class="p">&gt;</span>University<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">"building-select"</span><span class="p">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"apartments"</span><span class="p">&gt;</span>Apartments<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"church"</span><span class="p">&gt;</span>Church<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"commercial"</span><span class="p">&gt;</span>Commercial<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"hospital"</span><span class="p">&gt;</span>Hospital<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"office"</span><span class="p">&gt;</span>Office<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">value</span><span class="o">=</span><span class="s">"university"</span><span class="p">&gt;</span>University<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="code">Code</h2>
@@ -1663,29 +1673,29 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </div>
 <details class="javascript">
 <summary>timisoara.js</summary>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;../css/style.css&#39;</span><span class="p">;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/source/ImageWMS.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">import</span><span class="w"> </span><span class="nb">Map</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/Map.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">OSM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/source/OSM.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/View.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Image</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="p">,</span><span class="w"> </span><span class="nx">Tile</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TileLayer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/layer.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">VectorLayer</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/layer/Vector.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">import</span><span class="w"> </span><span class="nx">VectorSource</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/source/Vector.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">import</span><span class="w"> </span><span class="nx">GeoJSON</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/format/GeoJSON.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Style</span><span class="p">,</span><span class="w"> </span><span class="nx">Stroke</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/style.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">allStrategy</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ol/loadingstrategy.js&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">'../css/style.css'</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/source/ImageWMS.js'</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">import</span><span class="w"> </span><span class="nb">Map</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/Map.js'</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">OSM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/source/OSM.js'</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">View</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/View.js'</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Image</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="p">,</span><span class="w"> </span><span class="nx">Tile</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TileLayer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/layer.js'</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">VectorLayer</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/layer/Vector.js'</span><span class="p">;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">import</span><span class="w"> </span><span class="nx">VectorSource</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/source/Vector.js'</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">import</span><span class="w"> </span><span class="nx">GeoJSON</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/format/GeoJSON.js'</span><span class="p">;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Style</span><span class="p">,</span><span class="w"> </span><span class="nx">Stroke</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/style.js'</span><span class="p">;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">allStrategy</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'ol/loadingstrategy.js'</span><span class="p">;</span>
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VITE_MAPSERVER_BASE_URL</span><span class="p">;</span>
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VITE_MAPFILES_PATH</span><span class="p">;</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\?+$/</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\?+$/</span><span class="p">,</span><span class="w"> </span><span class="s1">''</span><span class="p">);</span>
 </span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
 </span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="kd">function</span><span class="w"> </span><span class="nx">buildOgcUrl</span><span class="p">(</span><span class="nx">buildingType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">cqlFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`building = &#39;</span><span class="si">${</span><span class="nx">buildingType</span><span class="si">}</span><span class="sb">&#39;`</span><span class="p">;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">cqlFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`building = '</span><span class="si">${</span><span class="nx">buildingType</span><span class="si">}</span><span class="sb">'`</span><span class="p">;</span>
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">baseUrl</span><span class="si">}</span><span class="sb">/timisoara/ogcapi/collections/buildings/items?`</span><span class="w"> </span><span class="o">+</span>
 </span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="sb">`filter=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">cqlFilter</span><span class="p">)</span><span class="si">}</span><span class="sb">&amp;filter-lang=cql2-text&amp;limit=1000&amp;f=json`</span><span class="p">;</span>
 </span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">}</span>
 </span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;building-select&#39;</span><span class="p">);</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'building-select'</span><span class="p">);</span>
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
 </span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">vectorSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">VectorSource</span><span class="p">({</span>
 </span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GeoJSON</span><span class="p">(),</span>
@@ -1697,10 +1707,10 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="nx">vectorSource</span><span class="p">,</span>
 </span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">    </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">Style</span><span class="p">({</span>
-</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">            </span><span class="nx">stroke</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Stroke</span><span class="p">({</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.5)&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">}),</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">            </span><span class="nx">stroke</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Stroke</span><span class="p">({</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'rgba(0,0,0,0.5)'</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">}),</span>
 </span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">        </span><span class="p">}),</span>
 </span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">Style</span><span class="p">({</span>
-</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">            </span><span class="nx">stroke</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Stroke</span><span class="p">({</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">}),</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">            </span><span class="nx">stroke</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Stroke</span><span class="p">({</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'cyan'</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">}),</span>
 </span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">        </span><span class="p">}),</span>
 </span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="p">]</span>
 </span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="p">});</span>
@@ -1713,8 +1723,8 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageLayer</span><span class="p">({</span>
 </span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">        </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span>
 </span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="w">        </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImageWMS</span><span class="p">({</span>
-</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;timisoara.map&amp;&#39;</span><span class="p">,</span>
-</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="w">            </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;LAYERS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;buildings&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;STYLES&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">mapserverUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mapfilesPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'timisoara.map&amp;'</span><span class="p">,</span>
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="w">            </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'LAYERS'</span><span class="o">:</span><span class="w"> </span><span class="s1">'buildings'</span><span class="p">,</span><span class="w"> </span><span class="s1">'STYLES'</span><span class="o">:</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="w">        </span><span class="p">}),</span>
 </span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="w">    </span><span class="p">}),</span>
 </span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a><span class="w">    </span><span class="nx">vectorLayer</span><span class="p">,</span>
@@ -1722,14 +1732,14 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a>
 </span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a><span class="kd">const</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Map</span><span class="p">({</span>
 </span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a><span class="w">    </span><span class="nx">layers</span><span class="o">:</span><span class="w"> </span><span class="nx">layers</span><span class="p">,</span>
-</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a><span class="w">    </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a><span class="w">    </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">'map'</span><span class="p">,</span>
 </span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="w">    </span><span class="nx">view</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">View</span><span class="p">({</span>
 </span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a><span class="w">        </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2363111</span><span class="p">,</span><span class="w"> </span><span class="mf">5740066</span><span class="p">],</span>
 </span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a><span class="w">        </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
 </span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a><span class="w">    </span><span class="p">}),</span>
 </span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a><span class="p">});</span>
 </span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a>
-</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;building-select&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'building-select'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'change'</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-68"><a id="__codelineno-5-68" name="__codelineno-5-68" href="#__codelineno-5-68"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">VectorSource</span><span class="p">({</span>
 </span><span id="__span-5-69"><a id="__codelineno-5-69" name="__codelineno-5-69" href="#__codelineno-5-69"></a><span class="w">        </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GeoJSON</span><span class="p">(),</span>
 </span><span id="__span-5-70"><a id="__codelineno-5-70" name="__codelineno-5-70" href="#__codelineno-5-70"></a><span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">buildOgcUrl</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">),</span>
@@ -1738,48 +1748,48 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
 </span><span id="__span-5-73"><a id="__codelineno-5-73" name="__codelineno-5-73" href="#__codelineno-5-73"></a><span class="w">    </span><span class="nx">vectorLayer</span><span class="p">.</span><span class="nx">setSource</span><span class="p">(</span><span class="nx">newSource</span><span class="p">);</span>
 </span><span id="__span-5-74"><a id="__codelineno-5-74" name="__codelineno-5-74" href="#__codelineno-5-74"></a><span class="p">});</span>
 </span><span id="__span-5-75"><a id="__codelineno-5-75" name="__codelineno-5-75" href="#__codelineno-5-75"></a>
-</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a><span class="kd">const</span><span class="w"> </span><span class="nx">loadingMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;loading-mask&#39;</span><span class="p">);</span>
-</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77" href="#__codelineno-5-77"></a><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;loadstart&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">loadingMask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">));</span>
-</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78" href="#__codelineno-5-78"></a><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;loadend&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">loadingMask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">));</span>
+</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a><span class="kd">const</span><span class="w"> </span><span class="nx">loadingMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'loading-mask'</span><span class="p">);</span>
+</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77" href="#__codelineno-5-77"></a><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">loadingMask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'active'</span><span class="p">));</span>
+</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78" href="#__codelineno-5-78"></a><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'loadend'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">loadingMask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'active'</span><span class="p">));</span>
 </span></code></pre></div>
 </details>
 <details class="mapfile">
 <summary>ogcapi-features.map</summary>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nc">MAP</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;Timisoara&quot;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"Timisoara"</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="mi">800</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nc">EXTENT</span><span class="w"> </span><span class="mf">20.9984994</span><span class="w"> </span><span class="mf">45.6280885</span><span class="w"> </span><span class="mf">21.5152955</span><span class="w"> </span><span class="mf">45.8955907</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nc">PROJECTION</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="s">&quot;EPSG:4326&quot;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="s">"EPSG:4326"</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nc">WEB</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp/&quot;</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="n">end</span><span class="o">-</span><span class="n">slash</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">important</span><span class="o">!</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">"/etc/mapserver/tmp/"</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="n">end</span><span class="o">-</span><span class="n">slash</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">important</span><span class="o">!</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nc">METADATA</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">            </span><span class="s">&quot;ows_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">            </span><span class="s">&quot;ows_srs&quot;</span><span class="w"> </span><span class="s">&quot;EPSG:4326 EPSG:3857&quot;</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">            </span><span class="s">&quot;ows_use_default_extent_for_getfeature&quot;</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">            </span><span class="s">"ows_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">            </span><span class="s">"ows_srs"</span><span class="w"> </span><span class="s">"EPSG:4326 EPSG:3857"</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">            </span><span class="s">"ows_use_default_extent_for_getfeature"</span><span class="w"> </span><span class="s">"false"</span>
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="nc">END</span>
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="nc">LAYER</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;buildings&quot;</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"buildings"</span>
 </span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="nc">PROJECTION</span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">            </span><span class="s">&quot;EPSG:4326&quot;</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">            </span><span class="s">"EPSG:4326"</span>
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="nc">END</span>
 </span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="nc">STATUS</span><span class="w"> </span><span class="nc">OFF</span>
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">POLYGON</span>
-</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="nc">PROCESSING</span><span class="w"> </span><span class="s">&quot;OGR_EXPOSE_FID=TRUE&quot;</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="nc">PROCESSING</span><span class="w"> </span><span class="s">"OGR_EXPOSE_FID=TRUE"</span>
 </span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">        </span><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">OGR</span>
-</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">        </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">&quot;data/osm/timisoara/buildings.gpkg&quot;</span>
-</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="nc">TEMPLATE</span><span class="w"> </span><span class="s">&quot;ttt&quot;</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">        </span><span class="nc">CONNECTION</span><span class="w"> </span><span class="s">"data/osm/timisoara/buildings.gpkg"</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="nc">TEMPLATE</span><span class="w"> </span><span class="s">"ttt"</span>
 </span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">        </span><span class="nc">METADATA</span>
-</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">            </span><span class="s">&quot;ows_title&quot;</span><span class="w"> </span><span class="s">&quot;Buildings&quot;</span>
-</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">            </span><span class="s">&quot;gml_include_items&quot;</span><span class="w"> </span><span class="s">&quot;all&quot;</span>
-</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">            </span><span class="s">&quot;gml_featureid&quot;</span><span class="w"> </span><span class="s">&quot;fid&quot;</span>
-</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">            </span><span class="s">&quot;gml_types&quot;</span><span class="w"> </span><span class="s">&quot;auto&quot;</span>
-</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">            </span><span class="s">&quot;oga_queryable_items&quot;</span><span class="w"> </span><span class="s">&quot;all&quot;</span>
-</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">            </span><span class="s">&quot;oga_sortable_items&quot;</span><span class="w"> </span><span class="s">&quot;all&quot;</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">            </span><span class="s">"ows_title"</span><span class="w"> </span><span class="s">"Buildings"</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">            </span><span class="s">"gml_include_items"</span><span class="w"> </span><span class="s">"all"</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">            </span><span class="s">"gml_featureid"</span><span class="w"> </span><span class="s">"fid"</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">            </span><span class="s">"gml_types"</span><span class="w"> </span><span class="s">"auto"</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">            </span><span class="s">"oga_queryable_items"</span><span class="w"> </span><span class="s">"all"</span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">            </span><span class="s">"oga_sortable_items"</span><span class="w"> </span><span class="s">"all"</span>
 </span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">        </span><span class="nc">END</span>
-</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">        </span><span class="nc">CLASSITEM</span><span class="w"> </span><span class="s">&quot;building&quot;</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">        </span><span class="nc">CLASSITEM</span><span class="w"> </span><span class="s">"building"</span>
 </span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">        </span><span class="nc">CLASS</span>
 </span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">            </span><span class="nc">STYLE</span>
 </span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">                </span><span class="nc">COLOR</span><span class="w"> </span><span class="mi">220</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="mi">60</span>
@@ -2021,10 +2031,14 @@ using the OGC filtering API to filter buildings by type, and highlight them on a
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="../../assets/javascripts/custom.js"></script>
       

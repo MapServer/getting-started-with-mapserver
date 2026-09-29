@@ -25,18 +25,18 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.46">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
-        <title>MapServer Configuration File - Getting Started with MapServer</title>
+        <title>Configuration File - Getting Started with MapServer</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.82a87433.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
       
       
 
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MapServer Configuration File
+              Configuration File
             
           </span>
         </div>
@@ -142,7 +142,7 @@
         <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -187,7 +187,7 @@
       <a href="https://github.com/mapserver/getting-started-with-mapserver" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -296,18 +296,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Introduction
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -331,10 +332,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -358,10 +359,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -385,10 +386,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -412,10 +413,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -439,10 +440,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -497,18 +499,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Mapfile
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -532,10 +535,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -559,10 +562,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -586,10 +589,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -613,10 +616,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -742,10 +745,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -794,18 +798,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Inputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -829,10 +834,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -856,10 +861,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -883,10 +888,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -943,18 +949,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Outputs
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -978,10 +985,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1005,10 +1012,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1032,10 +1039,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1059,10 +1066,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1086,10 +1093,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1113,10 +1120,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1140,10 +1147,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1200,18 +1208,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Advanced
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1235,10 +1244,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1262,10 +1271,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1289,10 +1298,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1316,10 +1325,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1343,10 +1352,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1370,10 +1379,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1397,10 +1406,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1641,8 +1651,8 @@ using the syntax <code>CONFIG "VARIABLE_NAME" "VARIABLE_VALUE"</code>, for examp
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">MAPS</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">here</span><span class="p">,</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">paths</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">within</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">MapServer</span><span class="w"> </span><span class="nc">Docker</span><span class="w"> </span><span class="n">container</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/clusters.map&quot;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/contours.map&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">"/etc/mapserver/clusters.map"</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">"/etc/mapserver/contours.map"</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">mapfiles</span><span class="p">...</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nc">END</span>
 </span></code></pre></div>
@@ -1681,47 +1691,47 @@ services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For ex
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">#</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nc">ENV</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nc">MS_ONLINERESOURCE</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nc">MS_ONLINERESOURCE</span><span class="w"> </span><span class="s">""</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">OGC</span><span class="w"> </span><span class="nc">API</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">#</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="nc">OGCAPI_HTML_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">&quot;/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/&quot;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="nc">OGCAPI_HTML_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">"/usr/local/share/mapserver/ogcapi/templates/html-bootstrap/"</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Landing</span><span class="w"> </span><span class="n">page</span>
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="n">#</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="nc">MS_INDEX_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">&quot;/usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/&quot;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="nc">MS_INDEX_TEMPLATE_DIRECTORY</span><span class="w"> </span><span class="s">"/usr/local/share/mapserver/ogcapi/templates/html-index-bootstrap/"</span>
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Limit</span><span class="w"> </span><span class="nc">Mapfile</span><span class="w"> </span><span class="nc">Access</span>
 </span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nc">Mapfiles</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="bp">this</span><span class="w"> </span><span class="n">regex</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">&quot;^/etc/mapserver/&quot;</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">"^/etc/mapserver/"</span>
 </span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_NO_PATH</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">&quot;^/opt/mapserver&quot;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_NO_PATH</span><span class="w"> </span><span class="s">"1"</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAP_PATTERN</span><span class="w"> </span><span class="s">"^/opt/mapserver"</span>
 </span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
 </span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Global</span><span class="w"> </span><span class="nc">Log</span><span class="o">/</span><span class="nc">Debug</span><span class="w"> </span><span class="nc">Setup</span>
 </span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">        </span><span class="n">#</span>
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_DEBUGLEVEL</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_ERRORFILE</span><span class="w"> </span><span class="s">&quot;/opt/mapserver/logs/mapserver.log&quot;</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_DEBUGLEVEL</span><span class="w"> </span><span class="s">"5"</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_ERRORFILE</span><span class="w"> </span><span class="s">"/opt/mapserver/logs/mapserver.log"</span>
 </span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
 </span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Default</span><span class="w"> </span><span class="nc">Map</span>
 </span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">        </span><span class="n">#</span>
-</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE</span><span class="w"> </span><span class="s">&quot;/opt/mapserver/test/test.map&quot;</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE</span><span class="w"> </span><span class="s">"/opt/mapserver/test/test.map"</span>
 </span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
 </span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Proj</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">proj</span><span class="p">.</span><span class="n">db</span><span class="p">)</span>
 </span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="n">#</span>
-</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">PROJ_DATA</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">PROJ_DATA</span><span class="w"> </span><span class="s">""</span>
 </span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>
 </span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Request</span><span class="w"> </span><span class="nc">Control</span>
 </span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="nc">POST</span><span class="w"> </span><span class="n">requests</span><span class="w"> </span><span class="p">(</span><span class="n">allowed</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">do</span><span class="p">)</span>
-</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_NO_POST</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_NO_POST</span><span class="w"> </span><span class="s">"1"</span>
 </span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>
 </span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">        </span><span class="n">#</span>
 </span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Other</span><span class="w"> </span><span class="nc">Options</span>
@@ -1729,11 +1739,11 @@ services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For ex
 </span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_ENCRYPTION_KEY</span>
 </span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_USE_GLOBAL_FT_CACHE</span>
 </span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_PDF_CREATION_DATE</span>
-</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE_PATTERN</span><span class="w"> </span><span class="s">&quot;\.map$&quot;</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAPFILE_PATTERN</span><span class="w"> </span><span class="s">"\.map$"</span>
 </span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_XMLMAPFILE_XSLT</span>
 </span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MODE</span>
 </span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_OPENLAYERS_JS_URL</span>
-</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_TEMPPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp&quot;</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_TEMPPATH</span><span class="w"> </span><span class="s">"/etc/mapserver/tmp"</span>
 </span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">MS_MAX_OPEN_FILES</span>
 </span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
@@ -1741,34 +1751,34 @@ services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For ex
 </span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">    </span><span class="n">#</span><span class="w"> </span><span class="nc">Map</span><span class="w"> </span><span class="nc">Aliases</span>
 </span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">    </span><span class="n">#</span>
 </span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">    </span><span class="nc">MAPS</span>
-</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">        </span><span class="nc">ARCGIS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/arcgis.map&quot;</span>
-</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">        </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/clusters.map&quot;</span>
-</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">        </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/contours.map&quot;</span>
-</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">        </span><span class="nc">COUNTRIES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/countries.map&quot;</span>
-</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">        </span><span class="nc">DIRECTION</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/direction.map&quot;</span>
-</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">        </span><span class="nc">GDALG</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/gdalg.map&quot;</span>
-</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">        </span><span class="nc">LAKES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/lakes.map&quot;</span>
-</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">        </span><span class="nc">LANDUSE</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/landuse.map&quot;</span>
-</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">        </span><span class="nc">LINES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/lines.map&quot;</span>
-</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">        </span><span class="nc">OGCAPI</span><span class="o">-</span><span class="nc">FEATURES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/ogcapi-features.map&quot;</span>
-</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">        </span><span class="nc">OTHER</span><span class="o">-</span><span class="nc">PROJECTIONS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/other-projections.map&quot;</span>
-</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="w">        </span><span class="nc">POINTS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/points.map&quot;</span>
-</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a><span class="w">        </span><span class="nc">POLYGONS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/polygons.map&quot;</span>
-</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a><span class="w">        </span><span class="nc">POSTGIS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/postgis.map&quot;</span>
-</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a><span class="w">        </span><span class="nc">RAILWAYS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/railways.map&quot;</span>
-</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a><span class="w">        </span><span class="nc">RASTER</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/raster.map&quot;</span>
-</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a><span class="w">        </span><span class="nc">RASTER</span><span class="o">-</span><span class="nc">PIPELINE</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/raster-pipeline.map&quot;</span>
-</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a><span class="w">        </span><span class="nc">SLD</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/sld.map&quot;</span>
-</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a><span class="w">        </span><span class="nc">STAC</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/stac.map&quot;</span>
-</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a><span class="w">        </span><span class="nc">STARS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/stars.map&quot;</span>
-</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a><span class="w">        </span><span class="nc">TILES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tiles.map&quot;</span>
-</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a><span class="w">        </span><span class="nc">TIMISOARA</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/timisoara.map&quot;</span>
-</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a><span class="w">        </span><span class="nc">VECTOR</span><span class="o">-</span><span class="nc">TILES</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/vector-tiles.map&quot;</span>
-</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a><span class="w">        </span><span class="nc">WCS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/wcs.map&quot;</span>
-</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a><span class="w">        </span><span class="nc">WFS</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/wfs.map&quot;</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">        </span><span class="nc">ARCGIS</span><span class="w"> </span><span class="s">"/etc/mapserver/arcgis.map"</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">        </span><span class="nc">CLUSTERS</span><span class="w"> </span><span class="s">"/etc/mapserver/clusters.map"</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">        </span><span class="nc">CONTOURS</span><span class="w"> </span><span class="s">"/etc/mapserver/contours.map"</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">        </span><span class="nc">COUNTRIES</span><span class="w"> </span><span class="s">"/etc/mapserver/countries.map"</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">        </span><span class="nc">DIRECTION</span><span class="w"> </span><span class="s">"/etc/mapserver/direction.map"</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">        </span><span class="nc">GDALG</span><span class="w"> </span><span class="s">"/etc/mapserver/gdalg.map"</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">        </span><span class="nc">LAKES</span><span class="w"> </span><span class="s">"/etc/mapserver/lakes.map"</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">        </span><span class="nc">LANDUSE</span><span class="w"> </span><span class="s">"/etc/mapserver/landuse.map"</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">        </span><span class="nc">LINES</span><span class="w"> </span><span class="s">"/etc/mapserver/lines.map"</span>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">        </span><span class="nc">OGCAPI</span><span class="o">-</span><span class="nc">FEATURES</span><span class="w"> </span><span class="s">"/etc/mapserver/ogcapi-features.map"</span>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">        </span><span class="nc">OTHER</span><span class="o">-</span><span class="nc">PROJECTIONS</span><span class="w"> </span><span class="s">"/etc/mapserver/other-projections.map"</span>
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="w">        </span><span class="nc">POINTS</span><span class="w"> </span><span class="s">"/etc/mapserver/points.map"</span>
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a><span class="w">        </span><span class="nc">POLYGONS</span><span class="w"> </span><span class="s">"/etc/mapserver/polygons.map"</span>
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a><span class="w">        </span><span class="nc">POSTGIS</span><span class="w"> </span><span class="s">"/etc/mapserver/postgis.map"</span>
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a><span class="w">        </span><span class="nc">RAILWAYS</span><span class="w"> </span><span class="s">"/etc/mapserver/railways.map"</span>
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a><span class="w">        </span><span class="nc">RASTER</span><span class="w"> </span><span class="s">"/etc/mapserver/raster.map"</span>
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a><span class="w">        </span><span class="nc">RASTER</span><span class="o">-</span><span class="nc">PIPELINE</span><span class="w"> </span><span class="s">"/etc/mapserver/raster-pipeline.map"</span>
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a><span class="w">        </span><span class="nc">SLD</span><span class="w"> </span><span class="s">"/etc/mapserver/sld.map"</span>
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a><span class="w">        </span><span class="nc">STAC</span><span class="w"> </span><span class="s">"/etc/mapserver/stac.map"</span>
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a><span class="w">        </span><span class="nc">STARS</span><span class="w"> </span><span class="s">"/etc/mapserver/stars.map"</span>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a><span class="w">        </span><span class="nc">TILES</span><span class="w"> </span><span class="s">"/etc/mapserver/tiles.map"</span>
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a><span class="w">        </span><span class="nc">TIMISOARA</span><span class="w"> </span><span class="s">"/etc/mapserver/timisoara.map"</span>
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a><span class="w">        </span><span class="nc">VECTOR</span><span class="o">-</span><span class="nc">TILES</span><span class="w"> </span><span class="s">"/etc/mapserver/vector-tiles.map"</span>
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a><span class="w">        </span><span class="nc">WCS</span><span class="w"> </span><span class="s">"/etc/mapserver/wcs.map"</span>
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a><span class="w">        </span><span class="nc">WFS</span><span class="w"> </span><span class="s">"/etc/mapserver/wfs.map"</span>
 </span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>
 </span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">workshop</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">mapfile</span><span class="o">/</span><span class="n">config</span><span class="p">.</span><span class="n">md</span>
-</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">CONFIG_MAP</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/config.map&quot;</span>
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a><span class="w">        </span><span class="n">#</span><span class="w"> </span><span class="nc">CONFIG_MAP</span><span class="w"> </span><span class="s">"/etc/mapserver/config.map"</span>
 </span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>
 </span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a><span class="nc">END</span>
@@ -1777,33 +1787,33 @@ services available for that Mapfile, such as WMS, WFS, WCS, and OGC APIs. For ex
 <details class="example mapfile file">
 <summary>config.map</summary>
 <div class="language-scala highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">MAP</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;CONFIG_MAP&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"CONFIG_MAP"</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nc">SIZE</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="mi">400</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nc">PROJECTION</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="s">&quot;epsg:4326&quot;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="s">"epsg:4326"</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nc">END</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nc">IMAGECOLOR</span><span class="w"> </span><span class="s">&quot;#37929E&quot;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nc">IMAGECOLOR</span><span class="w"> </span><span class="s">"#37929E"</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nc">WEB</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">&quot;/etc/mapserver/tmp/&quot;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nc">IMAGEPATH</span><span class="w"> </span><span class="s">"/etc/mapserver/tmp/"</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="nc">METADATA</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">            </span><span class="n">#</span><span class="s">&quot;ms_enable_modes&quot;</span><span class="w"> </span><span class="s">&quot;!*&quot;</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="o">!*</span><span class="w"> </span><span class="n">disables</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="nc">CGI</span><span class="w"> </span><span class="n">requests</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wms_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wcs_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;wfs_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">&quot;ows_enable_request&quot;</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">            </span><span class="n">#</span><span class="s">"ms_enable_modes"</span><span class="w"> </span><span class="s">"!*"</span><span class="w"> </span><span class="n">#</span><span class="w"> </span><span class="o">!*</span><span class="w"> </span><span class="n">disables</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="nc">CGI</span><span class="w"> </span><span class="n">requests</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">"wms_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">"wcs_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">"wfs_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="n">#</span><span class="w"> </span><span class="s">"ows_enable_request"</span><span class="w"> </span><span class="s">"*"</span>
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nc">END</span>
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nc">END</span>
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nc">EXTENT</span><span class="w"> </span><span class="o">-</span><span class="mi">180</span><span class="w"> </span><span class="o">-</span><span class="mi">90</span><span class="w"> </span><span class="mi">180</span><span class="w"> </span><span class="mi">90</span>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nc">LAYER</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">&quot;countries&quot;</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nc">NAME</span><span class="w"> </span><span class="s">"countries"</span>
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nc">TYPE</span><span class="w"> </span><span class="nc">POLYGON</span>
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nc">STATUS</span><span class="w"> </span><span class="nc">DEFAULT</span>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="nc">CONNECTIONTYPE</span><span class="w"> </span><span class="nc">FLATGEOBUF</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nc">DATA</span><span class="w"> </span><span class="s">&quot;data/naturalearth/ne_110m_admin_0_countries.fgb&quot;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nc">DATA</span><span class="w"> </span><span class="s">"data/naturalearth/ne_110m_admin_0_countries.fgb"</span>
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
 </span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="nc">CLASS</span>
 </span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="nc">STYLE</span>
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">                </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">&quot;#C7CAB0&quot;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">                </span><span class="nc">COLOR</span><span class="w"> </span><span class="s">"#C7CAB0"</span>
 </span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                </span><span class="nc">OUTLINECOLOR</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span>
 </span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">                </span><span class="nc">WIDTH</span><span class="w"> </span><span class="mf">0.1</span>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="nc">END</span>
@@ -1885,10 +1895,14 @@ starts.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","content.code.copy","content.code.select"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="../../assets/javascripts/custom.js"></script>
       
