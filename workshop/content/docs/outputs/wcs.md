@@ -77,7 +77,6 @@ WEB
         "wcs_srs" "EPSG:4326 EPSG:3857"
         "wcs_title" "Example WCS Mapfile"
         "wcs_description" "Test description"
-        "wcs_onlineresource" "http://localhost:7000/"
     END
 END
 ```
