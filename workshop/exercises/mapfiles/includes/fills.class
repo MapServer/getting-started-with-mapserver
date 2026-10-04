@@ -1,0 +1,41 @@
+CLASS
+    NAME "Forest"
+    EXPRESSION ("[fclass]" = "forest")
+    STYLE
+        COLOR "#2E8B57"
+        SYMBOL "fills"
+        SIZE 12
+    END
+    STYLE
+        OUTLINECOLOR "#1F5F3D"
+        WIDTH 0.5
+    END
+END
+
+CLASS
+    NAME "Industrial"
+    EXPRESSION ("[fclass]" = "industrial")
+    STYLE
+        COLOR "#8E5EA2"
+        SYMBOL "fills"
+        SIZE 12
+    END
+    STYLE
+        OUTLINECOLOR "#5E3A70"
+        WIDTH 0.5
+    END
+END
+
+CLASS
+    NAME "Other"
+    FALLBACK True
+    STYLE
+        COLOR "#8A9BA8"
+        SYMBOL "fills"
+        SIZE 12
+    END
+    STYLE
+        OUTLINECOLOR "#5C6B77"
+        WIDTH 0.5
+    END
+END

@@ -14,6 +14,7 @@ import xmlFormat from 'xml-formatter';
 import { EditorView, basicSetup } from 'codemirror';
 import { EditorState } from '@codemirror/state';
 import { xml } from '@codemirror/lang-xml';
+import { json } from '@codemirror/lang-json';
 
 const mapserverUrl = import.meta.env.VITE_MAPSERVER_BASE_URL;
 const mapfilesPath = import.meta.env.VITE_MAPFILES_PATH;
@@ -33,6 +34,7 @@ const demoLayers = [
     { id: 'notched-rect', type: 'point' },
     { id: 'square-spaced', type: 'polygon' },
     { id: 'wave', type: 'polygon' },
+    { id: 'fills', type: 'polygon' },
 ];
 
 const sldParser = new SLDParser();
@@ -72,6 +74,7 @@ function setText(view, text) {
 const classView = createViewer('class-text', mapfileLanguage);
 const symView = createViewer('sym-text', mapfileLanguage);
 const sldView = createViewer('sld-text', xml());
+const geostylerView = createViewer('geostyler-text', json());
 
 function showSld(text) {
     let formatted = text;
@@ -124,6 +127,7 @@ async function fetchSld(layerConfig) {
 
 /**
  * Convert an SLD to an OpenLayers style with GeoStyler, and apply it.
+* Returns the GeoStyler style the OpenLayers style was created from.
  */
 async function applySld(sldXmlString, vectorLayer) {
     const gs = await sldParser.readStyle(sldXmlString);
@@ -131,13 +135,6 @@ async function applySld(sldXmlString, vectorLayer) {
         throw new Error(`Errors parsing the SLD: ${gs.errors}`);
     }
 
-    // MapServer applies the first matching CLASS, so a final CLASS without an
-    // EXPRESSION means "everything else". In SLD a rule without a filter
-    // matches every feature, so mark such rules as else rules.
-    const rules = gs.output.rules;
-    if (rules.some((r) => r.filter)) {
-        rules.filter((r) => !r.filter).forEach((r) => { r.elseRule = true; });
-    }
     console.log(`GeoStyler style for layer ${vectorLayer.get('name')}:`, gs.output);
 
     const ol = await olParser.writeStyle(gs.output);
@@ -148,6 +145,7 @@ async function applySld(sldXmlString, vectorLayer) {
     console.log(`OpenLayers style for layer ${vectorLayer.get('name')}:`, ol.output);
 
     vectorLayer.setStyle(ol.output);
+    return gs.output;
 }
 
 function createVectorLayer(layerConfig) {
@@ -206,19 +204,20 @@ function main() {
         const classFile = `${layerConfig.id}.class`;
         const symFile = `${layerConfig.id}.sym`;
 
-        const [classText, symText, sld] = await Promise.all([
+        const [classText, symText, { sld, geostylerStyle }] = await Promise.all([
             fetchText(`${includesUrl}${classFile}`)
                 .catch((error) => `# Could not load ${classFile}: ${error.message}`),
             fetchOptionalText(`${includesUrl}${symFile}`)
                 .catch(() => null),
             fetchSld(layerConfig)
                 .then(async (sldXmlString) => {
-                    await applySld(sldXmlString, vectorLayer);
-                    return sldXmlString;
+                    const style = await applySld(sldXmlString, vectorLayer);
+                    return { sld: sldXmlString, geostylerStyle: style };
                 })
                 .catch((error) => {
                     console.error(`Failed to style layer ${layerConfig.id}`, error);
-                    return `Could not load or apply the SLD: ${error.message}`;
+                    const message = `Could not load or apply the SLD: ${error.message}`;
+                    return { sld: message, geostylerStyle: null };
                 }),
         ]);
 
@@ -235,8 +234,24 @@ function main() {
         setText(symView, symText ?? '');
 
         showSld(sld);
+        setText(geostylerView, geostylerStyle
+            ? JSON.stringify(geostylerStyle, null, 2)
+            : '// No GeoStyler style: see the SLD tab for the error');
 
         mapRight.getLayers().clear();
+
+        // Tabs in the bottom-right panel: show one viewer at a time
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach((t) => {
+                    const active = t === tab;
+                    t.classList.toggle('active', active);
+                    document.getElementById(t.dataset.tab).hidden = !active;
+                });
+            });
+        });
+
         mapRight.addLayer(baseLayer());
         mapRight.addLayer(vectorLayer);
     }

@@ -53,7 +53,8 @@ nav = [
         { "Clusters" = "advanced/clusters.md" },
         { "SLD" = "advanced/sld.md" },
         { "STAC" = "advanced/stac.md" },
-        { "Non-EPSG CRSs" = "advanced/other-projections.md" }
+        { "Non-EPSG CRSs" = "advanced/other-projections.md" },
+        { "GeoStyler" = "advanced/geostyler.md" }
     ]},
     { "Summary" = "summary.md" },
     { "Credits and Thanks" = "credits.md" }

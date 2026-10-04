@@ -38,8 +38,12 @@
                 </div>
             </div>
             <div class="panel">
-                <div class="panel-title">SLD (applied in OpenLayers)</div>
+                <div class="panel-title tabs" role="tablist">
+                    <button class="tab active" role="tab" data-tab="sld-text">SLD</button>
+                    <button class="tab" role="tab" data-tab="geostyler-text">GeoStyler style (used by OpenLayers)</button>
+                </div>
                 <div id="sld-text" class="code"></div>
+                <div id="geostyler-text" class="code" hidden></div>
             </div>
         </section>
     </main>

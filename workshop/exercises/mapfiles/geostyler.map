@@ -15,19 +15,16 @@ MAP
         FORMATOPTION "USE_FEATUREID=true" # ensure GeoJSON output has an id property
     END
 
-    # OpenLayers (ImageWMS with serverType 'mapserver') requests HiDPI images
-    # with MAP_RESOLUTION = 90 x device pixel ratio. MapServer scales symbol
-    # sizes by RESOLUTION / DEFRESOLUTION, so setting both to 90 keeps symbols
-    # at the same visual size on any screen, and matching the SLD sizes used
-    # for client-side styling.
+    # we require an IMAGETYPE for the OpenLayers viewer
+    # to avoid msDrawMap(): Image handling error. Unable to initialize image. msPrepareImage(): Image handling error. Unable to initialize image.
+    IMAGETYPE PNG24
 
+    # ensure symbol sizes are the same for any screen-size (see notes)
     RESOLUTION 90
     DEFRESOLUTION 90
 
-    # CONFIG "MS_ERRORFILE" "/etc/mapserver/tmp/mapserver.log"
-
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/" # end-slash is important!
+        IMAGEPATH "/etc/mapserver/tmp/"
         METADATA
             "ows_enable_request" "*"
             "ows_srs" "EPSG:4326 EPSG:3857"
@@ -43,6 +40,7 @@ MAP
     INCLUDE "includes/arrow-wide.sym"
 
     # polygons
+    INCLUDE "includes/fills.sym"
     INCLUDE "includes/square-spaced.sym"
     INCLUDE "includes/wave.sym"
 
@@ -63,6 +61,25 @@ MAP
         END
         FILTER ("[fclass]" = "scrub")
         INCLUDE "includes/square-spaced.class"
+    END
+
+    LAYER
+        NAME "fills"
+        TYPE POLYGON
+        # GEOMTRANSFORM (simplify([shape], 10))
+        STATUS OFF
+        PROJECTION
+            "EPSG:4326"
+        END
+        TEMPLATE "ttt"
+        CONNECTIONTYPE OGR
+        CONNECTION "data/osm/landuse_a.fgb"
+        METADATA
+            "gml_include_items" "all"
+            "gml_featureid" "fid"
+            "gml_types" "auto"
+        END
+        INCLUDE "includes/fills.class"
     END
 
     LAYER

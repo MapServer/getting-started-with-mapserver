@@ -129,3 +129,30 @@ html, body {
     .code .cm-content {
         padding-bottom: 40px;
     }
+
+    /* `display: flex` on .code would otherwise override the hidden attribute */
+    .code[hidden] {
+        display: none;
+    }
+
+/* Tabs in the bottom-right panel title bar */
+.tabs {
+    display: flex;
+    gap: 4px;
+    padding-bottom: 0;
+}
+
+.tab {
+    font: inherit;
+    color: #777;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0 6px 3px;
+    cursor: pointer;
+}
+
+    .tab.active {
+        color: #444;
+        border-bottom-color: #444;
+    }
