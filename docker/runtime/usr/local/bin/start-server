@@ -21,4 +21,25 @@ trap '' WINCH
 
 rm -f "${APACHE_PID_FILE}"
 
+# Warm up mod_fcgid. It only starts a new MapServer process without delay
+# when none is busy; otherwise a request waits 1 second for a busy process
+# to become free, so short concurrent requests (e.g. GetStyles + GetMap)
+# are slow. Sending MIN_PROCESSES requests at once, right after start-up,
+# starts that many processes, and FcgidMinProcessesPerClass keeps them alive.
+(
+    # Wait until Apache accepts connections (up to 30 seconds)
+    for _ in $(seq 30); do
+        (exec 3<>/dev/tcp/127.0.0.1/8080) 2>/dev/null && break
+        sleep 1
+    done
+    for _ in $(seq "${MIN_PROCESSES}"); do
+        (
+            exec 3<>/dev/tcp/127.0.0.1/8080 \
+                && printf 'GET / HTTP/1.0\r\nHost: localhost\r\n\r\n' >&3 \
+                && cat <&3 >/dev/null
+        ) &
+    done
+    wait
+) &
+
 exec apache2 -DFOREGROUND
