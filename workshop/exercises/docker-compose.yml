@@ -35,9 +35,6 @@ services:
       - 7000:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
-      MIN_PROCESSES: 2
-      IDLE_TIMEOUT: 3600 # 1 hour
-    command: ["bash", "/scripts/start-with-warmup.sh"]
     volumes:
       - ./scripts:/scripts:z
       - ./mapfiles:/etc/mapserver:z

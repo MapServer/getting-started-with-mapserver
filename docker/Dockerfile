@@ -155,10 +155,12 @@ ENV MS_DEBUGLEVEL=0 \
     MAPSERVER_CONFIG_FILE=/etc/mapserver/mapserver.conf \
     MAPSERVER_BASE_PATH= \
     MAX_REQUESTS_PER_PROCESS=1000 \
-    MIN_PROCESSES=1 \
+    # Keep several MapServer processes running, so concurrent requests don't
+    # wait for one another (see the warm-up in start-server)
+    MIN_PROCESSES=2 \
     MAX_PROCESSES=5 \
     BUSY_TIMEOUT=300 \
-    IDLE_TIMEOUT=300 \
+    IDLE_TIMEOUT=3600 \
     IO_TIMEOUT=40 \
     APACHE_LIMIT_REQUEST_LINE=8190 \
     GET_ENV=env \

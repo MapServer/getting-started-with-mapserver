@@ -2,3 +2,5 @@
 !runtime
 !instantclient
 !templates
+workshop/exercises/mapfiles/tmp/*
+!workshop/exercises/mapfiles/tmp/.gitkeep

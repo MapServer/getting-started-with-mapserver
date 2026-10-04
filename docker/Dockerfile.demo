@@ -2,3 +2,5 @@ FROM mapserver-workshop
 
 # Copy workshop files into the image
 COPY workshop/exercises/mapfiles /etc/mapserver/
+
+RUN chown -R www-data:www-data /etc/mapserver/tmp
