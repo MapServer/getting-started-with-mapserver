@@ -6,6 +6,7 @@ MAP
     END
     SIZE 256 256
     WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
         METADATA
             "tile_map_edge_buffer" "10"
             "tile_metatile_level" "0"

@@ -9,6 +9,7 @@ MAP
   END
 
   WEB
+    IMAGEPATH "/etc/mapserver/tmp/"
     METADATA
       "ows_title" "OSM Water"
       "ows_enable_request" "*"

@@ -5,6 +5,9 @@ MAP
     PROJECTION
         "epsg:3857"
     END
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
+    END
     LAYER
         NAME "countries"
         TYPE POLYGON
@@ -21,5 +24,12 @@ MAP
         END
         CONNECTIONTYPE FLATGEOBUF
         DATA "data/naturalearth/ne_110m_admin_0_countries.fgb"
+        # fallback styling for OpenLayers viewer which uses WMS
+        CLASS
+            STYLE
+                OUTLINECOLOR 51 153 204
+                WIDTH 1.25
+            END
+        END
     END
 END

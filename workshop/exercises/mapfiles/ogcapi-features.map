@@ -9,6 +9,7 @@ MAP
   END
 
   WEB
+    IMAGEPATH "/etc/mapserver/tmp/"
     METADATA
       "ows_title" "OSM Features"
       # "ows_enable_request" "*" # this enables all OGC requests

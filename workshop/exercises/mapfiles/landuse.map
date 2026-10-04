@@ -6,6 +6,9 @@ MAP
     PROJECTION
         "epsg:4326"
     END
+    WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
+    END
     SYMBOL
         NAME "octahedron"
         TYPE VECTOR

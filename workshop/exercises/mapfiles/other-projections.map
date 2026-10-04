@@ -21,6 +21,7 @@ MAP
     END
 
     WEB
+        IMAGEPATH "/etc/mapserver/tmp/"
         METADATA
             "ows_enable_request" "*"
             "ows_srs" "ESRI:53009 EPSG:4326"
