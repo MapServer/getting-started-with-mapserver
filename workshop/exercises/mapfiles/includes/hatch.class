@@ -6,10 +6,9 @@ CLASS
         COLOR "#E08E45"
         # SYMBOL "hatch"
         # ANGLE 90
-        WIDTH 0.5
-        SIZE 8 # distance between hatch lines in MapServer
         SYMBOL "hatch_vertical"
-        WIDTH 0.5
+        WIDTH 1
+        SIZE 8 # distance between hatch lines in MapServer
     END
     STYLE
         OUTLINECOLOR "#9D6330"
@@ -26,8 +25,8 @@ CLASS
         # SYMBOL "hatch"
         # ANGLE 0
         SYMBOL "hatch_horizontal"
-        WIDTH 3
-        SIZE 12
+        WIDTH 1
+        SIZE 8
     END
     STYLE
         OUTLINECOLOR "#9D6330"
@@ -44,7 +43,7 @@ CLASS
         # SYMBOL "hatch"
         # ANGLE 45
         SYMBOL "hatch_slash"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
@@ -62,7 +61,7 @@ CLASS
         # SYMBOL "hatch"
         # ANGLE -45
         SYMBOL "hatch_backslash"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
@@ -78,13 +77,13 @@ CLASS
     STYLE
         COLOR "#E08E45"
         SYMBOL "hatch_horizontal"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
         COLOR "#E08E45"
         SYMBOL "hatch_vertical"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
@@ -100,13 +99,13 @@ CLASS
     STYLE
         COLOR "#E08E45"
         SYMBOL "hatch_slash"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
         COLOR "#E08E45"
         SYMBOL "hatch_backslash"
-        WIDTH 0.5
+        WIDTH 1
         SIZE 8
     END
     STYLE
