@@ -27,15 +27,48 @@ const includesUrl = `${import.meta.env.BASE_URL}includes/`;
  *
  * - id: the MapServer LAYER name.
  * - type: the geometry type, shown in the layer selector
+ * - styles (optional): the layer's style names (its CLASS GROUPs), shown in
+ *   the style selector. Without it, the layer's default style is used.
  * - title (optional): label in the layer selector
+ * - sldUrl (optional, for testing): load the SLD from this URL instead of
+ *   a GetStyles request
+ * - geostylerUrl (optional, for testing): load a GeoStyler style (JSON) from
+ *   this URL and use it instead of an SLD
  */
 const demoLayers = [
     { id: 'arrow-wide', type: 'line' },
     { id: 'notched-rect', type: 'point' },
     { id: 'square-spaced', type: 'polygon' },
-    { id: 'wave', type: 'polygon' },
-    { id: 'fills', type: 'polygon' },
+    // Temporarily use a SLD file instead of MapServer's SLD
+    // { id: 'wave', type: 'polygon', sldUrl: `${import.meta.env.BASE_URL}styles/slash.sld.xml` },
+    {
+        id: 'wave',
+        type: 'polygon',
+        styles: ['Horizontal', 'Vertical']
+    },
+
+    // Temporarily use a GeoStyler style instead of MapServer's SLD
+    // { id: 'fills', type: 'polygon', geostylerUrl: `${import.meta.env.BASE_URL}styles/fills.geostyler.json` },
+    {
+        id: 'fills',
+        type: 'polygon'
+    },
+
+    {
+        id: 'hatch',
+        type: 'polygon',
+        styles: ['Horizontal', 'Vertical', 'Slash', 'Backslash', 'Cross', 'Diagonal']
+    },
 ];
+
+// Shown for layers without a styles list; sent to MapServer as an empty
+// STYLES value, which selects the layer's default style
+const DEFAULT_STYLE = 'default';
+
+const getStyles = (layerConfig) =>
+    layerConfig.styles?.length ? layerConfig.styles : [DEFAULT_STYLE];
+
+const getStylesParam = (style) => (style === DEFAULT_STYLE ? '' : style);
 
 const sldParser = new SLDParser();
 const olParser = new OpenLayersParser();
@@ -60,6 +93,7 @@ function createViewer(parentId, language) {
             extensions: [
                 basicSetup,
                 language,
+                EditorView.lineWrapping,
                 EditorState.readOnly.of(true),
                 EditorView.editable.of(false),
             ],
@@ -76,6 +110,35 @@ const symView = createViewer('sym-text', mapfileLanguage);
 const sldView = createViewer('sld-text', xml());
 const geostylerView = createViewer('geostyler-text', json());
 
+
+/**
+ * For display only: add the decoded SVG as a comment. The SLD that is
+ * parsed and applied is not changed.
+ */
+function addDecodedSvgComments(sldText) {
+    const pattern = /^([ \t]*)(<se:OnlineResource\b[^>]*href="data:image\/svg\+xml;base64,([A-Za-z0-9+/=]+)"[^>]*>)/gm;
+
+    return sldText.replace(pattern, (match, indent, tag, base64) => {
+        try {
+            const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+            let svg = new TextDecoder().decode(bytes).trim();
+            try {
+                svg = xmlFormat(svg, { indentation: '  ', collapseContent: true });
+            } catch {
+                // leave the SVG as decoded
+            }
+            svg = svg
+                .replace(/ M /g, '\n      M ') // one subpath (tile copy) per line
+                .replace(/--/g, '- -')         // "--" is not allowed inside an XML comment
+                .split('\n')
+                .map((line) => `${indent}  ${line}`)
+                .join('\n');
+            return `${indent}<!-- Decoded SVG:\n${svg}\n${indent}-->\n${indent}${tag}`;
+        } catch {
+            return match; // not valid base64: show as is
+        }
+    });
+}
 function showSld(text) {
     let formatted = text;
     try {
@@ -83,7 +146,7 @@ function showSld(text) {
     } catch {
         // not XML (e.g. an error message): show as is
     }
-    setText(sldView, formatted);
+    setText(sldView, addDecodedSvgComments(formatted));
 }
 
 async function fetchText(url) {
@@ -109,10 +172,15 @@ async function fetchOptionalText(url) {
 }
 
 /**
- * Fetch the SLD for a layer with a GetStyles request, and return it as a string.
+ * Fetch the SLD for a layer and style with a GetStyles request, and return
+ * it as a string. An sldUrl in the layer config overrides the GetStyles
+ * request (e.g. for testing).
  */
-async function fetchSld(layerConfig) {
-    const sldUrl = `${serverUrl}REQUEST=GetStyles&SERVICE=WMS&VERSION=1.3.0&LAYERS=${layerConfig.id}`;
+async function fetchSld(layerConfig, style) {
+    const stylesParam = encodeURIComponent(getStylesParam(style));
+    const sldUrl = layerConfig.sldUrl
+        ?? `${serverUrl}REQUEST=GetStyles&SERVICE=WMS&VERSION=1.3.0&LAYERS=${layerConfig.id}&STYLES=${stylesParam}`;
+
     const response = await fetch(sldUrl);
     if (!response.ok) {
         throw new Error(`Failed to fetch SLD: ${response.status} ${response.statusText}`);
@@ -126,25 +194,41 @@ async function fetchSld(layerConfig) {
 }
 
 /**
- * Convert an SLD to an OpenLayers style with GeoStyler, and apply it.
-* Returns the GeoStyler style the OpenLayers style was created from.
+ * Load a GeoStyler style saved as JSON.
  */
-async function applySld(sldXmlString, vectorLayer) {
-    const gs = await sldParser.readStyle(sldXmlString);
-    if (gs.errors) {
-        throw new Error(`Errors parsing the SLD: ${gs.errors}`);
+async function fetchGeoStylerStyle(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch GeoStyler style: ${response.status} ${response.statusText}`);
     }
+    return response.json();
+}
 
-    console.log(`GeoStyler style for layer ${vectorLayer.get('name')}:`, gs.output);
+/**
+ * Convert a GeoStyler style to an OpenLayers style, and apply it.
+ */
+async function applyGeoStylerStyle(geostylerStyle, vectorLayer) {
+    console.log(`GeoStyler style for layer ${vectorLayer.get('name')}:`, geostylerStyle);
 
-    const ol = await olParser.writeStyle(gs.output);
-
+    const ol = await olParser.writeStyle(geostylerStyle);
     if (ol.errors) {
         throw new Error(`Errors writing the OpenLayers style: ${ol.errors}`);
     }
     console.log(`OpenLayers style for layer ${vectorLayer.get('name')}:`, ol.output);
 
     vectorLayer.setStyle(ol.output);
+}
+
+/**
+ * Convert an SLD to an OpenLayers style with GeoStyler, and apply it.
+ * Returns the GeoStyler style the OpenLayers style was created from.
+ */
+async function applySld(sldXmlString, vectorLayer) {
+    const gs = await sldParser.readStyle(sldXmlString);
+    if (gs.errors) {
+        throw new Error(`Errors parsing the SLD: ${gs.errors}`);
+    }
+    await applyGeoStylerStyle(gs.output, vectorLayer);
     return gs.output;
 }
 
@@ -191,12 +275,11 @@ function main() {
     });
 
     let switchToken = 0;
-    async function switchLayer(layerConfig) {
-
+    async function switchLayer(layerConfig, style) {
         const token = ++switchToken;
 
         // Left map: MapServer renders the layer itself
-        wmsSource.updateParams({ LAYERS: layerConfig.id });
+        wmsSource.updateParams({ LAYERS: layerConfig.id, STYLES: getStylesParam(style) });
 
         // Right map: WFS features styled in OpenLayers from the SLD
         const vectorLayer = createVectorLayer(layerConfig);
@@ -204,19 +287,29 @@ function main() {
         const classFile = `${layerConfig.id}.class`;
         const symFile = `${layerConfig.id}.sym`;
 
+        // A geostylerUrl in the layer config replaces the SLD (e.g. for testing)
+        const loadStyle = layerConfig.geostylerUrl
+            ? fetchGeoStylerStyle(layerConfig.geostylerUrl)
+                .then(async (gsStyle) => {
+                    await applyGeoStylerStyle(gsStyle, vectorLayer);
+                    const note = `<!-- No SLD: GeoStyler style loaded from ${layerConfig.geostylerUrl} -->`;
+                    return { sld: note, geostylerStyle: gsStyle };
+                })
+            : fetchSld(layerConfig, style)
+                .then(async (sldXmlString) => {
+                    const gsStyle = await applySld(sldXmlString, vectorLayer);
+                    return { sld: sldXmlString, geostylerStyle: gsStyle };
+                });
+
         const [classText, symText, { sld, geostylerStyle }] = await Promise.all([
             fetchText(`${includesUrl}${classFile}`)
                 .catch((error) => `# Could not load ${classFile}: ${error.message}`),
             fetchOptionalText(`${includesUrl}${symFile}`)
                 .catch(() => null),
-            fetchSld(layerConfig)
-                .then(async (sldXmlString) => {
-                    const style = await applySld(sldXmlString, vectorLayer);
-                    return { sld: sldXmlString, geostylerStyle: style };
-                })
+            loadStyle
                 .catch((error) => {
                     console.error(`Failed to style layer ${layerConfig.id}`, error);
-                    const message = `Could not load or apply the SLD: ${error.message}`;
+                    const message = `Could not load or apply the style: ${error.message}`;
                     return { sld: message, geostylerStyle: null };
                 }),
         ]);
@@ -239,37 +332,61 @@ function main() {
             : '// No GeoStyler style: see the SLD tab for the error');
 
         mapRight.getLayers().clear();
-
-        // Tabs in the bottom-right panel: show one viewer at a time
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach((tab) => {
-            tab.addEventListener('click', () => {
-                tabs.forEach((t) => {
-                    const active = t === tab;
-                    t.classList.toggle('active', active);
-                    document.getElementById(t.dataset.tab).hidden = !active;
-                });
-            });
-        });
-
         mapRight.addLayer(baseLayer());
         mapRight.addLayer(vectorLayer);
     }
 
+    // Tabs in the bottom-right panel: show one viewer at a time
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach((t) => {
+                const active = t === tab;
+                t.classList.toggle('active', active);
+                document.getElementById(t.dataset.tab).hidden = !active;
+            });
+        });
+    });
+
+    const layerSelect = document.getElementById('layer-select');
+    const styleSelect = document.getElementById('style-select');
+
+    /**
+     * Fill the style selector with the styles of a layer, select the first
+     * one, and return it. The selector is disabled if there's only one style.
+     */
+    function populateStyles(layerConfig) {
+        const styles = getStyles(layerConfig);
+        styleSelect.replaceChildren(...styles.map((style) => {
+            const option = document.createElement('option');
+            option.value = style;
+            option.textContent = style;
+            return option;
+        }));
+        styleSelect.disabled = styles.length === 1;
+        return styles[0];
+    }
+
+    const selectedLayer = () => demoLayers[Number(layerSelect.value)];
+
     // Populate the layer selector
-    const select = document.getElementById('layer-select');
     demoLayers.forEach((layer, index) => {
         const option = document.createElement('option');
         option.value = String(index);
         option.textContent = layer.title ?? `${layer.id} (${layer.type})`;
-        select.appendChild(option);
+        layerSelect.appendChild(option);
     });
 
-    select.addEventListener('change', (e) => {
-        switchLayer(demoLayers[Number(e.target.value)]);
+    layerSelect.addEventListener('change', () => {
+        const layerConfig = selectedLayer();
+        switchLayer(layerConfig, populateStyles(layerConfig));
     });
 
-    switchLayer(demoLayers[0]);
+    styleSelect.addEventListener('change', () => {
+        switchLayer(selectedLayer(), styleSelect.value);
+    });
+
+    switchLayer(demoLayers[0], populateStyles(demoLayers[0]));
 }
 
 main();

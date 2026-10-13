@@ -1,0 +1,35 @@
+{
+  "name": 28,
+  "rules": [
+    {
+      "name": "Default",
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "graphicFill": {
+            "kind": "Mark",
+            "wellKnownName": "shape://horline",
+            "strokeColor": "#c496dc",
+            "strokeWidth": 0.5,
+            "radius": 3
+          }
+        },
+        {
+          "kind": "Fill",
+          "graphicFill": {
+            "kind": "Mark",
+            "wellKnownName": "shape://vertline",
+            "strokeColor": "#c496dc",
+            "strokeWidth": 0.5,
+            "radius": 3
+          }
+        },
+        {
+          "kind": "Fill",
+          "outlineColor": "#c496dc",
+          "outlineWidth": 2
+        }
+      ]
+    }
+  ]
+}

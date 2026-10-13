@@ -83,7 +83,8 @@ html, body {
     font-size: 13px;
 }
 
-#layer-select {
+#layer-select,
+#style-select {
     font-size: 13px;
     padding: 3px 6px;
     border: 1px solid #ccc;
@@ -104,10 +105,12 @@ html, body {
 
 #class-panel {
     flex: 1 1 auto;
+    min-height: 80px;
 }
 
 #sym-panel {
     flex: 0 1 auto;
+    min-height: 120px;
     border-top: 2px solid #ccc;
 }
 
