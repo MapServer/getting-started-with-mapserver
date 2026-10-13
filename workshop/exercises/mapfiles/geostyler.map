@@ -42,7 +42,9 @@ MAP
     # polygons
     INCLUDE "includes/fills.sym"
     INCLUDE "includes/square-spaced.sym"
+    INCLUDE "includes/vwave.sym"
     INCLUDE "includes/wave.sym"
+    INCLUDE "includes/hatch.sym"
 
     LAYER
         NAME "square-spaced"
@@ -66,7 +68,6 @@ MAP
     LAYER
         NAME "fills"
         TYPE POLYGON
-        # GEOMTRANSFORM (simplify([shape], 10))
         STATUS OFF
         PROJECTION
             "EPSG:4326"
@@ -80,6 +81,24 @@ MAP
             "gml_types" "auto"
         END
         INCLUDE "includes/fills.class"
+    END
+
+    LAYER
+        NAME "hatch"
+        TYPE POLYGON
+        STATUS OFF
+        PROJECTION
+            "EPSG:4326"
+        END
+        TEMPLATE "ttt"
+        CONNECTIONTYPE OGR
+        CONNECTION "data/osm/landuse_a.fgb"
+        METADATA
+            "gml_include_items" "all"
+            "gml_featureid" "fid"
+            "gml_types" "auto"
+        END
+        INCLUDE "includes/hatch.class"
     END
 
     LAYER

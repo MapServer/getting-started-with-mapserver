@@ -1,0 +1,46 @@
+SYMBOL
+    NAME "hatch"
+    TYPE hatch
+END
+
+# the following are not WellKnownNames so they export as SVGs
+
+SYMBOL
+    NAME "hatch_slash"
+    TYPE VECTOR
+    FILLED FALSE
+    POINTS
+        0 1
+        1 0
+    END
+END
+
+SYMBOL
+    NAME "hatch_backslash"
+    TYPE VECTOR
+    FILLED FALSE
+    POINTS
+        0 0
+        1 1
+    END
+END
+
+SYMBOL
+    NAME "hatch_horizontal"
+    TYPE VECTOR
+    FILLED FALSE
+    POINTS
+        0 1
+        1 1
+    END
+END
+
+SYMBOL
+    NAME "hatch_vertical"
+    TYPE VECTOR
+    FILLED FALSE
+    POINTS
+        1 0
+        1 1
+    END
+END
