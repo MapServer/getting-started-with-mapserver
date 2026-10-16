@@ -50,9 +50,9 @@ CLASS
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings>
-    - Inbuilt OpenLayers viewer: <http://localhost:7000/polygons/?template=openlayers&mode=browse&layers=all>
-    - Local OpenLayers example: <http://localhost:7001/polygons.html>
+    - Direct MapServer request: <http://localhost:9090/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings>
+    - Inbuilt OpenLayers viewer: <http://localhost:9090/polygons/?template=openlayers&mode=browse&layers=all>
+    - Local OpenLayers example: <http://localhost:9091/polygons.html>
 
 !!! tip
 

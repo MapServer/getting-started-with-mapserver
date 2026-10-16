@@ -82,7 +82,7 @@ if we were to use the service-specific metadata items.
 !!! note
 
     The order of the layers in the Mapfile is important when requesting a map directly using the MapServer CGI interface 
-    (for example <http://localhost:7000/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>).
+    (for example <http://localhost:9090/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>).
     The raster layer must be first in the Mapfile, otherwise the raster will be drawn on top of the vector layers and obscure them. The order of the layers in the request
     itself does not affect the rendering order, only the order in the Mapfile.
 
@@ -235,8 +235,8 @@ const wcsSource = new ImageWMS({
 
 !!! example
 
-    - MapServer request: <http://localhost:7000/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>
-    - OpenLayers example: <http://localhost:7001/other-projections.html>
+    - MapServer request: <http://localhost:9090/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>
+    - OpenLayers example: <http://localhost:9091/other-projections.html>
 
 ??? JavaScript "other-projections.js"
 
@@ -270,7 +270,7 @@ const wcsSource = new ImageWMS({
 2. Update the Mapfile to use another non-EPSG projection, for example `ESRI:54030` (the [Robinson projection](https://en.wikipedia.org/wiki/Robinson_projection)).
 
     Test everything is configured correctly by making a direct request to the MapServer CGI interface 
-    using <http://localhost:7000/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>.
+    using <http://localhost:9090/?map=/etc/mapserver/other-projections.map&mode=map&layer=countries&layer=cities&layer=raster>.
 
 
 ## Further Reading

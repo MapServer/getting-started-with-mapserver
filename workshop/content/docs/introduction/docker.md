@@ -10,7 +10,7 @@ MapServer runs on the Apache web server - see the [Apache page](../advanced/apac
 
 It uses the Apache [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), a module that provides FastCGI support.
 
-MapServer runs on port `8080` on the Docker container, which is mapped to port `7000` on the local machine, as can be seen in the Docker compose file
+MapServer runs on port `8080` on the Docker container, which is mapped to port `9090` on the local machine, as can be seen in the Docker compose file
 located at `workshop/exercises/docker-compose.yml`:
 
 ```yaml
@@ -18,7 +18,7 @@ located at `workshop/exercises/docker-compose.yml`:
     image: geographika/mapserver-workshop:latest
     container_name: mapserver
     ports:
-      - 7000:8080
+      - 9090:8080
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -37,7 +37,7 @@ A second Docker container serves the JavaScript example pages. This uses Node an
     image: node:lts-slim
     container_name: node
     ports:
-      - 7001:7001
+      - 9091:9091
     working_dir: /home/node/app
     volumes:
       - ./app:/home/node/app
@@ -55,8 +55,8 @@ A second Docker container serves the JavaScript example pages. This uses Node an
   # start docker in detached mode
   docker compose up -d
   # the following URLs should now be available
-  # http://localhost:7000
-  # http://localhost:7001
+  # http://localhost:9090
+  # http://localhost:9091
 
   # stop docker
   docker compose down

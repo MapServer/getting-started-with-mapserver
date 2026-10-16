@@ -8,8 +8,8 @@ In this tutorial, you'll learn how filtering is supported in MapServer and how t
   <iframe src="https://mapserver.github.io/getting-started-with-mapserver-demo/timisoara.html"></iframe>
 </div>
 
-Let's take a look at the [Timișoara OGC API Landing Page](http://localhost:7000/TIMISOARA/ogcapi/?f=html). 
-This contains a link to a page listing all the supported [Conformance Classes](http://localhost:7000/TIMISOARA/ogcapi/conformance?f=html).
+Let's take a look at the [Timișoara OGC API Landing Page](http://localhost:9090/TIMISOARA/ogcapi/?f=html). 
+This contains a link to a page listing all the supported [Conformance Classes](http://localhost:9090/TIMISOARA/ogcapi/conformance?f=html).
 
 The three we are interested in for this tutorial are:
 
@@ -24,7 +24,7 @@ The three we are interested in for this tutorial are:
 
 We can see which attributes in the **buildings** layer are filterable by opening the queryables endpoint:
 
-<http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/queryables?f=html>
+<http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/queryables?f=html>
 
 This list is controlled in MapServer by the `oga_queryable_items` keyword in the layer `METADATA` block. 
 In this example we use the special value `all`, which exposes all layer attributes as queryables
@@ -52,7 +52,7 @@ use a comma-separated list.
 The default MapServer Bootstrap templates then expose these queryables as simple filter inputs in the HTML interface. 
 You can try this directly on the items page:
 
-<http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=html>
+<http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=html>
 
 ![Filter interface](../assets/images/filters.png)
 
@@ -66,7 +66,7 @@ making it easier for software to generate, validate, and manipulate programmatic
 
 When you use the Bootstrap template above and apply a filter, you will see the query in the URL, for example:
 
-<http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=html&filter=building+LIKE+%27%25hospital%25%27&filter-lang=cql2-text>
+<http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=html&filter=building+LIKE+%27%25hospital%25%27&filter-lang=cql2-text>
 
 The `filter-lang=cql2-text` parameter indicates that the filter is written in CQL2-text.
 The filter itself is URL-encoded (for example spaces become `+` and special characters are percent-encoded),
@@ -88,7 +88,7 @@ Both expressions mean the same thing: return features where the `building` attri
 
 The JSON filter looks as follows as an encoded-URL:
 
-<http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=json&filter=%7B%22op%22%3A%22like%22%2C%22args%22%3A%5B%7B%22property%22%3A%22building%22%7D%2C%22%25hospital%25%22%5D%7D&filter-lang=cql2-json>
+<http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=json&filter=%7B%22op%22%3A%22like%22%2C%22args%22%3A%5B%7B%22property%22%3A%22building%22%7D%2C%22%25hospital%25%22%5D%7D&filter-lang=cql2-json>
 
 If you open this in a browser, you will see a list of matching features. These are returned in JSON because we supplied the `f=json` parameter.
 We also have to add the `&filter-lang=cql2-json` parameter, as by default MapServer assumes `cql2-text`.
@@ -97,12 +97,12 @@ In addition to CQL2 filters, MapServer also supports simple query parameter filt
 For example, `&building=hospital` is a shorthand for an equality-style filter on the building attribute.
 This is convenient for quick lookups but lacks the expressiveness of full CQL2.
 
-<http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=json&building=hospital>
+<http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=json&building=hospital>
 
 ## Custom Application with Filtering
 
 MapServer's filtering support allows us to quickly build powerful applications, using
-simple API calls. <http://localhost:7001/timisoara.html> links to a custom OpenLayers application,
+simple API calls. <http://localhost:9091/timisoara.html> links to a custom OpenLayers application,
 using the OGC filtering API to filter buildings by type, and highlight them on a map.
 
 The key parts of the code relating to filtering are building the filter string (as `cql2-text`):
@@ -143,8 +143,8 @@ The options for the drop-down list are defined in the `./workshop/exercises/app/
 
 !!! example
 
-    - MapServer OGC API Features request: <http://localhost:7000/timisoara/ogcapi/collections/buildings/items?f=html>
-    - Local OpenLayers example: <http://localhost:7001/timisoara.html>
+    - MapServer OGC API Features request: <http://localhost:9090/timisoara/ogcapi/collections/buildings/items?f=html>
+    - Local OpenLayers example: <http://localhost:9091/timisoara.html>
 
 ??? JavaScript "timisoara.js"
 
@@ -162,10 +162,10 @@ The options for the drop-down list are defined in the `./workshop/exercises/app/
 
 - Update the `oga_queryable_items` metadata keyword to only include the "building" and "name" fields.
   Check that the list of queryables is updated at:
-  <http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/queryables?f=html>,
+  <http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/queryables?f=html>,
   and also in the Bootstrap page:
-  <http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=html>.
+  <http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=html>.
 
 - Add a new building type to the dropdown in `./workshop/exercises/app/timisoara.html`.
   You can find additional types by inspecting the
-  [buildings items page](http://localhost:7000/TIMISOARA/ogcapi/collections/buildings/items?f=html).
+  [buildings items page](http://localhost:9090/TIMISOARA/ogcapi/collections/buildings/items?f=html).

@@ -49,7 +49,7 @@ new VectorTileLayer({
 
 !!! example
 
-    - Local OpenLayers example: <http://localhost:7001/vector-tiles.html>
+    - Local OpenLayers example: <http://localhost:9091/vector-tiles.html>
 
 ??? JavaScript "vector-tiles.js"
 

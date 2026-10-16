@@ -81,8 +81,8 @@ END
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/railways.map&mode=map&layer=roads>
-    - Local OpenLayers example: <http://localhost:7001/railways.html>
+    - Direct MapServer request: <http://localhost:9090/?map=/etc/mapserver/railways.map&mode=map&layer=roads>
+    - Local OpenLayers example: <http://localhost:9091/railways.html>
 
 ??? JavaScript "railways.js"
 

@@ -106,8 +106,8 @@ cd /home/getting-started-with-mapserver/workshop/exercises/
 sudo docker compose up
 
 # Test the following URLs in a browser
-# http://localhost:7000
-# http://localhost:7001/lines.html
+# http://localhost:9090
+# http://localhost:9091/lines.html
 ```
 
 ### Testing the Docker installation
@@ -147,10 +147,10 @@ docker compose down
 ```
 
 Once the containers are downloaded you can test they are running and you can connect to them. Open a web browser
-and navigate to <http://localhost:7000/>, and you should see the "MapServer Homepage" which means MapServer
+and navigate to <http://localhost:9090/>, and you should see the "MapServer Homepage" which means MapServer
 is running correctly.
 
-Next we will check that the front-end container is running by opening <http://localhost:7001/points.html>.
+Next we will check that the front-end container is running by opening <http://localhost:9091/points.html>.
 Hopefully you'll see a map, and we're ready to start the workshop.
 
 ## Possible Errors
