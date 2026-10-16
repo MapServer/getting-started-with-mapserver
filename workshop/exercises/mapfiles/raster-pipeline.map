@@ -5,7 +5,7 @@ MAP
     SIZE 800 800
     EXTENT 977816 6742006 998431 6755017
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/"
+        IMAGEPATH "/tmp/mapserver-data/"
     END
 
     PROJECTION

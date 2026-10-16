@@ -12,7 +12,7 @@ MAP
     END
 
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/"
+        IMAGEPATH "/tmp/mapserver-data/"
     END
 
     # the extent of the map in the projection

@@ -6,7 +6,7 @@ MAP
         "EPSG:4326"
     END
     WEB
-        IMAGEPATH "/etc/mapserver/tmp/" # end-slash is important!
+        IMAGEPATH "/tmp/mapserver-data/" # end-slash is important!
         METADATA
             "ows_enable_request" "*"
             "ows_srs" "EPSG:4326 EPSG:3857"
